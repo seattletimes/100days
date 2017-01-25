@@ -13,7 +13,7 @@
   "description": "",
   "url": "",
   "image": "assets/social.jpg",
-  "sheets": [],
+  "sheets": ["1pJulVzfZiHl4IrnzTz0s0lP6IgdxzYyCpevvKpRIZ2Q"],
   "production": false,
-  "embedded": true
+  "embedded": false
 }

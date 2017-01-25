@@ -3,9 +3,17 @@
   <head>
     <%= t.include("partials/_head.html") %>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
 
+
+      <header class="top-header">
+        <h1 class="large">FIRST
+        <div class="largest">100</div>
+        <div class="large">DAYS OF TRUMP </div>
+        </h1>
+      </header>
 
       <!-- calendar -->
       <h3>January</h4>
@@ -28,7 +36,21 @@
         <% for(i = 71; i < 101; i++) { %>
           <td><%= i %></td> 
         <% }%> 
+      <!-- end of calendar -->
 
+      <!-- checklist -->
+      <h2>100-DAY ACTION PLAN</h2>
+      
+
+
+      <i class="fa fa-square-o" aria-hidden="true"></i>
+
+
+      <!-- end of checklist -->
+
+     <script>
+      window.goals = <%= JSON.stringify(json.goals) %>;
+    </script>
 
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
