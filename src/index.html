@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <%= t.include("partials/_head.html") %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+
+      <!-- calendar -->
+      <h3>January</h4>
+        <% for(i = 1; i < 12; i++) { %>
+          <%= i %>
+        <% }%>
+    
+
+      <h3>February</h4>
+        <% for(i = 12; i < 40; i++) { %>
+          <td><%= i %></td> 
+        <% }%>
+
+      <h3>March</h4>
+        <% for(i = 40; i < 71; i++) { %>
+          <td><%= i %></td> 
+        <% }%>
+
+      <h3>April</h4>
+        <% for(i = 71; i < 101; i++) { %>
+          <td><%= i %></td> 
+        <% }%> 
+
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
