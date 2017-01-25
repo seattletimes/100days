@@ -5,11 +5,13 @@
 .top-header {
   border-bottom: 3px solid #000000;
   background-image: url("http://placekitten.com/g/1280/250");
+  padding-left: 40px;
+  padding-top: 15px;
 }
 
 .large {
   font-family: @df-serif;
-  font-size: 50px;
+  font-size: 45px;
   line-height: 50px;
   color: #FFFFFF;
 }
@@ -19,4 +21,58 @@
   font-size: 200px;
   line-height: 130px;
   color: #FFFFFF;
+}
+
+// inside
+
+.dates-goals{
+  .display-flex();
+}
+
+.checklist {
+  .flex(0 50 80%);
+  font-family: @df-sans;
+  padding-left: 50px;
+}
+
+.checklist h2 {
+  margin-top: 0px;
+}
+
+.checklist ol {
+  list-style-type: none;
+  font-size: 18px;
+  padding-left: 0px;
+
+}
+
+.calendar {
+  .flex(50 1 20%);
+  .display-flex();
+  .flex-wrap(wrap);
+  .justify-content(space-around);
+  .align-items(flex-start);
+
+  font-family: @df-sans;
+  .day {
+    .flex(0 0 100%);
+  }
+}
+
+.month {
+  margin: 10px 0px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: @df-middle-gray;
+}
+
+
+.innerbox {
+  padding: 15px 100px;
+}
+
+
+.actions ol {
+  list-style-type: none;
+  padding-left: 0px;
 }
