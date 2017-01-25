@@ -33,6 +33,10 @@
   .flex(0 50 80%);
   font-family: @df-sans;
   padding-left: 50px;
+
+  @media @mobile {
+    display: block;
+  }
 }
 
 .checklist h2 {
@@ -48,14 +52,23 @@
 
 .calendar {
   .flex(50 1 20%);
-  .display-flex();
-  .flex-wrap(wrap);
-  .justify-content(space-around);
-  .align-items(flex-start);
+
+  .page {
+    .display-flex();
+    .flex-wrap(wrap);
+    width: 100%;
+
+    .day {
+      text-align: center;
+      .flex(0 0 100% / 7)
+    }
+  }
 
   font-family: @df-sans;
-  .day {
-    .flex(0 0 100%);
+
+
+  @media @mobile {
+    display: block;
   }
 }
 

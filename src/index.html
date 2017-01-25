@@ -31,24 +31,34 @@
       <section class="dates-goals">
       <div class="calendar">
         <h3 class="month">January</h3>
+        <div class="page">
           <% for(i = 1; i < 12; i++) { %>
-            <div class="day, i"><%= i %></div>
+            <div class="day">
+              <a href="#day-<%= i %>"><%= i %></a>
+            </div>
           <% }%>
+        </div>
     
         <h3 class="month">February</h3>
+        <div class="page">
           <% for(i = 12; i < 40; i++) { %>
-            <div class="day, i"><%= i %></div>
+            <div class="day"><%= i %></div>
           <% }%>
+          </div>
 
         <h3 class="month">March</h3>
+        <div class="page">
           <% for(i = 40; i < 71; i++) { %>
-            <div class="day, i"><%= i %></div>
+            <div class="day"><%= i %></div>
           <% }%>
+        </div>
 
         <h3 class="month">April</h3>
+        <div class="page">
           <% for(i = 71; i < 101; i++) { %>
-            <div class="day, i"><%= i %></div>
+            <div class="day"><%= i %></div>
           <% }%> 
+        </div>
         </div>
 
         <div class="checklist">
@@ -57,12 +67,15 @@
         <ol>
         <% json.goals.forEach(function(k) { %>
         <li>
-        <% if (k.completed == "no") { %>
+        <% if (!k.completed) { %>
               <i class="fa fa-square-o" aria-hidden="true"></i>
               <% }
               else { %>
               <i class="fa fa-check-square" aria-hidden="true"></i><% }%>
           <%= k.goal %>
+          <% if (k.completed) { %>
+          (<a href="#day-<%= k.completed%>">Completed on day <%= k.completed %></a>)
+          <% } %>
         <% }) %>
         </ol>
         
@@ -76,10 +89,13 @@
       <section class="actions">
         <h2>Day-by-day actions</h2>
           <ol>
-          <% json.goals.forEach(function(k) { %>
-          <li>
-          <% if (k.completed == "yes") { %>
-                <%= k.completed %> (<%= k.day_completed %>)
+          <% json.daily.forEach(function(k) { %>
+          <li id="day-<%= k.day %>">
+          <% if (k.summary) { %>
+                Day <%= k.day %>
+                <ul>
+                <li><%= k.summary %></li>
+                </ul>
                 <% }
                 }) %>
           </ol>
@@ -93,6 +109,7 @@
 </responsive-child>
       <script>
       window.goals = <%= JSON.stringify(json.goals) %>;
+      window.daily = <%= JSON.stringify(json.goals) %>;
     </script>
 
     <script src="app.js" async></script>
