@@ -80,6 +80,7 @@
 
         <ol>
         <% json.goals.forEach(function(k) { %>
+        <div class="plan-item">
         <li>
         <% if (!k.completed) { %>
               <i class="fa fa-square-o" aria-hidden="true"></i>
@@ -90,6 +91,7 @@
           <% if (k.completed) { %>
           (<a href="#day-<%= k.completed%>">Completed on day <%= k.completed %></a>)
           <% } %>
+          </div>
         <% }) %>
         </ol>
         

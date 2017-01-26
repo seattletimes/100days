@@ -41,6 +41,10 @@
 
 .checklist h2 {
   margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: @df-charcoal;
+  color: @df-off-white;
+  padding-left: 5px;
 }
 
 .checklist ol {
@@ -84,6 +88,19 @@
   padding: 15px 100px;
 }
 
+// action plan list
+.plan-item {
+  padding: 8px 4px 16px;
+
+  &:nth-child(2n) {
+        background: darken(@df-off-white, 5%);
+      }
+
+  .fa-check-square {
+    color: green;
+  }
+}
+
 // actions list
 .actions {
   font-size: 16px;
@@ -102,6 +119,10 @@
       margin: 0px;
     }
 
+    .actions-list ul {
+        max-width: 100%;
+    }
+
     &:nth-child(2n) {
       background: darken(@df-off-white, 5%);
     }
@@ -115,5 +136,18 @@
         padding-left: 0;
       }
     }
+
+    a {
+      font-size: 14px;
+      font-weight: bold;
+      color: @df-middle-gray;
+      padding-left: 5px;
+    }
   }
+
+  h2 {
+      background-color: @df-charcoal;
+      color: @df-off-white;
+      padding-left: 5px;
+    }
 }
