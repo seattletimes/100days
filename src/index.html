@@ -16,10 +16,24 @@
         </h1>
       </header>
 
+
+
+
+
 <responsive-child class="innerbox">
       <section class="introduction">
         <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu dolor tristique, porttitor velit ut, egestas leo. Nunc ullamcorper, urna eu bibendum lacinia, leo nulla euismod ante, vitae pharetra mi mi nec tellus. Quisque auctor, ligula ut consectetur faucibus, risus risus mattis nisl, feugiat mollis est nulla nec justo. Mauris enim mauris, egestas eget lacus id, vulputate consectetur tortor. Mauris eget vulputate nibh.</p>
       <section>
+
+      <%
+        var byDay = {};
+        json.daily.forEach(function(row) {
+          if (!byDay[row.day]) {
+            byDay[row.day] = [];
+          }
+          byDay[row.day].push(row);
+        });
+      %>
 
       <!-- <% json.daily.forEach(function(day) { %>
         <li> Day <%= day.day %>: <%= day.summary %>
@@ -62,7 +76,7 @@
         </div>
 
         <div class="checklist">
-        <h2>100-DAY ACTION PLAN</h2>
+        <h2>100-day action plan</h2>
 
         <ol>
         <% json.goals.forEach(function(k) { %>
@@ -88,7 +102,7 @@
 
       <section class="actions">
         <h2>Day-by-day actions</h2>
-          <ol>
+          <!--<ol>
           <% json.daily.forEach(function(k) { %>
           <li id="day-<%= k.day %>">
           <% if (k.summary) { %>
@@ -98,10 +112,24 @@
                 </ul>
                 <% }
                 }) %>
-          </ol>
+          </ol> -->
 
+          <% Object.keys(byDay).sort().forEach(function(d) { 
+            var actions = byDay[d]; %>
+            <div class="day-no">
+              <h3 id="day-<%= d %>">Day <%= d %></h3>
+              <ul class="actions-list">
+                <% actions.forEach(function(e) { %>
+                  <li><%= e.summary %> 
+                  <a href="<%= e.url %>">READ MORE</a>
+                  </li>
+                <% }) %>
+                </ul>
+                </div>
+                <% }) %>
+          
 
-
+         <% console.log(byDay) %>
 
 
       </section>

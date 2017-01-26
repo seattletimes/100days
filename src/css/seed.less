@@ -84,8 +84,36 @@
   padding: 15px 100px;
 }
 
+// actions list
+.actions {
+  font-size: 16px;
+  font-family: @df-sans;
 
-.actions ol {
-  list-style-type: none;
-  padding-left: 0px;
+  .day-no {
+    .display-flex();
+    padding: 8px 4px 16px;
+    border-top: 1px solid @df-light-gray;
+
+    @media @mobile {
+      display: block;
+    }
+
+    .actions-list {
+      margin: 0px;
+    }
+
+    &:nth-child(2n) {
+      background: darken(@df-off-white, 5%);
+    }
+
+    h3 {
+      .flex(0 0 100px);
+      padding-left: 10px;
+      margin: 0px;
+
+      @media @mobile {
+        padding-left: 0;
+      }
+    }
+  }
 }
