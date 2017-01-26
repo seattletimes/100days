@@ -123,7 +123,9 @@
               <ul class="actions-list">
                 <% actions.forEach(function(e) { %>
                   <li><%= e.summary %> 
+                  <% if (e.url) { %>
                   <a href="<%= e.url %>">READ MORE</a>
+                  <% } %>
                   </li>
                 <% }) %>
                 </ul>
