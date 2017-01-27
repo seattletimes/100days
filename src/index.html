@@ -42,9 +42,15 @@
           <% } %>
       <% }) %> -->
 
+      <nav class="jump-to">
+            <ul>
+                <li><i class="fa fa-calendar" aria-hidden="true"></i> <a href="#day-by-day">A day-by-day look at Trump's actions</a></li>
+            </ul>
+          </nav>
+
       <section class="dates-goals">
 
-        <div class="checklist" id="action-plan">
+        <div class="checklist narrow" id="action-plan">
         <h2>100-day action plan</h2>
 
         <ol>
@@ -82,16 +88,6 @@
 
         </div>
 
-        <div class="menu">
-          <div class="inner-menu">
-          <h3 class="menu-title">JUMP TO</h3>
-          <nav>
-            <ul>
-                <li><i class="fa fa-calendar" aria-hidden="true"></i> <a href="#day-by-day">A day-by-day look at Trump's actions</a></li>
-            </ul>
-          </nav>
-        </div>
-        </div>
       </section>
 <div class="to-top"><a href="#action-plan">&uarr; Top</a></div>
 <hr>
@@ -99,62 +95,17 @@
       <section class="day-calendar" id="day-by-day">
         <div class="calendar">
 
-          <%= t.include("_calendar.html", { padding: 3, offset: 10, length: 28, ignored: 0 }) %>
+          <%= t.include("_calendar.html", { lookup, padding: 0, offset: 0, length: 31, ignored: 19, month: "january" }) %>
+
+          <%= t.include("_calendar.html", { lookup, padding: 3, offset: 12, length: 28, ignored: 0, month: "february" }) %>
+
+          <%= t.include("_calendar.html", { lookup, padding: 3, offset: 40, length: 31, ignored: 0, month: "march" }) %>
+
+          <%= t.include("_calendar.html", { lookup, padding: 6, offset: 71, length: 30, ignored: 0, month: "april" }) %>
+
+       
         
-        <div class="month-container jan">
-        <h3 class="month">JANUARY</h3>
-        <div class="page">
-          <% for(i = 1; i <20; i++) { %>
-          <div class=" day gray"><%= i %></div>
-          <% }
-           for(i = 20; i < 32; i++) { %>
-            <div class="day <%= lookup[i - 19] ? "goal" : "" %>">
-              <a href="#day-<%= i - 19 %>">
-              <%= i %>
-              </a>
-            </div>
-          <% }%>
-          </div>   
-        </div>
-      
-        <div class="month-container feb">
-        <h3 class="month">February</h3>
-        <div class="page">
-          <div class="day"> </div>
-          <div class="day"> </div>
-          <div class="day"> </div>
-          <% for(i = 1; i < 29; i++) { %>
-            <div class="day"><%= i %></div>
-          <% }%>
-          </div>
-        </div>
-
-        <div class="month-container march">
-        <h3 class="month">March</h3>
-        <div class="page">
-          <div class="day"> </div>
-          <div class="day"> </div>
-          <div class="day"> </div>
-          <% for(i = 1; i < 32; i++) { %>
-            <div class="day"><%= i %></div>
-          <% }%>
-        </div>
-      </div>
-
-        <div class="month-container april">
-        <h3 class="month">April</h3>
-        <div class="page">
-          <div class="day"> </div>
-          <div class="day"> </div>
-          <div class="day"> </div>
-          <div class="day"> </div>
-          <div class="day"> </div>
-          <div class="day"> </div>
-          <% for(i = 1; i < 30; i++) { %>
-            <div class="day"><%= i %></div>
-          <% }%> 
-        </div>
-        </div>
+       
         </div>
       </section>
 

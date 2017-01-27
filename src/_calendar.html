@@ -1,4 +1,27 @@
-<%= padding %>
-<%= length %>
-<%= ignored %>
-<%= offset %>
+<div class="month-container">
+  <h3 class="month"><%= month %></h3>
+  <div class="page">
+    <% if (padding > 0) {
+      for (var i = 0; i < padding; i++) { %>
+      <div class="day"> </div>
+    <% }
+    }
+    for (var i = 0; i < ignored; i++) { %>
+      <div class="day gray"><%= i %></div>
+    <% }
+      for(var i = ignored; i < length; i++) {
+        if (i + offset > 99) {
+          continue;
+        }
+        %>
+        <div class="day <%= lookup[i - offset + 1] ? "goal" : "" %>">
+          <a href="#day-<%= offset + (i - ignored) + 1 %>">
+          <%= i + 1 %>
+          </a>
+        </div> <%
+      }
+      if (month == "april") { %>
+      <div class="day gray">30</div>
+      <% } %>
+    </div> 
+</div> 
