@@ -14,6 +14,11 @@
   font-size: 45px;
   line-height: 50px;
   color: @df-off-white;
+
+  @media @mobile {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .largest {
@@ -21,19 +26,38 @@
   font-size: 200px;
   line-height: 130px;
   color: @df-off-white;
+
+  @media @mobile {
+    font-size: 40px;
+    line-height: 20px;
+  }
 }
 
 // inside
 
 .introduction {
     max-width: 800px;
-    margin: 0px
+    margin: auto;
+
+    @media @mobile {
+      max-width: 100%;
+      padding: 0px;
+    }
+
+    @media @tablet {
+      margin: 15px;
+    }
   }
 
 .intro {
   font-size: 23px;
   margin-left: 10px;
   margin-right: 10px;
+
+  @media @mobile {
+    font-size: 19px;
+  }
+
 }
 
 .dates-goals{
@@ -68,13 +92,32 @@
   list-style-type: none;
   font-size: 18px;
   padding-left: 0px;
+}
 
+.checklist-key ul {
+  list-style-type: none;
+
+  li {
+    padding: 0px;
+  }
+}
+
+.day-calendar {
+  background-color: @df-off-white;
+}
+
+.light-caps {
+  font-family: @df-sans;
+  color: @df-charcoal;
+  padding-top: 25px;
+  margin: 0px 60px;
 }
 
 .calendar {
   .display-flex();
   font-size: 15px;
-  padding: 25px 0px;
+  padding- bottom: 25px;
+  margin: 0px 60px;
 
   .gray {
     color: @df-middle-gray;
@@ -110,6 +153,9 @@
     .day {
       // text-align: center;
       .flex(0 0 100% / 7);
+      a {
+        color: @df-charcoal;
+      }
 
       &.goal a {
         background: @st-green;
@@ -136,9 +182,9 @@
 }
 
 
-.innerbox {
-  padding: 15px 100px;
-}
+// .innerbox {
+//   padding: 15px 100px;
+// }
 
 // action plan list
 .plan-item {
@@ -225,7 +271,59 @@
     text-decoration: none !important;
 
     &:hover {
-      color: @df-orange;
+      color: @df-middle-gray;
     }
+  }
+}
+
+
+ul.calendar-legend li{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  padding-top: 4px;
+  padding-left: 60px;
+  font-family: @df-sans;
+  font-size: 16px;
+}
+
+ul.events, ul.key {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  padding-top: 4px;
+}
+ul.key {
+  padding: 8px 26px 16px;
+}
+
+.event {
+  clear: left;
+  @icon-size: 14px;
+  text-indent: -@icon-size - 8px;
+
+  @media @mobile {
+    padding-left: @icon-size * 2;
+  }
+
+  &::before {
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: text-top;
+    width: @icon-size;
+    height: @icon-size;
+    background: black;
+    content: "";
+    background-size: @icon-size @icon-size;
+    margin-right: 4px;
+    margin-top: 2px;
+  }
+
+  &.complete::before {
+    background-color: @st-green;
+  }
+
+  &.progress::before {
+    background-color: @df-dark-gray;
   }
 }

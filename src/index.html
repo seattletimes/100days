@@ -53,6 +53,11 @@
         <div class="checklist narrow" id="action-plan">
         <h2>100-day action plan</h2>
 
+        <ul class="checklist-key">
+        <li><i class="fa fa-check-square" aria-hidden="true"></i> = Completed </li>
+        <li><i class="fa fa-pencil" aria-hidden="true"></i> = In progress </li>
+        </ul>
+
         <ol>
         <% var lookup = {} %>
         <% json.goals.forEach(function(k) { %>
@@ -93,6 +98,17 @@
 <hr>
 
       <section class="day-calendar" id="day-by-day">
+        <div class="instructions">
+          <p class="light-caps">Click on a day to see what actions Trump took on that day.</p>
+          <ul class="key events calendar-legend">
+            <li class="event complete">
+              = Completed a promise
+            </li>
+            <li class="event progress">
+              = Promise in progress
+            </li>
+          </ul>
+        </div>
         <div class="calendar">
 
           <%= t.include("_calendar.html", { lookup, padding: 0, offset: 0, length: 31, ignored: 19, month: "january" }) %>
@@ -112,6 +128,15 @@
       <section class="actions">
         <div class="narrow">
         <h2>Day-by-day actions</h2>
+          <ul class="key">
+            <li class="event complete">
+              = Goals completed
+            </li>
+            <li class="event progress">
+              = Goals in progress
+            </li>
+          </ul>
+
           <% Object.keys(byDay).sort().forEach(function(d) { 
             var actions = byDay[d]; %>
             <div class="day-no">
