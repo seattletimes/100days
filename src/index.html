@@ -21,6 +21,9 @@
 
 
 <responsive-child class="innerbox">
+
+
+
       <section class="introduction">
         <p class="intro">During the 2016 presidential campaign, Donald Trump released his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter."</a> The document, issued Oct. 22, contains his plan for his first 100 days in office. Here, we track which promises he has completed, when and if they were done by when he planned to.</p>
       </section>
@@ -53,10 +56,11 @@
         <div class="checklist narrow" id="action-plan">
         <h2>100-day action plan</h2>
 
-        <ul class="checklist-key">
-        <li><i class="fa fa-check-square" aria-hidden="true"></i> = Completed </li>
-        <li><i class="fa fa-pencil" aria-hidden="true"></i> = In progress </li>
-        </ul>
+        <nav class="checklist-key">
+            <a href="#completed" class="switch-tab"><i class="fa fa-check-square" aria-hidden="true"></i> Completed</a>
+            <a href="#in-progress" class="switch-tab"> <i class="fa fa-pencil" aria-hidden="true"></i> In progress</a>
+            <a href="#incomplete" class="switch-tab"> <i class="fa fa-square-o" aria-hidden="true"></i> Incomplete</a>
+          </nav>
 
         <ol>
         <% var lookup = {} %>
@@ -64,17 +68,20 @@
         <div class="plan-item">
         <li>
         <% if (k.day_completed) { %>
-           <i class="fa fa-check-square" aria-hidden="true"></i>
+          <div class="category-label"><%= k.category%></div>
+          <i class="fa fa-check-square" aria-hidden="true"></i>
               <%
               lookup[k.day_completed] = true; 
             }
 
             else if (k.in_progress) { %>
+            <div class="category-label"><%= k.category%></div>
             <i class="fa fa-pencil" aria-hidden="true"></i>
             <%
             lookup[k.in_progress] = true; 
             }  
             else { %>
+              <div class="category-label"><%= k.category%></div>
               <i class="fa fa-square-o" aria-hidden="true"></i><% }%>    
           <%= k.goal %>
           <% if (k.day_completed) { %>
