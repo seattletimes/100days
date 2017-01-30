@@ -1,15 +1,5 @@
 @import "seattletimes";
 
-//header
-
-//the styles below were for the previous layout
-// .top-header {
-//   border-bottom: 3px solid @df-charcoal;
-//   background-image: url("http://placekitten.com/g/1280/250");
-//   padding-left: 40px;
-//   padding-top: 15px;
-// }
-
 .large {
   font-family: @df-serif;
   font-size: 30px;
@@ -25,8 +15,8 @@
 
 .largest {
   font-family: @df-serif;
-  font-size: 100px;
-  line-height: 130px;
+  font-size: 70px;
+  line-height: 80px;
   color: @df-charcoal;
   text-align: center;
 
@@ -54,8 +44,7 @@
 
 .intro {
   font-size: 23px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 10px 10px 10px 10px;
 
   @media @mobile {
     font-size: 19px;
@@ -199,8 +188,9 @@
   border: .5px solid;
   border-radius: 5px;
   border-color: @df-charcoal;
-  padding:7px;
+  padding:6px;
   color: black;
+  font-size: 16px;
 }
 
   .fa-check-square {
@@ -393,4 +383,75 @@ ul.key {
     background: @st-green;
   }
   
+}
+
+.legend {
+  max-width: 100%;
+  padding-bottom: 30px;
+}
+
+
+.category-legend {
+  @icon-size: 12px;
+  text-indent: -@icon-size - 8px;
+  font-family: @df-sans;
+  float: left;
+  clear: right;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+
+  @media @mobile {
+    padding-left: @icon-size * 2;
+  }
+
+  &::before {
+    border-radius: 10%;
+    display: inline-block;
+    vertical-align: text-top;
+    width: @icon-size;
+    height: @icon-size;
+    background: black;
+    content: "";
+    background-size: @icon-size @icon-size;
+    margin-right: 4px;
+    margin-top: 2px;
+  }
+
+  &.government::before {
+    background-color: @st-light-red;
+  }
+
+  &.trade::before {
+    background-color: @st-dark-red;
+  }
+
+  &.energy::before {
+    background-color: @st-light-orange;
+  }
+
+  &.environment::before {
+    background-color: @st-dark-orange;
+  }
+
+  &.immigration::before {
+    background-color: @st-light-purple;
+  }
+
+  &.economy::before {
+    background-color: @st-dark-purple;
+  }
+
+  &.education::before {
+    background-color: @st-dark-green;
+  }
+
+  &.health::before {
+    background-color: @st-light-blue;
+  }
+
+  &.crime::before {
+    background-color: @st-dark-blue;
+  }
 }

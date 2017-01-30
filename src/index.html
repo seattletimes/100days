@@ -18,9 +18,7 @@
 
 
 <section class="title">
-  <h1 class="large">TRUMP'S FIRST
-        <div class="largest">100 days</div>
-        </h1>
+  <h1 class="largest">Trump's first 100 days</h1>
 </section>
 
 
@@ -33,6 +31,20 @@
     <span style="width:30%" class="bar-3"></span>
     <span style="width:35%" class="bar-4"></span>
   </div>
+
+
+<div class="legend">
+  <ul class="key">
+    <li class="category-legend government">Government</li>
+    <li class="category-legend trade">Trade</li>
+    <li class="category-legend energy">Energy</li>
+    <li class="category-legend environment">Environment</li>
+    <li class="category-legend immigration">Immigration</li>
+    <li class="category-legend economy">Economy</li>
+    <li class="category-legend education">Education</li>
+    <li class="category-legend health">Health care</li>
+    <li class="category-legend crime">Crime</li>
+</div>
 
 
 
@@ -49,13 +61,6 @@
       byDay[row.day].push(row);
     });
   %>
-
-      <!-- <% json.daily.forEach(function(day) { %>
-        <li> Day <%= day.day %>: <%= day.summary %>
-          <% if (day.link) { %>
-          <a href="<%= day.url %>""><%= day.link %></a>
-          <% } %>
-      <% }) %> -->
 
       <nav class="jump-to">
             <ul>
