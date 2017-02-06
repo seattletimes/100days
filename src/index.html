@@ -7,189 +7,176 @@
   </head>
   <body>
 
+    <%= t.include("partials/_nav.html") %>
+
+    <main class="content">
+
+      <section class="title">
+        <h1 class="largest">Trump's first 100 days</h1>
+      </section>
+
+      <div class="progress-bar">
+        <span style="width:20%" class="bar-1"></span>
+        <span style="width:15%" class="bar-2"></span>
+        <span style="width:30%" class="bar-3"></span>
+        <span style="width:35%" class="bar-4"></span>
+      </div>
 
 
-<!--       <header class="top-header">
-        <h1 class="large">TRUMP'S FIRST
-        <div class="largest">100</div>
-        <div class="large">DAYS IN OFFICE </div>
-        </h1>
-      </header> -->
+      <div class="legend">
+        <ul class="key">
+          <li class="category-legend government">Government</li>
+          <li class="category-legend trade">Trade</li>
+          <li class="category-legend energy">Energy</li>
+          <li class="category-legend environment">Environment</li>
+          <li class="category-legend immigration">Immigration</li>
+          <li class="category-legend economy">Economy</li>
+          <li class="category-legend education">Education</li>
+          <li class="category-legend health">Health care</li>
+          <li class="category-legend crime">Crime</li>
+        </div>
 
+        <section class="introduction">
+          <p class="intro">During the 2016 presidential campaign, Donald Trump released his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter."</a> The document, issued Oct. 22, contains his plan for his first 100 days in office. Here, we track which promises he has completed, when and if they were done by when he planned to.</p>
+        </section>
 
-<section class="title">
-  <h1 class="largest">Trump's first 100 days</h1>
-</section>
+        <%
+        var byDay = {};
+        json.daily.forEach(function(row) {
+          if (!byDay[row.day]) {
+            byDay[row.day] = [];
+          }
+          byDay[row.day].push(row);
+        });
+        %>
 
-
-
-<responsive-child class="innerbox">
-
-  <div class="progress-bar">
-    <span style="width:20%" class="bar-1"></span>
-    <span style="width:15%" class="bar-2"></span>
-    <span style="width:30%" class="bar-3"></span>
-    <span style="width:35%" class="bar-4"></span>
-  </div>
-
-
-<div class="legend">
-  <ul class="key">
-    <li class="category-legend government">Government</li>
-    <li class="category-legend trade">Trade</li>
-    <li class="category-legend energy">Energy</li>
-    <li class="category-legend environment">Environment</li>
-    <li class="category-legend immigration">Immigration</li>
-    <li class="category-legend economy">Economy</li>
-    <li class="category-legend education">Education</li>
-    <li class="category-legend health">Health care</li>
-    <li class="category-legend crime">Crime</li>
-</div>
-
-
-
-  <section class="introduction">
-    <p class="intro">During the 2016 presidential campaign, Donald Trump released his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter."</a> The document, issued Oct. 22, contains his plan for his first 100 days in office. Here, we track which promises he has completed, when and if they were done by when he planned to.</p>
-  </section>
-
-  <%
-    var byDay = {};
-    json.daily.forEach(function(row) {
-      if (!byDay[row.day]) {
-        byDay[row.day] = [];
-      }
-      byDay[row.day].push(row);
-    });
-  %>
-
-      <nav class="jump-to">
+          <nav class="jump-to">
             <ul>
-                <li><i class="fa fa-calendar" aria-hidden="true"></i> <a href="#day-by-day">A day-by-day look at Trump's actions</a></li>
+              <li><i class="fa fa-calendar" aria-hidden="true"></i> <a href="#day-by-day">A day-by-day look at Trump's actions</a></li>
             </ul>
           </nav>
 
-      <section class="dates-goals">
+          <section class="dates-goals">
 
-        <div class="checklist narrow" id="action-plan">
-        <h2>100-day action plan</h2>
+            <div class="checklist narrow" id="action-plan">
+              <h2>100-day action plan</h2>
 
-        <nav class="checklist-key">
-            <a href="#completed" class="switch-tab"><i class="fa fa-check-square" aria-hidden="true"></i> Completed</a>
-            <a href="#in-progress" class="switch-tab"> <i class="fa fa-pencil" aria-hidden="true"></i> In progress</a>
-            <a href="#incomplete" class="switch-tab"> <i class="fa fa-square-o" aria-hidden="true"></i> Incomplete</a>
-          </nav>
+              <nav class="checklist-key">
+                <a href="#completed" class="switch-tab"><i class="fa fa-check-square" aria-hidden="true"></i> Completed</a>
+                <a href="#in-progress" class="switch-tab"> <i class="fa fa-pencil" aria-hidden="true"></i> In progress</a>
+                <a href="#incomplete" class="switch-tab"> <i class="fa fa-square-o" aria-hidden="true"></i> Incomplete</a>
+              </nav>
 
-        <ol>
-        <% var lookup = {} %>
-        <% json.goals.forEach(function(k) { %>
-        <div class="plan-item">
-        <li>
-        <% if (k.day_completed) { %>
-          <div class="category-label"><%= k.category%></div>
-          <i class="fa fa-check-square" aria-hidden="true"></i>
-              <%
-              lookup[k.day_completed] = true; 
-            }
+              <ol>
+                <% var lookup = {} %>
+                <% json.goals.forEach(function(k) { %>
+                <div class="plan-item">
+                  <li>
+                    <% if (k.day_completed) { %>
+                    <div class="category-label"><%= k.category%></div>
+                    <i class="fa fa-check-square" aria-hidden="true"></i>
+                    <%
+                    lookup[k.day_completed] = true; 
+                  }
 
-            else if (k.in_progress) { %>
-            <div class="category-label"><%= k.category%></div>
-            <i class="fa fa-pencil" aria-hidden="true"></i>
-            <%
-            lookup[k.in_progress] = true; 
-            }  
-            else { %>
-              <div class="category-label"><%= k.category%></div>
-              <i class="fa fa-square-o" aria-hidden="true"></i><% }%>    
-          <%= k.goal %>
-          <% if (k.day_completed) { %>
-          (<a href="#day-<%= k.day_completed%>">Completed on Day <%= k.day_completed %></a>)
-          <% } 
+                  else if (k.in_progress) { %>
+                  <div class="category-label"><%= k.category%></div>
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                  <%
+                  lookup[k.in_progress] = true; 
+                }  
+                else { %>
+                <div class="category-label"><%= k.category%></div>
+                <i class="fa fa-square-o" aria-hidden="true"></i><% }%>    
+                <%= k.goal %>
+                <% if (k.day_completed) { %>
+                (<a href="#day-<%= k.day_completed%>">Completed on Day <%= k.day_completed %></a>)
+                <% } 
 
-         else if (k.in_progress) { %>
-          (<a href="#day-<%= k.in_progress%>">Started process on Day <%= k.in_progress %></a>)
-          <% }%>
-          </div>
-        <% }) %>
-        </ol>
-        
+                else if (k.in_progress) { %>
+                (<a href="#day-<%= k.in_progress%>">Started process on Day <%= k.in_progress %></a>)
+                <% }%>
+              </div>
+              <% }) %>
+            </ol>
+
         <!-- <i class="fa fa-square-o" aria-hidden="true"></i> 
         <i class="fa fa-check-square" aria-hidden="true"></i> -->
 
-        </div>
+      </div>
 
-      </section>
-<div class="to-top"><a href="#action-plan">&uarr; Top</a></div>
-<hr>
+    </section>
 
-      <section class="day-calendar" id="day-by-day">
-        <div class="instructions">
-          <p class="light-caps">Click on a day to see what actions Trump took on that day.</p>
-          <ul class="key events calendar-legend">
-            <li class="event complete">
-              = Completed a promise
-            </li>
-            <li class="event progress">
-              = Promise in progress
-            </li>
-          </ul>
-        </div>
-        <div class="calendar">
+    <div class="to-top"><a href="#action-plan">&uarr; Top</a></div>
+    <hr>
 
-          <%= t.include("_calendar.html", { lookup, padding: 0, offset: 0, length: 31, ignored: 19, month: "january" }) %>
+    <section class="day-calendar" id="day-by-day">
+      <div class="instructions">
+        <p class="light-caps">Click on a day to see what actions Trump took on that day.</p>
+        <ul class="key events calendar-legend">
+          <li class="event complete">
+            = Completed a promise
+          </li>
+          <li class="event progress">
+            = Promise in progress
+          </li>
+        </ul>
+      </div>
+      <div class="calendar">
 
-          <%= t.include("_calendar.html", { lookup, padding: 3, offset: 12, length: 28, ignored: 0, month: "february" }) %>
+        <%= t.include("_calendar.html", { lookup, padding: 0, offset: 0, length: 31, ignored: 19, month: "january" }) %>
 
-          <%= t.include("_calendar.html", { lookup, padding: 3, offset: 40, length: 31, ignored: 0, month: "march" }) %>
+        <%= t.include("_calendar.html", { lookup, padding: 3, offset: 12, length: 28, ignored: 0, month: "february" }) %>
 
-          <%= t.include("_calendar.html", { lookup, padding: 6, offset: 71, length: 30, ignored: 0, month: "april" }) %>
+        <%= t.include("_calendar.html", { lookup, padding: 3, offset: 40, length: 31, ignored: 0, month: "march" }) %>
 
-       
-        
-       
-        </div>
-      </section>
+        <%= t.include("_calendar.html", { lookup, padding: 6, offset: 71, length: 30, ignored: 0, month: "april" }) %>
 
-      <section class="actions">
-        <div class="narrow">
+      </div>
+    </section>
+
+    <section class="actions">
+      <div class="narrow">
         <h2>Day-by-day actions</h2>
-          <ul class="key">
-            <li class="event complete">
-              = Goals completed
-            </li>
-            <li class="event progress">
-              = Goals in progress
-            </li>
-          </ul>
+        <ul class="key">
+          <li class="event complete">
+            = Goals completed
+          </li>
+          <li class="event progress">
+            = Goals in progress
+          </li>
+        </ul>
 
-          <% Object.keys(byDay).sort().forEach(function(d) { 
-            var actions = byDay[d]; %>
-            <div class="day-no">
-              <% if (d) { %>
-              <h3 id="day-<%= d %>">Day <%= d %></h3>
-              <% }
-              else { %>
-                <h3 id="day-<%= d.in_progress %>">Day <%= d %></h3>
-              <% } %>
-              <ul class="actions-list">
-                <% actions.forEach(function(e) { %>
-                  <li><%= e.summary %> 
-                  <% if (e.url) { %>
-                  <a href="<%= e.url %>">READ MORE</a>
-                  <% } %>
-                  </li>
-                <% }) %>
-                </ul>
-                </div>
-                <% }) %>
+        <% Object.keys(byDay).sort().forEach(function(d) { 
+          var actions = byDay[d]; %>
+          <div class="day-no">
+            <% if (d) { %>
+            <h3 id="day-<%= d %>">Day <%= d %></h3>
+            <% }
+            else { %>
+            <h3 id="day-<%= d.in_progress %>">Day <%= d %></h3>
+            <% } %>
+            <ul class="actions-list">
+              <% actions.forEach(function(e) { %>
+              <li><%= e.summary %> 
+                <% if (e.url) { %>
+                <a href="<%= e.url %>">READ MORE</a>
+                <% } %>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+          <% }) %>
         </div>
 
       </section>
-  <div class="to-top"><a href="#day-by-day">&uarr; Top</a></div>
+      <div class="to-top"><a href="#day-by-day">&uarr; Top</a></div>
+      
+    </main>
 
-</responsive-child>
-      <script>
-      window.goals = <%= JSON.stringify(json.goals) %>;
-      window.daily = <%= JSON.stringify(json.daily) %>;
+    <script>
+    window.goals = <%= JSON.stringify(json.goals) %>;
+    window.daily = <%= JSON.stringify(json.daily) %>;
     </script>
 
     <script src="app.js" async></script>
