@@ -9,6 +9,17 @@
 @health: @st-light-blue;
 @crime: @st-dark-blue;
 
+//simple utililty classes 
+.government { background: @government }
+.trade { background: @trade }
+.energy { background: @energy }
+.environment { background: @environment }
+.immigration { background: @immigration }
+.economy { background: @economy }
+.education { background: @education }
+.health { background: @health }
+.crime { background: @crime }
+
 // chart styles
 .bar-container {
   width: 100%;
@@ -28,22 +39,6 @@
     font-family: arial, sans-serif;
     padding: 10px;
   }
-
-  .bar-bg(@sector) {
-    .bar.@{sector} {
-      background: @@sector;
-    }
-  }
-
-  .bar-bg(government);
-  .bar-bg(trade);
-  .bar-bg(energy);
-  .bar-bg(environment);
-  .bar-bg(immigration);
-  .bar-bg(economy);
-  .bar-bg(education);
-  .bar-bg(health);
-  .bar-bg(crime);
 
 }
 
@@ -81,7 +76,11 @@
   }
 
   .key-icon-bg(@sector) {
-    &.@{sector}::before { background-color: @@sector }
+    &.@{sector} {
+      background: transparent;
+
+      &::before { background-color: @@sector }
+    }
   }
 
   .key-icon-bg(government);
