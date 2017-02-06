@@ -1,6 +1,7 @@
 @import "seattletimes";
 
 @import "calendars";
+@import "progress-bar";
 
 .large {
   font-family: @df-serif;
@@ -275,111 +276,3 @@ ul.key {
   }
 }
 
-// chart styles
-.progress-bar {
-  width: 100%;
-  height: 38px;
-  // background: #eee;
-  color:#414042;
-  max-width: 700px;
-  margin: auto;
-
-  span {
-    display: inline-block;
-    height:100%;
-    box-sizing: border-box;
-    float: left;
-    //  color: #fff;
-    font-weight: bold;
-    font-family: arial, sans-serif;
-    padding: 10px;
-
-  }
-
-  .bar-1 {
-    background: @st-light-red;
-  }
-
-  .bar-2 {
-    background: @st-dark-red;
-  }
-
-  .bar-3 {
-    background: @st-light-orange;
-  }
-
-  .bar-4 {
-    background: @st-green;
-  }
-
-}
-
-.legend {
-  max-width: 100%;
-  padding-bottom: 30px;
-}
-
-.category-legend {
-  @icon-size: 12px;
-  text-indent: -@icon-size - 8px;
-  font-family: @df-sans;
-  float: left;
-  clear: right;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 16px;
-
-  @media @mobile {
-    padding-left: @icon-size * 2;
-  }
-
-  &::before {
-    border-radius: 10%;
-    display: inline-block;
-    vertical-align: text-top;
-    width: @icon-size;
-    height: @icon-size;
-    background: black;
-    content: "";
-    background-size: @icon-size @icon-size;
-    margin-right: 4px;
-    margin-top: 2px;
-  }
-
-  &.government::before {
-    background-color: @st-light-red;
-  }
-
-  &.trade::before {
-    background-color: @st-dark-red;
-  }
-
-  &.energy::before {
-    background-color: @st-light-orange;
-  }
-
-  &.environment::before {
-    background-color: @st-dark-orange;
-  }
-
-  &.immigration::before {
-    background-color: @st-light-purple;
-  }
-
-  &.economy::before {
-    background-color: @st-dark-purple;
-  }
-
-  &.education::before {
-    background-color: @st-dark-green;
-  }
-
-  &.health::before {
-    background-color: @st-light-blue;
-  }
-
-  &.crime::before {
-    background-color: @st-dark-blue;
-  }
-}
