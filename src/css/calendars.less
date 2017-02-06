@@ -1,0 +1,67 @@
+
+.calendar {
+  .display-flex();
+  font-size: 15px;
+  padding- bottom: 25px;
+  margin: 0px 60px;
+
+  .gray {
+    color: @df-middle-gray;
+  }
+
+  .month-container {
+    .flex(0 0 25%);
+    padding: 10px;
+  }
+
+  .page {
+    .display-flex();
+    .flex-wrap(wrap);
+    width: 100%;
+    // padding: 15px;
+
+    .day {
+      .display-flex();
+      .justify-content(center);
+      .align-items(center);
+      .flex(0 0 100% / 7);
+      position: relative;
+
+      a {
+        color: @df-charcoal;
+        position: relative;
+      }
+
+      &.goal {
+        &::before {
+          content: "";
+          position: absolute;
+          background: @st-green;
+          color: white;
+          border-radius: 100%;
+          top: 0;
+          right: 0;
+          width: 100%;
+          padding-bottom: 100%;
+        }
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  font-family: @df-sans;
+
+
+  @media @mobile {
+    display: block;
+  }
+}
+
+.month {
+  margin: 10px 0px;
+  font-size: 16px;
+  text-transform: uppercase;
+}

@@ -1,5 +1,7 @@
 @import "seattletimes";
 
+@import "calendars";
+
 .large {
   font-family: @df-serif;
   font-size: 30px;
@@ -56,13 +58,15 @@ main.content {
   font-family: @df-sans;
 }
 
-.jump-to ul {
-  list-style-type: none;
-  text-align: center;
-}
+.jump-to {
+  ul {
+    list-style-type: none;
+    text-align: center;
+  }
 
-.jump-to ul li a {
-  font-family: @df-sans;
+  li a {
+    font-family: @df-sans;
+  }
 }
 
 .checklist {
@@ -72,25 +76,25 @@ main.content {
   @media @mobile {
     display: block;
   }
-}
 
-.checklist h2 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 5px;
-}
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+  }
 
-.checklist ol {
-  list-style-type: none;
-  font-size: 18px;
-  padding-left: 0px;
-}
+  ol {
+    list-style-type: none;
+    font-size: 18px;
+    padding-left: 0px;
+  }
 
-.checklist-key ul {
-  list-style-type: none;
+  .checklist-key ul {
+    list-style-type: none;
 
-  li {
-    padding: 0px; 
+    li {
+      padding: 0px; 
+    }
   }
 }
 
@@ -104,78 +108,6 @@ main.content {
   padding-top: 25px;
   margin: 0px 60px;
 }
-
-.calendar {
-  .display-flex();
-  font-size: 15px;
-  padding- bottom: 25px;
-  margin: 0px 60px;
-
-  .gray {
-    color: @df-middle-gray;
-  }
-
-  .month-container {
-    .flex(0 0 25%);
-    padding: 10px;
-  }
-
-  .page {
-    .display-flex();
-    .flex-wrap(wrap);
-    width: 100%;
-    // padding: 15px;
-
-    .day {
-      .display-flex();
-      .justify-content(center);
-      .align-items(center);
-      .flex(0 0 100% / 7);
-      position: relative;
-
-      a {
-        color: @df-charcoal;
-        position: relative;
-      }
-
-      &.goal {
-        &::before {
-          content: "";
-          position: absolute;
-          background: @st-green;
-          color: white;
-          border-radius: 100%;
-          top: 0;
-          right: 0;
-          width: 100%;
-          padding-bottom: 100%;
-        }
-
-        a {
-          color: white;
-        }
-      }
-    }
-  }
-
-  font-family: @df-sans;
-
-
-  @media @mobile {
-    display: block;
-  }
-}
-
-.month {
-  margin: 10px 0px;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-
-// .innerbox {
-//   padding: 15px 100px;
-// }
 
 // action plan switch tab styles
 
@@ -272,8 +204,6 @@ main.content {
   }
 }
 
-
-
 .to-top {
   text-align: right;
   text-transform: uppercase;
@@ -293,7 +223,6 @@ main.content {
   }
 }
 
-
 ul.calendar-legend li{
   padding: 0;
   margin: 0;
@@ -310,6 +239,7 @@ ul.events, ul.key {
   list-style-type: none;
   padding-top: 4px;
 }
+
 ul.key {
   padding: 8px 26px 16px;
 }
@@ -349,38 +279,38 @@ ul.key {
 .progress-bar {
   width: 100%;
   height: 38px;
- // background: #eee;
- color:#414042;
- max-width: 700px;
- margin: auto;
+  // background: #eee;
+  color:#414042;
+  max-width: 700px;
+  margin: auto;
 
- span {
-  display: inline-block;
-  height:100%;
-  box-sizing: border-box;
-  float: left;
-  //  color: #fff;
-  font-weight: bold;
-  font-family: arial, sans-serif;
-  padding: 10px;
+  span {
+    display: inline-block;
+    height:100%;
+    box-sizing: border-box;
+    float: left;
+    //  color: #fff;
+    font-weight: bold;
+    font-family: arial, sans-serif;
+    padding: 10px;
 
-}
+  }
 
-.bar-1 {
-  background: @st-light-red;
-}
+  .bar-1 {
+    background: @st-light-red;
+  }
 
-.bar-2 {
-  background: @st-dark-red;
-}
+  .bar-2 {
+    background: @st-dark-red;
+  }
 
-.bar-3 {
-  background: @st-light-orange;
-}
+  .bar-3 {
+    background: @st-light-orange;
+  }
 
-.bar-4 {
-  background: @st-green;
-}
+  .bar-4 {
+    background: @st-green;
+  }
 
 }
 
@@ -388,7 +318,6 @@ ul.key {
   max-width: 100%;
   padding-bottom: 30px;
 }
-
 
 .category-legend {
   @icon-size: 12px;
