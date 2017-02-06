@@ -254,7 +254,7 @@ ul.key {
     padding-left: @icon-size * 2;
   }
 
-  &::before {
+  .icon {
     border-radius: 100%;
     display: inline-block;
     vertical-align: text-top;
@@ -267,11 +267,11 @@ ul.key {
     margin-top: 2px;
   }
 
-  &.complete::before {
+  &.complete .icon {
     background-color: @st-green;
   }
 
-  &.progress::before {
+  &.progress .icon {
     background-color: @df-dark-gray;
   }
 }
