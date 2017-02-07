@@ -80,8 +80,8 @@ json.goals.forEach(function(g) {
           <h2>100-day action plan</h2>
 
           <nav class="checklist-key">
-            <a href="#completed" class="switch-tab"><i class="fa fa-check-square" aria-hidden="true"></i> Completed</a>
-            <a href="#in-progress" class="switch-tab"> <i class="fa fa-pencil" aria-hidden="true"></i> In progress</a>
+            <a href="#completed" class="switch-tab"><i class="fa fa-check-square" aria-hidden="true"></i> Completed</a> |
+            <a href="#in-progress" class="switch-tab"> <i class="fa fa-pencil" aria-hidden="true"></i> In progress</a> |
             <a href="#incomplete" class="switch-tab"> <i class="fa fa-square-o" aria-hidden="true"></i> Incomplete</a>
           </nav>
 
@@ -91,20 +91,20 @@ json.goals.forEach(function(g) {
             <div class="plan-item">
               <li>
                 <% if (k.day_completed) { %>
-                <div class="category-label"><%= k.category%></div>
+                <div class="category-label <%= k.category.toLowerCase() %>"><%= k.category%></div>
                 <i class="fa fa-check-square" aria-hidden="true"></i>
                 <%
                 lookup[k.day_completed] = true; 
               }
 
               else if (k.in_progress) { %>
-              <div class="category-label"><%= k.category%></div>
+              <div class="category-label <%= k.category.toLowerCase() %>"><%= k.category%></div>
               <i class="fa fa-pencil" aria-hidden="true"></i>
               <%
               lookup[k.in_progress] = true; 
             }
             else { %>
-            <div class="category-label"><%= k.category%></div>
+            <div class="category-label <%= k.category.toLowerCase() %>"><%= k.category%></div>
             <i class="fa fa-square-o" aria-hidden="true"></i><% }%>    
             <%= k.goal %>
             <% if (k.day_completed) { %>
@@ -132,9 +132,9 @@ json.goals.forEach(function(g) {
           <li class="event complete">
             <i class="icon"></i> = Completed a promise
           </li>
-          <li class="event progress">
+<!--           <li class="event progress">
             <i class="icon"></i> = Promise in progress
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="calendar">
@@ -173,7 +173,7 @@ json.goals.forEach(function(g) {
             <% } %>
             <ul class="actions-list">
               <% actions.forEach(function(e) { %>
-              <li><%= e.summary %> 
+              <li class="event <%= e.status %>"> <i class="icon"></i> <%= e.summary %> 
                 <% if (e.url) { %>
                 <a href="<%= e.url %>">READ MORE</a>
                 <% } %>

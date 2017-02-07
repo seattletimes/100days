@@ -117,12 +117,13 @@ main.content {
 }
 
 .switch-tab {
-  border: .5px solid;
-  border-radius: 5px;
-  border-color: @df-charcoal;
-  padding:6px;
   color: black;
-  font-size: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &:hover {
+  font-weight: bold;
+  }
 }
 
 .fa-check-square {
@@ -132,7 +133,7 @@ main.content {
 // action plan list
 .plan-item {
   padding: 8px 4px 16px;
-  border-top: 1px solid @df-light-gray;
+  // border-top: 1px solid @df-light-gray;
   font-size: 16px;
 
   .category-label {
@@ -140,15 +141,38 @@ main.content {
     font-size: 14px;
     font-weight: bold;
     color: @df-dark-gray;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+  .label-bg(@sector) {
+  &.@{sector} {
+    background-color: @@sector;
+    }
   }
 
-  &:nth-child(2n) {
-    background: darken(@df-off-white, 5%);
+  .label-bg(government);
+  .label-bg(trade);
+  .label-bg(energy);
+  .label-bg(environment);
+  .label-bg(immigration);
+  .label-bg(economy);
+  .label-bg(education);
+  .label-bg(health);
+  .label-bg(crime);
   }
+
+  // &:nth-child(2n) {
+  //   background: darken(@df-off-white, 5%);
+  // }
 
   .fa-check-square {
     color: @st-green;
   }
+}
+
+i {
+  font-size: 17px;
 }
 
 // actions list
@@ -193,7 +217,7 @@ main.content {
     }
 
     a {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: bold;
       color: @df-middle-gray;
       padding-left: 5px;
@@ -201,7 +225,8 @@ main.content {
   }
 
   h2 {
-    padding-left: 5px;
+    margin-top: 40px;
+    margin-bottom: 0px;
   }
 }
 
@@ -272,7 +297,7 @@ ul.key {
   }
 
   &.progress .icon {
-    background-color: @df-dark-gray;
+    background-color: @st-light-orange;
   }
 }
 
