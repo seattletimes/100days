@@ -3,18 +3,22 @@
     "day": 1,
     "summary": "Trump did x",
     "link": "stuff",
-    "url": "http://google.com"
+    "url": "http://google.com",
+    "status": "complete"
   },
   {
     "day": 1,
-    "summary": "Trump did y"
+    "summary": "Trump did y",
+    "status": "progress"
   },
   {
     "day": 2,
-    "summary": "Trump did z"
+    "summary": "Trump did z",
+    "status": "complete"
   },
   {
     "day": 3,
-    "summary": "Trump did a"
+    "summary": "Trump did a",
+    "status": "complete"
   }
 ]
