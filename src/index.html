@@ -44,6 +44,8 @@ json.goals.forEach(function(g) {
           </div>
         </div>
 
+        <span class="days-remaining"></span> days remaining
+
 
         <div class="legend">
           <ul class="key">
@@ -80,43 +82,49 @@ json.goals.forEach(function(g) {
           <h2>100-day action plan</h2>
 
           <nav class="checklist-key">
-            <a href="#completed" class="switch-tab"><i class="fa fa-check-square" aria-hidden="true"></i> Completed</a> |
-            <a href="#in-progress" class="switch-tab"> <i class="fa fa-pencil" aria-hidden="true"></i> In progress</a> |
-            <a href="#incomplete" class="switch-tab"> <i class="fa fa-square-o" aria-hidden="true"></i> Incomplete</a>
+            <input type="checkbox" class="plan-filter" id="completed">
+            <label for="completed">
+              <i class="fa fa-check-square" aria-hidden="true"></i> Completed
+            </label> |
+
+            <input type="checkbox" class="plan-filter" id="in-progress">
+            <label for="in-progress">
+              <i class="fa fa-pencil" aria-hidden="true"></i> In progress
+            </label> |
+            
+            <input type="checkbox" class="plan-filter" id="incomplete">
+            <label for="incomplete">
+              <i class="fa fa-square-o" aria-hidden="true"></i> Incomplete
+            </label>
           </nav>
 
           <ol>
             <% var lookup = {} %>
             <% json.goals.forEach(function(k) { %>
-            <div class="plan-item">
-              <li>
-                <% if (k.day_completed) { %>
-                <div class="category-label <%= k.category.toLowerCase() %>"><%= k.category%></div>
-                <i class="fa fa-check-square" aria-hidden="true"></i>
-                <%
-                lookup[k.day_completed] = true; 
-              }
+              <li class="plan-item" data-category="<%= k.day_completed ? "completed" : k.in_progress ? "in-progress" : "incomplete" %>">
 
-              else if (k.in_progress) { %>
-              <div class="category-label <%= k.category.toLowerCase() %>"><%= k.category%></div>
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-              <%
-              lookup[k.in_progress] = true; 
-            }
-            else { %>
-            <div class="category-label <%= k.category.toLowerCase() %>"><%= k.category%></div>
-            <i class="fa fa-square-o" aria-hidden="true"></i><% }%>    
-            <%= k.goal %>
-            <% if (k.day_completed) { %>
-            (<a href="#day-<%= k.day_completed%>">Completed on Day <%= k.day_completed %></a>)
-            <% } 
+                <header class="label-container">
+                  <div class="category-label <%= k.category.toLowerCase() %>"><%= k.category%></div>
+                </header>
 
-            else if (k.in_progress) { %>
-            (<a href="#day-<%= k.in_progress%>">Started process on Day <%= k.in_progress %></a>)
-            <% }%>
-          </div>
-          <% }) %>
-        </ol>
+                <% if (k.day_completed) { lookup[k.day_completed] = true; %>
+                  <i class="fa fa-check-square" aria-hidden="true"></i>
+                <% } else if (k.in_progress) { lookup[k.in_progress] = true; %>
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                <% } else { %>
+                  <i class="fa fa-square-o" aria-hidden="true"></i>
+                <% } %>
+
+                <%= k.goal %>
+
+              <% if (k.day_completed) { %>
+              (<a href="#day-<%= k.day_completed%>">Completed on Day <%= k.day_completed %></a>)
+              <% } else if (k.in_progress) { %>
+              (<a href="#day-<%= k.in_progress%>">Started process on Day <%= k.in_progress %></a>)
+              <% }%>
+            </li>
+            <% }) %>
+          </ol>
 
       </div>
 
@@ -162,7 +170,7 @@ json.goals.forEach(function(g) {
           </li>
         </ul>
 
-        <% Object.keys(byDay).sort().forEach(function(d) { 
+        <% Object.keys(byDay).forEach(function(d) { 
           var actions = byDay[d]; %>
           <div class="day-no">
             <% if (d) { %>

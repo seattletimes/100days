@@ -20,5 +20,18 @@
     "day": 3,
     "summary": "Trump did a",
     "status": "complete"
+  },
+  {
+    "day": 20,
+    "summary": "Trump did xkjlkfdj",
+    "link": "stuff here",
+    "url": "http://seattletimes.com",
+    "status": "progress"
+  },
+  {
+    "day": 5,
+    "summary": "djkfjls",
+    "link": "jklfjsl",
+    "status": "complete"
   }
 ]

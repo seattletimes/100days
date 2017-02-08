@@ -2,22 +2,33 @@
 // require("./lib/ads");
 // var track = require("./lib/tracking");
 
-require("component-responsive-frame/child");
-require("./lib/qsa.js");
 
-var switchTab = function(e) {
-  if (e) e.preventDefault();
-  $(".switch-tab.activated").forEach(t => t.classList.remove("activated"));
-  this.classList.add("activated");
-  // var id = this.getAttribute("href");
-  // $(".players-by-line").forEach(t => t.classList.add("hidden"));
-  // var shown = document.querySelector(id);
-  // shown.classList.remove("hidden");
+var $ = require("./lib/qsa.js");
 
-  var first = shown.querySelector(".player");
-  var p = first.getAttribute("data-jersey");
+var planItems = $(".plan-item");
+var filterInputs = $(".plan-filter");
 
-  showDetail(p);
-  selectPlayer.value = p;
-
+var changeFilter = function() {
+  var checked = $(".plan-filter:checked");
+  var categories = checked.map(check => check.id);
+  if (!categories.length) categories = ["completed", "in-progress", "incomplete"];
+  planItems.forEach(function(item) {
+    var cat = item.getAttribute("data-category");
+    if (categories.indexOf(cat) > -1) {
+      item.classList.remove("hidden");
+    } else {
+      item.classList.add("hidden");
+    }
+  });
 };
+
+filterInputs.forEach(el => el.addEventListener("change", changeFilter));
+changeFilter();
+
+var moment = require("moment");
+
+var lastDay = moment("2017-04-29", "YYYY-MM-DD");
+var now = moment([]);
+var difference = lastDay.dayOfYear() - now.dayOfYear();
+
+document.querySelector(".days-remaining").innerHTML = difference;
