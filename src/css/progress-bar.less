@@ -43,7 +43,7 @@
 
 .legend {
   max-width: 100%;
-  padding-bottom: 30px;
+  display: inline-block;
 }
 
 .category-legend {
@@ -56,9 +56,10 @@
   padding-top: 10px;
   font-size: 14px;
 
-  @media @mobile {
-    padding-left: @icon-size * 2;
-  }
+  // @media @mobile {
+  //   padding-left: @icon-size * 2;
+    
+  // }
 
   &::before {
     border-radius: 10%;
@@ -90,4 +91,20 @@
   .key-icon-bg(education);
   .key-icon-bg(health);
   .key-icon-bg(crime);
+}
+
+// line with days remaining below bar
+.remaining {
+  font-family: @df-sans;
+  font-size: 16px;
+  color: @df-middle-gray;
+  text-transform: uppercase;
+  text-align: right;
+  max-width: 700px;
+  margin: auto;
+  width: 100%;
+
+  .days-remaining {
+    font-weight: bold;
+  }
 }

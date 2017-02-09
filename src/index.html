@@ -44,7 +44,7 @@ json.goals.forEach(function(g) {
           </div>
         </div>
 
-        <span class="days-remaining"></span> days remaining
+        <div class="remaining"><span class="days-remaining"></span> days remaining</div>
 
 
         <div class="legend">
@@ -71,9 +71,7 @@ json.goals.forEach(function(g) {
         %>
 
       <nav class="jump-to">
-        <ul>
-          <li><i class="fa fa-calendar" aria-hidden="true"></i> <a href="#day-by-day">A day-by-day look at Trump's actions</a></li>
-        </ul>
+        <p><i class="fa fa-calendar" aria-hidden="true"></i> <a href="#day-by-day">A day-by-day look at Trump's actions</a></p>
       </nav>
 
       <section class="dates-goals">
@@ -85,18 +83,37 @@ json.goals.forEach(function(g) {
             <input type="checkbox" class="plan-filter" id="completed">
             <label for="completed">
               <i class="fa fa-check-square" aria-hidden="true"></i> Completed
-            </label> |
+            </label> 
 
             <input type="checkbox" class="plan-filter" id="in-progress">
             <label for="in-progress">
               <i class="fa fa-pencil" aria-hidden="true"></i> In progress
-            </label> |
+            </label> 
             
             <input type="checkbox" class="plan-filter" id="incomplete">
             <label for="incomplete">
               <i class="fa fa-square-o" aria-hidden="true"></i> Incomplete
             </label>
           </nav>
+
+<!-- for mobile -->
+          <nav class="checklist-key-mobile">
+            <input type="checkbox" class="mobile" id="completed">
+            <label for="completed">
+              <i class="fa fa-check-square" aria-hidden="true"></i>
+            </label> 
+
+            <input type="checkbox" class="mobile" id="in-progress">
+            <label for="in-progress">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </label> 
+            
+            <input type="checkbox" class="mobile" id="incomplete">
+            <label for="incomplete">
+              <i class="fa fa-square-o" aria-hidden="true"></i>
+            </label>
+          </nav>
+<!-- end for mobile -->
 
           <ol>
             <% var lookup = {} %>

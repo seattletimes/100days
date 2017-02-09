@@ -43,6 +43,34 @@
           right: 0;
           width: 100%;
           padding-bottom: 100%;
+
+          @media @mobile {
+            &::before {
+              content: "";
+              position: absolute;
+              background: @st-green;
+              color: white;
+              border-radius: 100%;
+              top: 0;
+              right: 3;
+              width: 75%;
+              padding-bottom: 71%;
+            }
+          }
+
+          @media @tablet {
+            &::before {
+              content: "";
+              position: absolute;
+              background: @st-green;
+              color: white;
+              border-radius: 100%;
+              top: 0;
+              right: 3;
+              width: 75%;
+              padding-bottom: 71%;
+            }
+          }
         }
 
         a {
