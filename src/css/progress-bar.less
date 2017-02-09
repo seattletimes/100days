@@ -4,7 +4,7 @@
 @energy: @st-light-orange;
 @environment: @st-dark-orange;
 @immigration: @st-light-purple;
-@economy: @st-dark-purple;
+@economy: @df-light-gray;
 @education: @st-dark-green;
 @health: @st-light-blue;
 @crime: @st-dark-blue;
@@ -44,6 +44,10 @@
 .legend {
   max-width: 100%;
   display: inline-block;
+
+  @media @mobile {
+    text-align: center;
+  }
 }
 
 .category-legend {
@@ -58,7 +62,7 @@
 
   // @media @mobile {
   //   padding-left: @icon-size * 2;
-    
+
   // }
 
   &::before {
