@@ -191,11 +191,11 @@ json.goals.forEach(function(g) {
 
         <% Object.keys(byDay).forEach(function(d) { 
           var actions = byDay[d]; %>
-          
+
           <div class="day-no">
             <% if (d) { %>
               <h3 id="day-<%= d %>">Day <%= d %></h3>
-              <% } %>
+            <% } %>
 
             <ul class="actions-list">
               <% actions.forEach(function(e) { %>

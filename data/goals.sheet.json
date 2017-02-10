@@ -1,122 +1,150 @@
 [
   {
     "goal": "Propose a constitutional amendment to impose term limits on all members of Congress",
+    "date": "Jan. 1",
     "category": "Government"
   },
   {
     "goal": "A hiring freeze on all federal employees to reduce federal workforce through attrition (exempting military, public safety, and public health)",
+    "date": "Jan. 1",
     "category": "Government",
     "undefined": "ImmigrationTradeEconomyGovernment processEnergyEnvironmentEducationHealth careCrimeNational security"
   },
   {
     "goal": "A requirement that for every new federal regulation, two existing regulations must be eliminated",
+    "date": "Jan. 1",
     "category": "Government"
   },
   {
     "goal": "A 5-year-ban on White House and congressional officials becoming lobbyists after they leave government service",
+    "date": "Jan. 1",
     "category": "Government"
   },
   {
     "goal": "A lifetime ban on White House officials lobbying on behalf of a foreign government",
+    "date": "Jan. 1",
     "category": "Government"
   },
   {
     "goal": "A complete ban on foreign lobbyists raising money for American elections",
+    "date": "Jan. 1",
     "category": "Government"
   },
   {
     "goal": "Renegotiate NAFTA or withdraw from the deal under Article 2205",
     "in_progress": 4,
+    "date": "Jan. 23",
     "category": "Trade"
   },
   {
     "goal": "Withdrawal from the Trans-Pacific Partnership",
     "day_completed": 4,
+    "date": "Jan. 23",
     "category": "Trade"
   },
   {
     "goal": "Direct my Secretary of the Treasury to label China a currency manipulator",
+    "date": "Jan. 1",
     "category": "Trade"
   },
   {
     "goal": "Direct the Secretary of Commerce and U.S. Trade Representative to identify all foreign trading abuses that unfairly impact American workers and direct them to use every tool under American and international law to end those abuses immediately",
+    "date": "Jan. 1",
     "category": "Trade"
   },
   {
     "goal": "Lift the restrictions on the production of $50 trillion dollars' worth of job-producing American energy reserves, including shale, oil, natural gas and clean coal.",
+    "date": "Jan. 1",
     "category": "Energy"
   },
   {
     "goal": "Allow energy infrastructure projects, like the Keystone Pipeline, to move forward",
     "day_completed": 5,
+    "date": "Jan. 24",
     "category": "Energy"
   },
   {
     "goal": "Cancel billions in payments to U.N. climate change programs and use the money to fix America's water and environmental infrastructure",
+    "date": "Jan. 1",
     "category": "Environment"
   },
   {
     "goal": "Cancel every executive action, memorandum and order issued by President Obama",
+    "date": "Jan. 1",
     "category": "Government"
   },
   {
     "goal": "Select a Supreme Court nominee",
+    "date": "Jan. 1",
     "category": "Government"
   },
   {
     "goal": "cancel all federal funding to Sanctuary Cities",
     "in_progress": 6,
+    "date": "Jan. 25",
     "category": "Immigration"
   },
   {
     "goal": "Begin removing the more than 2 million criminal illegal immigrants from the country and cancel visas to foreign countries that won't take them back",
     "in_progress": 6,
+    "date": "Jan. 25",
     "category": "Immigration"
   },
   {
     "goal": "Suspend immigration from terror-prone regions where vetting cannot safely occur. All vetting of people coming into our country will be considered extreme vetting.",
     "in_progress": 8,
+    "date": "Jan. 27",
     "category": "Immigration"
   },
   {
     "goal": "Middle Class Tax Relief And Simplification Act.",
+    "date": "Jan. 1",
     "category": "Economy"
   },
   {
     "goal": "End The Offshoring Act.",
+    "date": "Jan. 1",
     "category": "Trade"
   },
   {
     "goal": "American Energy & Infrastructure Act.",
+    "date": "Jan. 1",
     "category": "Economy"
   },
   {
     "goal": "School Choice And Education Opportunity Act",
+    "date": "Jan. 1",
     "category": "Education"
   },
   {
     "goal": "Repeal and Replace Obamacare Act",
     "in_progress": 1,
+    "date": "Jan. 1",
     "category": "Health care"
   },
   {
     "goal": "Affordable Childcare and Eldercare Act",
+    "date": "Jan. 1",
     "category": "Economy"
   },
   {
     "goal": "End Illegal Immigration Act",
+    "date": "Jan. 1",
     "category": "Immigration"
   },
   {
     "goal": "Restoring Community Safety Act",
+    "date": "Jan. 1",
     "category": "Crime"
   },
   {
     "goal": "Restoring National Security Act",
+    "date": "Jan. 1",
     "category": "Government"
   },
   {
     "goal": "Clean up Corruption in Washington Act",
+    "date": "Jan. 1",
     "category": "Government"
   }
 ]
