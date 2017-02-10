@@ -1,37 +1,65 @@
 [
   {
     "day": 1,
-    "summary": "Trump did x",
-    "link": "stuff",
-    "url": "http://google.com",
-    "status": "complete"
+    "summary": "The first executive order signed by Trump aimed to repeal former President Obama's health care law. More than 200,000 King County residents are insured through the Affordable Care Act.",
+    "link": "Read more about how a repeal would affect local residents.",
+    "url": "http://www.seattletimes.com/seattle-news/health/king-county-officials-patients-push-to-salvage-health-care-law/",
+    "status": "progress",
+    "date": "Jan. 1"
   },
   {
-    "day": 1,
-    "summary": "Trump did y",
-    "status": "progress"
+    "day": 4,
+    "summary": "President Trump kicked off his first full week in office by signing three executive memorandums regarding the Trans-Pacific Partnership, a freeze on hiring for some federal government workers and a a ban on providing federal money to international groups that perform abortions or provide information about abortions.",
+    "link": "Read more about the executive actions.",
+    "url": "http://www.seattletimes.com/nation-world/nation-politics/trump-undoes-parts-of-obama-agenda-with-executive-actions/",
+    "status": "progress",
+    "date": "Jan. 1"
   },
   {
-    "day": 2,
-    "summary": "Trump did z",
-    "status": "complete"
-  },
-  {
-    "day": 3,
-    "summary": "Trump did a",
-    "status": "complete"
-  },
-  {
-    "day": 20,
-    "summary": "Trump did xkjlkfdj",
-    "link": "stuff here",
-    "url": "http://seattletimes.com",
-    "status": "progress"
+    "day": 4,
+    "summary": "President Trump formally abandoned the Trans-Pacific Partnership.",
+    "link": "Read more about what this means.",
+    "url": "http://www.seattletimes.com/nation-world/trump-withdraws-us-from-sweeping-asia-trade-pact/",
+    "status": "complete",
+    "date": "Jan. 1"
   },
   {
     "day": 5,
-    "summary": "djkfjls",
-    "link": "jklfjsl",
-    "status": "complete"
+    "summary": "Trump signed executive actions to aggressively overhaul the country's energy policy, advancing the Keystone XL and Dakota Access pipeline projects.",
+    "link": "Here are recent articles on the Dakota Access Pipeline to help you understand the conflict.",
+    "url": "http://www.seattletimes.com/tag/dakota-access-pipeline/",
+    "status": "complete",
+    "date": "Jan. 1"
+  },
+  {
+    "day": 6,
+    "summary": "Trump signed executive actions to jumpstart construction of a U.S.-Mexico border wall and order cuts in federal grants for \"sanctuary cities.\"",
+    "link": "Here's what Trump's action on sanctuary cities means for Seattle.",
+    "url": "http://www.seattletimes.com/seattle-news/what-does-trumps-action-on-sanctuary-cities-mean-for-seattle-thats-up-for-debate/",
+    "status": "progress",
+    "date": "Jan. 1"
+  },
+  {
+    "day": 6,
+    "summary": "Pending congressional funding, an executive action by Trump would boost the number of border patrol agents and immigration officers.",
+    "link": "Read more about Trump's sharp shift in U.S. policy.",
+    "url": "http://www.seattletimes.com/nation-world/trumps-immigration-actions-mark-sharp-shift-in-us-policy/",
+    "status": "progress",
+    "date": "Jan. 1"
+  },
+  {
+    "day": 8,
+    "summary": "Trump signed a memorandum to conduct a 30-day readiness review .......",
+    "url": "https://www.whitehouse.gov/the-press-office/2017/01/27/presidential-memorandum-rebuilding-us-armed-forces",
+    "status": "progress",
+    "date": "Jan. 23"
+  },
+  {
+    "day": 8,
+    "summary": "Trump signed an executive order barring all refugees from entering the country for 120 days, blocking Syrian refugees indefinitely and barring citizens from seven majority Muslim countries — Iran, Sudan, Syria, Yemen, Libya, Iraq and Somalia— from entering the United States for 90 days.",
+    "link": "The order sparked protests throughout thte country the next day, including at Seattle-Tacoma International Airport.",
+    "url": "http://www.seattletimes.com/seattle-news/politics/heres-what-happened-in-seattle-after-trumps-immigration-ban/",
+    "status": "complete",
+    "date": "Jan. 23"
   }
 ]

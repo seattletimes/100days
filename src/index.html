@@ -187,20 +187,21 @@ json.goals.forEach(function(g) {
           </li>
         </ul>
 
+
+
         <% Object.keys(byDay).forEach(function(d) { 
           var actions = byDay[d]; %>
+          
           <div class="day-no">
             <% if (d) { %>
-            <h3 id="day-<%= d %>">Day <%= d %></h3>
-            <% }
-            else { %>
-            <h3 id="day-<%= d.in_progress %>">Day <%= d %></h3>
-            <% } %>
+              <h3 id="day-<%= d %>">Day <%= d %></h3>
+              <% } %>
+
             <ul class="actions-list">
               <% actions.forEach(function(e) { %>
               <li class="event <%= e.status %>"> <i class="icon"></i> <%= e.summary %> 
                 <% if (e.url) { %>
-                <a href="<%= e.url %>">READ MORE</a>
+                <a href="<%= e.url %>"><%= e.link %></a>
                 <% } %>
               </li>
               <% }) %>
