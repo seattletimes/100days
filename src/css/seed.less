@@ -249,6 +249,18 @@ i {
   font-size: 17px;
 }
 
+// key for actions list
+
+.actions-key li {
+  display: inline-block;
+  margin-right: 40px;
+
+  @media @mobile {
+    padding: 0px;
+    
+  }
+}
+
 // actions list
 .actions {
   font-size: 16px;
@@ -297,6 +309,10 @@ i {
       font-weight: bold;
       color: @df-middle-gray;
       padding-left: 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -350,9 +366,11 @@ ul.key {
   clear: left;
   @icon-size: 14px;
   text-indent: -@icon-size - 8px;
+  padding-bottom: 18px;
 
   @media @mobile {
     padding-left: @icon-size * 2;
+    padding-top: 18px;
   }
 
   .icon {

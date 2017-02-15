@@ -61,5 +61,53 @@
     "url": "http://www.seattletimes.com/seattle-news/politics/heres-what-happened-in-seattle-after-trumps-immigration-ban/",
     "status": "complete",
     "date": "Jan. 27"
+  },
+  {
+    "day": 9,
+    "summary": "President Trump signed an executive order banning administration officials from ever lobbying the U.S. on behalf of a foreign government and imposing a separate five-year ban on other lobbying.",
+    "link": "Here's more on the lobbying ban.",
+    "url": "http://www.seattletimes.com/business/trump-sets-tougher-restrictions-on-lobbying-by-officials/",
+    "status": "complete",
+    "date": "Jan. 28"
+  },
+  {
+    "day": 11,
+    "summary": "Trump signed an executive order aimed at significantly cutting regulations. White House officials are calling the directive a “one in, two out” plan. It requires government agencies requesting a new regulations to identify two regulations they will cut from their own departments. (AP caption)",
+    "link": "Read the executive order here.",
+    "url": "https://www.whitehouse.gov/the-press-office/2017/01/30/presidential-executive-order-reducing-regulation-and-controlling",
+    "status": "progress",
+    "date": "Jan. 30"
+  },
+  {
+    "day": 12,
+    "summary": "In a move to replace the late Justice Antonin Scalia on the Supreme Court, Trump nominated Neil Gorsuch to the seat.",
+    "link": "Read more about Neil Gorsuch, a judge on the 10th Circuit Court of Appeals in Denver.",
+    "url": "http://www.seattletimes.com/nation-world/trump-set-to-announce-nominee-for-supreme-court/",
+    "status": "progress",
+    "date": "Jan. 31"
+  },
+  {
+    "day": 21,
+    "summary": "Trump signs an executive order aimed at creating a \"Task Force on Crime Reduction and PublicSafety.\"",
+    "link": "Read more about the task force the Attorney General has been directed to create.",
+    "url": "https://www.whitehouse.gov/the-press-office/2017/02/09/presidential-executive-order-task-force-crime-reduction-and-public",
+    "status": "progress",
+    "date": "Feb. 9"
+  },
+  {
+    "day": 21,
+    "summary": "Trump signs an executive order directing the Attorney General to review and make recommendations on legislation to protect Federal, State, tribal and local law enforcement officers.",
+    "link": "This would include \"defining new crimes of violence and establishing new mandatory minimum sentences for existing crimes.\"",
+    "url": "https://www.whitehouse.gov/the-press-office/2017/02/09/presidential-executive-order-preventing-violence-against-federal-state",
+    "status": "progress",
+    "date": "Feb. 9"
+  },
+  {
+    "day": 21,
+    "summary": "Trump signs an executive order aimed at strengthening enforcement of Federal law against \"the illegal smuggling and trafficking of humans, drugs or other substances, wildlife, and weapons.\"",
+    "link": "The order also covers corruption, cybercrime, fraud and more.",
+    "url": "https://www.whitehouse.gov/the-press-office/2017/02/09/presidential-executive-order-enforcing-federal-law-respect-transnational",
+    "status": "progress",
+    "date": "Feb. 9"
   }
 ]

@@ -6,23 +6,27 @@
   },
   {
     "goal": "A hiring freeze on all federal employees to reduce federal workforce through attrition (exempting military, public safety, and public health)",
-    "date": "Jan. 1",
+    "day_completed": 5,
+    "date": "Jan. 24",
     "category": "Government",
     "undefined": "ImmigrationTradeEconomyGovernment processEnergyEnvironmentEducationHealth careCrimeNational security"
   },
   {
     "goal": "A requirement that for every new federal regulation, two existing regulations must be eliminated",
-    "date": "Jan. 1",
+    "day_completed": 11,
+    "date": "Jan. 30",
     "category": "Government"
   },
   {
     "goal": "A 5-year-ban on White House and congressional officials becoming lobbyists after they leave government service",
-    "date": "Jan. 1",
+    "day_completed": 9,
+    "date": "Jan. 28",
     "category": "Government"
   },
   {
     "goal": "A lifetime ban on White House officials lobbying on behalf of a foreign government",
-    "date": "Jan. 1",
+    "day_completed": 9,
+    "date": "Jan. 28",
     "category": "Government"
   },
   {
@@ -43,7 +47,7 @@
     "category": "Trade"
   },
   {
-    "goal": "Direct my Secretary of the Treasury to label China a currency manipulator",
+    "goal": "Direct the Secretary of the Treasury to label China a currency manipulator",
     "date": "Jan. 1",
     "category": "Trade"
   },
@@ -75,7 +79,8 @@
   },
   {
     "goal": "Select a Supreme Court nominee",
-    "date": "Jan. 1",
+    "in_progress": 12,
+    "date": "Jan. 31",
     "category": "Government"
   },
   {
@@ -92,7 +97,7 @@
   },
   {
     "goal": "Suspend immigration from terror-prone regions where vetting cannot safely occur. All vetting of people coming into our country will be considered extreme vetting.",
-    "in_progress": 8,
+    "day_completed": 8,
     "date": "Jan. 27",
     "category": "Immigration"
   },
@@ -134,7 +139,8 @@
   },
   {
     "goal": "Restoring Community Safety Act",
-    "date": "Jan. 1",
+    "in_progress": 21,
+    "date": "Feb. 9",
     "category": "Crime"
   },
   {
@@ -144,7 +150,8 @@
   },
   {
     "goal": "Clean up Corruption in Washington Act",
-    "date": "Jan. 1",
+    "in_progress": 9,
+    "date": "Jan. 28",
     "category": "Government"
   }
 ]
