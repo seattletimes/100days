@@ -46,6 +46,40 @@ json.goals.forEach(function(g) {
 
         <div class="remaining"><span class="days-remaining"></span> days remaining</div>
 
+<!-- end of first progress bar -->
+
+<!-- second progress bar o -- >
+
+<%
+var progressByStatus = {};
+var statusCount = 0;
+json.daily.forEach(function(g) {
+  var stat = g.promise-status;
+  if (!stat) return;
+  if (!progressByStatus[stat]) progressByStatus[stat] = 0;
+  if (g.day_completed) {
+    progressCount++;
+    progressBySector[cat]++;
+  }
+});
+        %>
+
+        <div class="bar-container">
+          <div class="completed" style="width: <%= (progressCount / json.goals.length * 100).toFixed(2) %>%">
+            <% for (var s in progressBySector) { %>
+            <div
+              style="width: <%= (progressBySector[s] / progressCount * 100).toFixed(2) %>%"
+              class="bar <%= s.toLowerCase() %>"
+            ></div>
+            <% } %>
+          </div>
+        </div>
+
+        <div class="remaining"><span class="days-remaining"></span> days remaining</div>
+
+
+<!-- end of first progress bar -->
+
 
         <div class="legend">
           <ul class="key">
@@ -82,38 +116,22 @@ json.goals.forEach(function(g) {
           <nav class="checklist-key">
             <input type="checkbox" class="plan-filter" id="completed">
             <label for="completed">
-              <i class="fa fa-check-square" aria-hidden="true"></i> Completed
+              <i class="fa fa-check-square" aria-hidden="true"></i> 
+              <span class="text">Completed</span>
             </label> 
 
             <input type="checkbox" class="plan-filter" id="in-progress">
             <label for="in-progress">
-              <i class="fa fa-pencil" aria-hidden="true"></i> In progress
+              <i class="fa fa-pencil" aria-hidden="true"></i> 
+              <span class="text">In progress</span>
             </label> 
             
             <input type="checkbox" class="plan-filter" id="incomplete">
             <label for="incomplete">
-              <i class="fa fa-square-o" aria-hidden="true"></i> Incomplete
-            </label>
-          </nav>
-
-<!-- for mobile -->
-          <nav class="checklist-key-mobile">
-            <input type="checkbox" class="mobile" id="completed">
-            <label for="completed">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </label> 
-
-            <input type="checkbox" class="mobile" id="in-progress">
-            <label for="in-progress">
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            </label> 
-            
-            <input type="checkbox" class="mobile" id="incomplete">
-            <label for="incomplete">
               <i class="fa fa-square-o" aria-hidden="true"></i>
+              <span class="text">Incomplete</span>
             </label>
           </nav>
-<!-- end for mobile -->
 
           <ol>
             <% var lookup = {} %>

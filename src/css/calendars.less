@@ -4,6 +4,7 @@
   font-size: 15px;
   padding- bottom: 25px;
   margin: 0px 60px;
+  .flex-wrap(wrap);
 
   .gray {
     color: @df-middle-gray;
@@ -12,6 +13,10 @@
   .month-container {
     .flex(0 0 25%);
     padding: 10px;
+
+    @media @tablet {
+      .flex(0 0 50%);
+    }
   }
 
   .page {
@@ -30,10 +35,16 @@
       a {
         color: @df-charcoal;
         position: relative;
+        padding: 8px;
+
+        .digit {
+          z-index: 999;
+          position: relative;
+        }
       }
 
       &.goal {
-        &::before {
+        a::before {
           content: "";
           position: absolute;
           background: @st-green;
@@ -43,34 +54,7 @@
           right: 0;
           width: 100%;
           padding-bottom: 100%;
-
-          @media @mobile {
-            &::before {
-              content: "";
-              position: absolute;
-              background: @st-green;
-              color: white;
-              border-radius: 100%;
-              top: 0;
-              right: 3;
-              width: 75%;
-              padding-bottom: 71%;
-            }
-          }
-
-          @media @tablet {
-            &::before {
-              content: "";
-              position: absolute;
-              background: @st-green;
-              color: white;
-              border-radius: 100%;
-              top: 0;
-              right: 3;
-              width: 75%;
-              padding-bottom: 71%;
-            }
-          }
+          z-index: 0;
         }
 
         a {

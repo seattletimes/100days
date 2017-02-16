@@ -105,7 +105,7 @@ main.content {
     display: block;
 
     @media @mobile {
-     display: none;
+     // display: none;
     }
   }
 
@@ -135,6 +135,9 @@ main.content {
       padding: 8px 15px;
       cursor: pointer;
 
+      @media @mobile {
+        .text { display: none }
+      }
     }
 
     &:checked + label {
@@ -257,7 +260,7 @@ i {
 
   @media @mobile {
     padding: 0px;
-    
+
   }
 }
 
