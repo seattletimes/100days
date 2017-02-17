@@ -5,8 +5,7 @@
     "link": "Read more about how a repeal would affect local residents.",
     "url": "http://www.seattletimes.com/seattle-news/health/king-county-officials-patients-push-to-salvage-health-care-law/",
     "status": "progress",
-    "date": "Jan. 20",
-    "promise-status": "launched"
+    "date": "Jan. 20"
   },
   {
     "day": 4,
@@ -14,8 +13,7 @@
     "link": "Read more about the executive actions.",
     "url": "http://www.seattletimes.com/nation-world/nation-politics/trump-undoes-parts-of-obama-agenda-with-executive-actions/",
     "status": "progress",
-    "date": "Jan. 23",
-    "promise-status": "launched"
+    "date": "Jan. 23"
   },
   {
     "day": 4,
@@ -23,8 +21,7 @@
     "link": "Read more about what this means.",
     "url": "http://www.seattletimes.com/nation-world/trump-withdraws-us-from-sweeping-asia-trade-pact/",
     "status": "complete",
-    "date": "Jan. 23",
-    "promise-status": "kept"
+    "date": "Jan. 23"
   },
   {
     "day": 5,
@@ -32,8 +29,7 @@
     "link": "Here are recent articles on the Dakota Access Pipeline to help you understand the conflict.",
     "url": "http://www.seattletimes.com/tag/dakota-access-pipeline/",
     "status": "complete",
-    "date": "Jan. 24",
-    "promise-status": "kept"
+    "date": "Jan. 24"
   },
   {
     "day": 6,
@@ -41,8 +37,7 @@
     "link": "Here's what Trump's action on sanctuary cities means for Seattle.",
     "url": "http://www.seattletimes.com/seattle-news/what-does-trumps-action-on-sanctuary-cities-mean-for-seattle-thats-up-for-debate/",
     "status": "progress",
-    "date": "Jan. 25",
-    "promise-status": "launched"
+    "date": "Jan. 25"
   },
   {
     "day": 6,
@@ -50,16 +45,14 @@
     "link": "Read more about Trump's sharp shift in U.S. policy.",
     "url": "http://www.seattletimes.com/nation-world/trumps-immigration-actions-mark-sharp-shift-in-us-policy/",
     "status": "progress",
-    "date": "Jan. 25",
-    "promise-status": "launched"
+    "date": "Jan. 25"
   },
   {
     "day": 8,
     "summary": "Trump signed a memorandum to conduct a 30-day readiness review .......",
     "url": "https://www.whitehouse.gov/the-press-office/2017/01/27/presidential-memorandum-rebuilding-us-armed-forces",
     "status": "progress",
-    "date": "Jan. 27",
-    "promise-status": "launched"
+    "date": "Jan. 27"
   },
   {
     "day": 8,
@@ -67,8 +60,7 @@
     "link": "The order sparked protests throughout thte country the next day, including at Seattle-Tacoma International Airport.",
     "url": "http://www.seattletimes.com/seattle-news/politics/heres-what-happened-in-seattle-after-trumps-immigration-ban/",
     "status": "complete",
-    "date": "Jan. 27",
-    "promise-status": "kept"
+    "date": "Jan. 27"
   },
   {
     "day": 9,
@@ -76,8 +68,7 @@
     "link": "Here's more on the lobbying ban.",
     "url": "http://www.seattletimes.com/business/trump-sets-tougher-restrictions-on-lobbying-by-officials/",
     "status": "complete",
-    "date": "Jan. 28",
-    "promise-status": "kept"
+    "date": "Jan. 28"
   },
   {
     "day": 11,
@@ -85,8 +76,7 @@
     "link": "Read the executive order here.",
     "url": "https://www.whitehouse.gov/the-press-office/2017/01/30/presidential-executive-order-reducing-regulation-and-controlling",
     "status": "progress",
-    "date": "Jan. 30",
-    "promise-status": "launched"
+    "date": "Jan. 30"
   },
   {
     "day": 12,
@@ -94,8 +84,7 @@
     "link": "Read more about Neil Gorsuch, a judge on the 10th Circuit Court of Appeals in Denver.",
     "url": "http://www.seattletimes.com/nation-world/trump-set-to-announce-nominee-for-supreme-court/",
     "status": "progress",
-    "date": "Jan. 31",
-    "promise-status": "launched"
+    "date": "Jan. 31"
   },
   {
     "day": 21,
@@ -103,8 +92,7 @@
     "link": "Read more about the task force the Attorney General has been directed to create.",
     "url": "https://www.whitehouse.gov/the-press-office/2017/02/09/presidential-executive-order-task-force-crime-reduction-and-public",
     "status": "progress",
-    "date": "Feb. 9",
-    "promise-status": "launched"
+    "date": "Feb. 9"
   },
   {
     "day": 21,
@@ -112,8 +100,7 @@
     "link": "This would include \"defining new crimes of violence and establishing new mandatory minimum sentences for existing crimes.\"",
     "url": "https://www.whitehouse.gov/the-press-office/2017/02/09/presidential-executive-order-preventing-violence-against-federal-state",
     "status": "progress",
-    "date": "Feb. 9",
-    "promise-status": "launched"
+    "date": "Feb. 9"
   },
   {
     "day": 21,
@@ -121,7 +108,6 @@
     "link": "The order also covers corruption, cybercrime, fraud and more.",
     "url": "https://www.whitehouse.gov/the-press-office/2017/02/09/presidential-executive-order-enforcing-federal-law-respect-transnational",
     "status": "progress",
-    "date": "Feb. 9",
-    "promise-status": "launched"
+    "date": "Feb. 9"
   }
 ]

@@ -2,156 +2,184 @@
   {
     "goal": "Propose a constitutional amendment to impose term limits on all members of Congress",
     "date": "Jan. 1",
-    "category": "Government"
+    "category": "Government",
+    "promise_status": "none"
   },
   {
     "goal": "A hiring freeze on all federal employees to reduce federal workforce through attrition (exempting military, public safety, and public health)",
     "day_completed": 5,
     "date": "Jan. 24",
     "category": "Government",
+    "promise_status": "kept",
     "undefined": "ImmigrationTradeEconomyGovernment processEnergyEnvironmentEducationHealth careCrimeNational security"
   },
   {
     "goal": "A requirement that for every new federal regulation, two existing regulations must be eliminated",
     "day_completed": 11,
     "date": "Jan. 30",
-    "category": "Government"
+    "category": "Government",
+    "promise_status": "kept"
   },
   {
     "goal": "A 5-year-ban on White House and congressional officials becoming lobbyists after they leave government service",
     "day_completed": 9,
     "date": "Jan. 28",
-    "category": "Government"
+    "category": "Government",
+    "promise_status": "broken"
   },
   {
     "goal": "A lifetime ban on White House officials lobbying on behalf of a foreign government",
     "day_completed": 9,
     "date": "Jan. 28",
-    "category": "Government"
+    "category": "Government",
+    "promise_status": "kept"
   },
   {
     "goal": "A complete ban on foreign lobbyists raising money for American elections",
     "date": "Jan. 1",
-    "category": "Government"
+    "category": "Government",
+    "promise_status": "none"
   },
   {
     "goal": "Renegotiate NAFTA or withdraw from the deal under Article 2205",
     "in_progress": 4,
     "date": "Jan. 23",
-    "category": "Trade"
+    "category": "Trade",
+    "promise_status": "launched"
   },
   {
     "goal": "Withdrawal from the Trans-Pacific Partnership",
     "day_completed": 4,
     "date": "Jan. 23",
-    "category": "Trade"
+    "category": "Trade",
+    "promise_status": "kept"
   },
   {
     "goal": "Direct the Secretary of the Treasury to label China a currency manipulator",
     "date": "Jan. 1",
-    "category": "Trade"
+    "category": "Trade",
+    "promise_status": "none"
   },
   {
     "goal": "Direct the Secretary of Commerce and U.S. Trade Representative to identify all foreign trading abuses that unfairly impact American workers and direct them to use every tool under American and international law to end those abuses immediately",
     "date": "Jan. 1",
-    "category": "Trade"
+    "category": "Trade",
+    "promise_status": "none"
   },
   {
     "goal": "Lift the restrictions on the production of $50 trillion dollars' worth of job-producing American energy reserves, including shale, oil, natural gas and clean coal.",
     "date": "Jan. 1",
-    "category": "Energy"
+    "category": "Energy",
+    "promise_status": "none"
   },
   {
     "goal": "Allow energy infrastructure projects, like the Keystone Pipeline, to move forward",
     "day_completed": 5,
     "date": "Jan. 24",
-    "category": "Energy"
+    "category": "Energy",
+    "promise_status": "kept"
   },
   {
     "goal": "Cancel billions in payments to U.N. climate change programs and use the money to fix America's water and environmental infrastructure",
     "date": "Jan. 1",
-    "category": "Environment"
+    "category": "Environment",
+    "promise_status": "none"
   },
   {
     "goal": "Cancel every executive action, memorandum and order issued by President Obama",
     "date": "Jan. 1",
-    "category": "Government"
+    "category": "Government",
+    "promise_status": "none"
   },
   {
     "goal": "Select a Supreme Court nominee",
     "in_progress": 12,
     "date": "Jan. 31",
-    "category": "Government"
+    "category": "Government",
+    "promise_status": "launched"
   },
   {
     "goal": "cancel all federal funding to Sanctuary Cities",
     "in_progress": 6,
     "date": "Jan. 25",
-    "category": "Immigration"
+    "category": "Immigration",
+    "promise_status": "launched"
   },
   {
     "goal": "Begin removing the more than 2 million criminal illegal immigrants from the country and cancel visas to foreign countries that won't take them back",
     "in_progress": 6,
     "date": "Jan. 25",
-    "category": "Immigration"
+    "category": "Immigration",
+    "promise_status": "launched"
   },
   {
     "goal": "Suspend immigration from terror-prone regions where vetting cannot safely occur. All vetting of people coming into our country will be considered extreme vetting.",
     "day_completed": 8,
     "date": "Jan. 27",
-    "category": "Immigration"
+    "category": "Immigration",
+    "promise_status": "kept"
   },
   {
     "goal": "Middle Class Tax Relief And Simplification Act.",
     "date": "Jan. 1",
-    "category": "Economy"
+    "category": "Economy",
+    "promise_status": "none"
   },
   {
     "goal": "End The Offshoring Act.",
     "date": "Jan. 1",
-    "category": "Trade"
+    "category": "Trade",
+    "promise_status": "none"
   },
   {
     "goal": "American Energy & Infrastructure Act.",
     "date": "Jan. 1",
-    "category": "Economy"
+    "category": "Economy",
+    "promise_status": "none"
   },
   {
     "goal": "School Choice And Education Opportunity Act",
     "date": "Jan. 1",
-    "category": "Education"
+    "category": "Education",
+    "promise_status": "none"
   },
   {
     "goal": "Repeal and Replace Obamacare Act",
     "in_progress": 1,
     "date": "Jan. 1",
-    "category": "Health care"
+    "category": "Health care",
+    "promise_status": "launched"
   },
   {
     "goal": "Affordable Childcare and Eldercare Act",
     "date": "Jan. 1",
-    "category": "Economy"
+    "category": "Economy",
+    "promise_status": "none"
   },
   {
     "goal": "End Illegal Immigration Act",
     "date": "Jan. 1",
-    "category": "Immigration"
+    "category": "Immigration",
+    "promise_status": "none"
   },
   {
     "goal": "Restoring Community Safety Act",
     "in_progress": 21,
     "date": "Feb. 9",
-    "category": "Crime"
+    "category": "Crime",
+    "promise_status": "launched"
   },
   {
     "goal": "Restoring National Security Act",
     "date": "Jan. 1",
-    "category": "Government"
+    "category": "Government",
+    "promise_status": "none"
   },
   {
     "goal": "Clean up Corruption in Washington Act",
     "in_progress": 9,
     "date": "Jan. 28",
-    "category": "Government"
+    "category": "Government",
+    "promise_status": "launched"
   }
 ]

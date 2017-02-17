@@ -16,79 +16,54 @@
 
     <main class="content">
 
-      <section class="progress-bar">
+    <section class="progress-bar">
+ 
+      <%
+        var progressByStatus = {};
+        var statusCount = 0;
+        json.goals.forEach(function(g) {
+        var stat = g.promise_status;
+        if (!stat) return;
+        if (!progressByStatus[stat]) progressByStatus[stat] = 0;
+        if (stat) {
+          progressByStatus[stat]++;
+          
+          if (stat !== "none") statusCount++;
+      }
+      });
 
-        <%
-// build an index of progress
-var progressBySector = {};
-var progressCount = 0;
-json.goals.forEach(function(g) {
-  var cat = g.category;
-  if (!cat) return;
-  if (!progressBySector[cat]) progressBySector[cat] = 0;
-  if (g.day_completed) {
-    progressCount++;
-    progressBySector[cat]++;
-  }
-});
-        %>
+      %>
 
-        <div class="bar-container">
-          <div class="completed" style="width: <%= (progressCount / json.goals.length * 100).toFixed(2) %>%">
-            <% for (var s in progressBySector) { %>
-            <div
-              style="width: <%= (progressBySector[s] / progressCount * 100).toFixed(2) %>%"
-              class="bar <%= s.toLowerCase() %>"
-            ></div>
-            <% } %>
-          </div>
+      <div class="bar-container">
+        <div class="completed" style="width: <%= (statusCount / json.goals.length * 100).toFixed(2) %>%">
+          <% for (var s in progressByStatus) { 
+            if (s !== "none") {%>
+              <div
+                style="width: <%= (progressByStatus[s] / statusCount * 100).toFixed(2) %>%"
+                class="bar <%= s.toLowerCase() %>"
+              ></div><% } 
+            } %>
         </div>
+      </div>
 
-        <div class="remaining"><span class="days-remaining"></span> days remaining</div>
+      <div class="remaining"><span class="days-remaining"></span> days remaining</div>
 
-<!-- end of first progress bar -->
+      <!-- legend -->
+      <div class="legend">
+        <ul class="legend-key">
+          <% for (var s in progressByStatus) { %>
+          <li class="status-legend <%= s.toLowerCase() %>">
 
-<!-- second progress bar o -- >
+            <div class="status-title"> <%= s %> </div>
+            
+            <div class="quantity"> <%= progressByStatus[s] %> </div>
 
-<%
-var progressByStatus = {};
-var statusCount = 0;
-json.daily.forEach(function(g) {
-  var stat = g.promise-status;
-  if (!stat) return;
-  if (!progressByStatus[stat]) progressByStatus[stat] = 0;
-  if (g.day_completed) {
-    progressCount++;
-    progressBySector[cat]++;
-  }
-});
-        %>
+          </li>
+          <% } %>
+        </ul>
+      </div>
 
-        <div class="bar-container">
-          <div class="completed" style="width: <%= (progressCount / json.goals.length * 100).toFixed(2) %>%">
-            <% for (var s in progressBySector) { %>
-            <div
-              style="width: <%= (progressBySector[s] / progressCount * 100).toFixed(2) %>%"
-              class="bar <%= s.toLowerCase() %>"
-            ></div>
-            <% } %>
-          </div>
-        </div>
-
-        <div class="remaining"><span class="days-remaining"></span> days remaining</div>
-
-
-<!-- end of first progress bar -->
-
-
-        <div class="legend">
-          <ul class="key">
-            <% for (var s in progressBySector) { %>
-            <li class="category-legend <%= s.toLowerCase() %>"><%= s %></li>
-            <% } %>
-          </ul>
-        </div>
-      </section>
+    </section>
 
       <section class="introduction">
         <p class="intro">During the 2016 presidential campaign, Donald Trump released his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter."</a> The document, issued Oct. 22, contains his plan for his first 100 days in office. Here, we track which promises he has completed, when and if they were done by when he planned to.</p>
