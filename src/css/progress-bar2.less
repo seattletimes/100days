@@ -1,7 +1,7 @@
 // color variables
-@broken: @st-light-red;
+@broken: @st-dark-red;
 @launched: @st-light-orange;
-@kept: @st-dark-green;
+@kept: @st-green;
 @none: @df-off-white;
 
 
@@ -31,90 +31,59 @@
 }
 
 .legend {
-  max-width: 100%;
-  display: inline-block;
+  width: 100%;
 }
 
 .legend-key {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 700px;
+  flex-wrap: wrap;
+  padding: 0px;
 
   .status-legend {
     list-style-type: none;
     font-family: @df-sans;
   }
 
+  .status-title {
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .quantity {
+    font-size: 35px;
+    font-family: @df-serif;
+    text-align: center;
+  }
+
   .kept {
     .status-title {
       background-color: @kept;
-      padding-left: 15px;
-      padding-right: 15px;
-      border-radius: 5px;
-      color: white;
-      font-weight: medium;
-      text-transform: uppercase;
-    }
-
-    .quantity {
-      font-size: 40px;
-      font-family: @df-serif;
-      text-align: center;
     }
   }
 
   .none {
     .status-title {
       background-color: @none;
-      padding-left: 15px;
-      padding-right: 15px;
-      border-radius: 3px;
       color: @df-charcoal;
-      font-weight: medium;
-      text-transform: uppercase;
-    }
-
-    .quantity {
-      font-size: 40px;
-      font-family: @df-serif;
-      text-align: center;
     }
   }
 
   .broken {
     .status-title {
       background-color: @broken;
-      padding-left: 15px;
-      padding-right: 15px;
-      border-radius: 5px;
-      color: white;
-      font-weight: medium;
-      text-transform: uppercase;
-    }
-
-    .quantity {
-      font-size: 40px;
-      font-family: @df-serif;
-      text-align: center;
     }
   }
 
   .launched {
     .status-title {
       background-color: @launched;
-      padding-left: 15px;
-      padding-right: 15px;
-      border-radius: 5px;
       color: @df-charcoal;
-      font-weight: medium;
-      text-transform: uppercase;
-    }
-
-    .quantity {
-      font-size: 40px;
-      font-family: @df-serif;
-      text-align: center;
     }
   }
 }
