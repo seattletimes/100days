@@ -25,6 +25,7 @@ var changeFilter = function() {
 filterInputs.forEach(el => el.addEventListener("change", changeFilter));
 changeFilter();
 
+//finding days remaining
 var moment = require("moment");
 
 var lastDay = moment("2017-04-29", "YYYY-MM-DD");
@@ -32,3 +33,6 @@ var now = moment([]);
 var difference = lastDay.dayOfYear() - now.dayOfYear();
 
 document.querySelector(".days-remaining").innerHTML = difference;
+document.querySelector(".now").innerHTML = now;
+
+//finding current day
