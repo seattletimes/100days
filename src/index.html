@@ -16,8 +16,12 @@
 
     <main class="content">
 
+    <section class="introduction">
+      <p class="intro">As of today, President Donald Trump has been in office for <span class="currentDay"></span> days. During the presidential campaign,  Trump released his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> which contains his plan for his first 100 days in office. He has <span class="days-remaining"></span> days remaining in this period. We're traking the status of those promises.</p>
+    </section>
+
     <section class="progress-bar">
- 
+
       <%
         var progressByStatus = {};
         var statusCount = 0;
@@ -45,8 +49,8 @@
         </div>
       </div>
 
-      <div class="remaining"><span class="days-remaining"></span> days remaining</div>
-      <div class="now"><span class="now"></span> today</div>
+<!--       <div class="remaining"><span class="days-remaining"></span> days remaining</div>
+      <div class="now"><span class="now"></span> today</div> -->
 
       <!-- legend -->
       <div class="legend">
@@ -54,7 +58,13 @@
           <% for (var s in progressByStatus) { %>
           <li class="status-legend <%= s.toLowerCase() %>">
 
-            <div class="status-title"> <%= s %> </div>
+            <div class="status-title">
+              <% if (s == "none"){ %> 
+                No action <% } 
+                else { %>
+                <%= s %>
+                <% } %>
+              </div>
             
             <div class="quantity"> <%= progressByStatus[s] %> </div>
 
@@ -64,10 +74,6 @@
       </div>
 
     </section>
-
-      <section class="introduction">
-        <p class="intro">During the 2016 presidential campaign, Donald Trump released his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter."</a> The document, issued Oct. 22, contains his plan for his first 100 days in office. Here, we track which promises he has completed, when and if they were done by when he planned to.</p>
-      </section>
 
         <%
         var byDay = {};
@@ -145,11 +151,11 @@
 
     <section class="day-calendar" id="day-by-day">
       <div class="instructions">
-        <p class="light-caps">Click on a day to see what actions Trump took on that day.</p>
-        <ul class="key events calendar-legend">
+        <p class="light-caps">Click on a day to see what actions Trump took on that day. Dates in green signify an action was taken that day.</p>
+        <!-- <ul class="key events calendar-legend">
           <li class="event complete">
             <i class="icon"></i> = Completed a promise
-          </li>
+          </li> -->
 <!--           <li class="event progress">
             <i class="icon"></i> = Promise in progress
           </li> -->

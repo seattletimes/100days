@@ -4,7 +4,6 @@
 @kept: @custom-green;
 @none: @df-off-white;
 
-
 // chart styles
 .bar-container {
   width: 100%;
@@ -68,6 +67,8 @@
   }
 
   .none {
+    order: 1;
+    
     .status-title {
       background-color: @none;
       color: @df-charcoal;
@@ -88,23 +89,19 @@
   }
 }
 
-// line with days remaining below bar
-.remaining {
-  font-family: @df-sans;
-  font-size: 16px;
-  color: @df-middle-gray;
-  text-transform: uppercase;
-  text-align: right;
-  max-width: 700px;
-  margin: auto;
-  width: 100%;
+// // line with days remaining below bar
+// .remaining {
+//   font-family: @df-sans;
+//   font-size: 16px;
+//   color: @df-middle-gray;
+//   text-transform: uppercase;
+//   text-align: right;
+//   max-width: 700px;
+//   margin: auto;
+//   width: 100%;
 
-  .days-remaining {
-    font-weight: bold;
-  }
-}
+//   .days-remaining {
+//     font-weight: bold;
+//   }
+// }
 
-
-
-
-//2nd option

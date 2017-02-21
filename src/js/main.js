@@ -32,7 +32,10 @@ var lastDay = moment("2017-04-29", "YYYY-MM-DD");
 var now = moment([]);
 var difference = lastDay.dayOfYear() - now.dayOfYear();
 
+var firstDay = moment("2017-01-20", "YYYY-MM-DD");
+var currentDay = ( now.dayOfYear() - firstDay.dayOfYear() ) + 1;
+
 document.querySelector(".days-remaining").innerHTML = difference;
-document.querySelector(".now").innerHTML = now;
+document.querySelector(".currentDay").innerHTML = currentDay;
 
 //finding current day
