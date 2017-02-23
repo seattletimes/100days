@@ -7,13 +7,14 @@ var $ = require("./lib/qsa.js");
 
 var planItems = $(".plan-item");
 var filterInputs = $(".plan-filter");
+var topicSelect = $.one("select.topics");
 
 var changeFilter = function() {
   var checked = $(".plan-filter:checked");
   var categories = checked.map(check => check.id);
   if (!categories.length) categories = ["completed", "in-progress", "incomplete"];
   planItems.forEach(function(item) {
-    var cat = item.getAttribute("data-category");
+    var cat = item.getAttribute("data-progress");
     if (categories.indexOf(cat) > -1) {
       item.classList.remove("hidden");
     } else {
@@ -22,8 +23,29 @@ var changeFilter = function() {
   });
 };
 
-filterInputs.forEach(el => el.addEventListener("change", changeFilter));
-changeFilter();
+
+var changeTopic = function() {
+  //get topicSelect value
+  var value = topicSelect.value;
+  if (!value) return;
+  //loop through all non-hidden items
+  planItems.forEach(function(item) {
+    var topic = item.getAttribute("data-topic");
+    if (topic !== value){
+      item.classList.add("hidden");
+    }
+  })
+};
+
+var applyFilters = function() {
+  changeFilter();
+  changeTopic();
+}
+
+filterInputs.forEach(el => el.addEventListener("change", applyFilters));
+topicSelect.addEventListener("change", applyFilters);
+applyFilters();
+
 
 //finding days remaining
 var moment = require("moment");

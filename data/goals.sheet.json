@@ -45,7 +45,7 @@
     "in_progress": 4,
     "date": "Jan. 23",
     "category": "Trade",
-    "promise_status": "launched"
+    "promise_status": "progress"
   },
   {
     "goal": "Withdrawal from the Trans-Pacific Partnership",
@@ -96,21 +96,21 @@
     "in_progress": 12,
     "date": "Jan. 31",
     "category": "Government",
-    "promise_status": "launched"
+    "promise_status": "progress"
   },
   {
     "goal": "cancel all federal funding to Sanctuary Cities",
     "in_progress": 6,
     "date": "Jan. 25",
     "category": "Immigration",
-    "promise_status": "launched"
+    "promise_status": "progress"
   },
   {
     "goal": "Begin removing the more than 2 million criminal illegal immigrants from the country and cancel visas to foreign countries that won't take them back",
     "in_progress": 6,
     "date": "Jan. 25",
     "category": "Immigration",
-    "promise_status": "launched"
+    "promise_status": "progress"
   },
   {
     "goal": "Suspend immigration from terror-prone regions where vetting cannot safely occur. All vetting of people coming into our country will be considered extreme vetting.",
@@ -148,7 +148,7 @@
     "in_progress": 1,
     "date": "Jan. 1",
     "category": "Health care",
-    "promise_status": "launched"
+    "promise_status": "progress"
   },
   {
     "goal": "Affordable Childcare and Eldercare Act",
@@ -167,7 +167,7 @@
     "in_progress": 21,
     "date": "Feb. 9",
     "category": "Crime",
-    "promise_status": "launched"
+    "promise_status": "progress"
   },
   {
     "goal": "Restoring National Security Act",
@@ -180,6 +180,6 @@
     "in_progress": 9,
     "date": "Jan. 28",
     "category": "Government",
-    "promise_status": "launched"
+    "promise_status": "progress"
   }
 ]

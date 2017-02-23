@@ -55,7 +55,7 @@ main.content {
   margin: auto;
 
   a {
-    color: @df-middle-gray;
+    color: @df-blue;
 
     &:hover {
       text-decoration: underline;
@@ -80,16 +80,27 @@ main.content {
   color: @df-charcoal;
   padding-bottom: 10px;
 
-  p a {
-    color: @df-charcoal;
-    font-weight: bold;
+  ul {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
 
-    &:hover {
-      color: @df-middle-gray;
-    }
+    li {
+      float: left;
+      padding: 8px;
 
-    @media @mobile {
-      font-size: 16px;
+      a {
+        color: @df-charcoal;
+
+        &:hover {
+          color: @df-charcoal;
+          font-weight: bold;
+        }
+
+        @media @mobile {
+          font-size: 16px;
+        }
+      }
     }
   }
 }
@@ -172,6 +183,11 @@ main.content {
   color: @df-charcoal;
   padding-top: 25px;
   margin: 0px 60px;
+
+  @media @mobile {
+    margin: 0px 30px;
+    font-size: 14px;
+  }
 }
 
 // action plan switch tab styles
