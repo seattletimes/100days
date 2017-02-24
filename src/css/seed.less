@@ -166,6 +166,10 @@ main.content {
       cursor: pointer;
       border-radius: 5px;
 
+    @media @mobile {
+      .flex(1 1 100%);
+    }
+
       // @media @mobile {
       //   .text { display: none }
       // }
@@ -188,10 +192,10 @@ main.content {
   color: @df-charcoal;
   padding-top: 25px;
   margin: 0px 60px;
+  font-size: 16px;
 
   @media @mobile {
     margin: 0px 30px;
-    font-size: 14px;
   }
 }
 
@@ -375,6 +379,7 @@ ul.key {
 }
 
 .event {
+  font-size: 16px;
   clear: left;
   @icon-size: 14px;
   text-indent: -@icon-size - 8px;
