@@ -1,8 +1,8 @@
 @import "seattletimes";
 
 @import "calendars";
+
 @import "progress-bar";
-@import "progress-bar2";
 
 .large {
   font-family: @df-serif;
@@ -23,7 +23,7 @@
   line-height: 80px;
   color: @df-charcoal;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   @media @mobile {
     font-size: 35px;
@@ -63,9 +63,8 @@ main.content {
   }
 
   @media @mobile {
-    font-size: 19px;
+    font-size: 16px;
     padding-bottom: 40px;
-    font-size: 14.5px;
   }
 
 }
@@ -131,13 +130,14 @@ main.content {
     flex-wrap: wrap;
     padding-top: 20px;
 
-    .broken {
+    .incomplete {
       margin-right: auto;
+
+      @media @mobile {
+        margin: 0px;
+      }
     }
 
-    @media @mobile {
-     // display: none;
-    }
   }
 
   .checklist-key ul {
@@ -161,19 +161,18 @@ main.content {
 
     & + label {
       font-size: 15px;
-      border: .3px solid @df-light-gray;
-      border-radius: 20px;
-      padding: 8px 15px;
+      border: .3px dotted @df-light-gray;
+      padding: 8px 10px;
       cursor: pointer;
+      border-radius: 5px;
 
-      @media @mobile {
-        .text { display: none }
-      }
+      // @media @mobile {
+      //   .text { display: none }
+      // }
     }
 
     &:checked + label {
       font-weight: bold;
-      border-radius: 20px;
       background-color: @df-light-gray;
       cursor: pointer;
     }
@@ -230,28 +229,10 @@ label {
     font-size: 13px;
     font-weight: bold;
     color: @df-dark-gray;
-    padding: 5px 16px;
     margin-bottom: 10px;
-    border-radius: 10px;
     display: inline-block;
     // min-width: 150px;
     line-height: 1;
-
-  .label-bg(@sector) {
-  &.@{sector} {
-    background-color: @@sector;
-    }
-  }
-
-  .label-bg(government);
-  .label-bg(trade);
-  .label-bg(energy);
-  .label-bg(environment);
-  .label-bg(immigration);
-  .label-bg(economy);
-  .label-bg(education);
-  .label-bg(health);
-  .label-bg(crime);
   }
 
   // &:nth-child(2n) {
@@ -268,6 +249,14 @@ i {
 }
 
 // key for actions list
+  
+.cal {
+  font-family: @df-sans;
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 0px;
+  }
+}
 
 .actions-key li {
   display: inline-block;
@@ -334,9 +323,14 @@ i {
     }
   }
 
-  h2 {
-    margin-top: 40px;
-    margin-bottom: 0px;
+  .update {
+    padding-top: 12px;
+    padding-left: 45px;
+    font-style: italic;
+
+    a {
+      font-size: 14px;
+    }
   }
 }
 
@@ -402,6 +396,7 @@ ul.key {
     background-size: @icon-size @icon-size;
     margin-right: 4px;
     margin-top: 2px;
+    font-size: 19px;
   }
 
   &.complete .icon {
@@ -415,4 +410,13 @@ ul.key {
   &.broken .icon {
     background-color: @st-dark-red;
   }
+
+  &.incomplete .icon {
+    background-color: #FFFFFF;
+    border: .5px solid @df-charcoal;
+  }
+}
+
+select {
+  height: 30px;
 }

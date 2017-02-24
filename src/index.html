@@ -37,6 +37,7 @@
 
       %>
 
+      <div class="bar-label">Status of Trump's promises</div>
       <div class="bar-container">
         <div class="completed" style="width: <%= (statusCount / json.goals.length * 100).toFixed(2) %>%">
           <% for (var s in progressByStatus) { 
@@ -94,7 +95,7 @@
 
             <li> | </li>
 
-            <li><a href="http://www.seattletimes.com/nation-world/nation-politics/">Read all our politics coverage</a></li>
+            <li><a href="http://www.seattletimes.com/nation-world/nation-politics/"><i class="fa fa-external-link" aria-hidden="true"></i> Read all our politics coverage</a></li>
           </ul>
         </nav>
       </div>
@@ -107,27 +108,24 @@
           <nav class="checklist-key">
             <input type="checkbox" class="plan-filter" id="completed">
             <label for="completed">
-              <i class="fa fa-check-square" aria-hidden="true"></i> 
-              <span class="text">Completed</span>
+              <span class="text event complete"><i class="icon"></i> Promise kept</span>
             </label> 
 
             <input type="checkbox" class="plan-filter" id="in-progress">
             <label for="in-progress">
-              <i class="fa fa-pencil" aria-hidden="true"></i> 
-              <span class="text">In progress</span>
+              <span class="text event progress"><i class="icon"></i> In progress</span>
             </label> 
-            
-            <input type="checkbox" class="plan-filter" id="incomplete">
-            <label for="incomplete" class="incomplete">
-              <i class="fa fa-square-o" aria-hidden="true"></i>
-              <span class="text">Incomplete</span>
-            </label>
 
             <input type="checkbox" class="plan-filter" id="broken">
             <label for="broken" class="broken">
-              <i class="fa fa-times" aria-hidden="true"></i>
-              <span class="text">Broken</span>
+              <span class="text event broken"><i class="icon"></i> Promise broken</span>
             </label>
+            
+            <input type="checkbox" class="plan-filter" id="incomplete">
+            <label for="incomplete" class="incomplete">
+              <span class="text event incomplete"><i class="icon"></i> Incomplete</span>
+            </label>
+
 
             <!-- dropdown menu for categories -->
 
@@ -148,7 +146,7 @@
 
 
             <select class="topics">
-              <option value="">Select all ...</option>
+              <option value="">Filter by category</option>
 
               <% for (var i=0; i < categories.length; i++) { %>
                 <option value=<%= categories[i] %>>
@@ -177,10 +175,15 @@
                 } else {
                   if (k.day_broken) {
                     k.progress = "broken";
-                  }
+                    } else {
+                        k.progress = "incomplete";
+                    }
                 }
               }
               %>
+
+
+
               <li class="plan-item" data-progress="<%= k.progress %>" data-topic="<%= k.category %>">
 
                 <header class="label-container">
@@ -188,13 +191,14 @@
                 </header>
 
                 <% if (k.day_completed) { lookup[k.day_completed] = true; %>
-                  <i class="fa fa-check-square" aria-hidden="true"></i>
+                  <span class="text event complete"><i class="icon"></i></span>
                 <% } else if (k.in_progress) { lookup[k.in_progress] = true; %>
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                  <span class="text event progress"><i class="icon"></i></span>
                   <% } else if (k.day_broken) { lookup[k.day_broken] = true; %>
-                  <i class="fa fa-times" aria-hidden="true"></i>
+                  <span class="text event broken"><i class="icon"></i></span>
+
                 <% } else { %>
-                  <i class="fa fa-square-o" aria-hidden="true"></i>
+                  <span class="text event incomplete"><i class="icon"></i></span>
                 <% } %>
 
                 <%= k.goal %>
@@ -215,19 +219,36 @@
     <div class="to-top"><a href="#action-plan">&uarr; Top</a></div>
     <hr>
 
-    <section class="day-calendar" id="day-by-day">
-      <div class="instructions">
-        <p class="light-caps">Click on a day to see what actions Trump took on that day. Dates in green signify an action was taken that day.</p>
-        <!-- <ul class="key events calendar-legend">
-          <li class="event complete">
-            <i class="icon"></i> = Completed a promise
-          </li> -->
-<!--           <li class="event progress">
-            <i class="icon"></i> = Promise in progress
-          </li> -->
-        </ul>
-      </div>
-      <div class="calendar">
+    <section class="cal">
+      <div class="narrow">
+      <h2>Day-by-day day</h2>
+      <ul class="actions-key">
+        <li class="event complete">
+          <i class="icon"></i> = Completed
+        </li>
+        
+        <li class="event progress">
+          <i class="icon"></i> = In progress
+        </li>
+
+        <li class="event broken">
+          <i class="icon"></i> = Broken
+        </li>
+      </ul>
+      
+      <div class="day-calendar" id="day-by-day">
+        <div class="instructions">
+          <p class="light-caps">Click on a day to see what actions Trump took on that day. Dates in green signify an action was taken that day.</p>
+          <!-- <ul class="key events calendar-legend">
+            <li class="event complete">
+              <i class="icon"></i> = Completed a promise
+            </li> -->
+    <!--           <li class="event progress">
+              <i class="icon"></i> = Promise in progress
+            </li> -->
+          </ul>
+        </div>
+        <div class="calendar">
 
         <%= t.include("_calendar.html", { lookup, padding: 0, offset: 0, length: 31, ignored: 19, month: "january" }) %>
 
@@ -241,23 +262,6 @@
     </section>
 
     <section class="actions">
-      <div class="narrow">
-        <h2>Day-by-day actions</h2>
-        <ul class="actions-key">
-          <li class="event complete">
-            <i class="icon"></i> = Completed
-          </li>
-          
-          <li class="event progress">
-            <i class="icon"></i> = In progress
-          </li>
-
-          <li class="event broken">
-            <i class="icon"></i> = Broken
-          </li>
-        </ul>
-
-
 
         <% Object.keys(byDay).forEach(function(d) { 
           var actions = byDay[d]; %>
@@ -272,7 +276,15 @@
               <li class="event <%= e.status %>"> <i class="icon"></i> <%= e.summary %> 
                 <% if (e.url) { %>
                 <a href="<%= e.url %>"><%= e.link %></a>
-                <% } %>
+                <% }
+                   if (e.update) {%>
+                    <div class="update">
+                      <i class="fa fa-clock-o" aria-hidden="true"></i> <%= e.update %> <a href="<%=e.update_url%>"><%=e.update_link%></a>
+                    </div>
+                  <% }
+                    else {
+                     return;
+                    } %>
               </li>
               <% }) %>
             </ul>

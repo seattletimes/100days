@@ -1,32 +1,33 @@
 // color variables
-@government: @st-light-red;
-@trade: @st-dark-red;
-@energy: @st-light-orange;
-@environment: @st-dark-orange;
-@immigration: @st-light-purple;
-@economy: @custom-light-green;
-@education: @st-dark-green;
-@health: @st-light-blue;
-@crime: @st-dark-blue;
+@broken: @custom-red;
+@in-progress: @custom-yellow;
+@kept: @custom-green;
+@none: @df-off-white;
 
-//simple utililty classes 
-.government { background: @government }
-.trade { background: @trade }
-.energy { background: @energy }
-.environment { background: @environment }
-.immigration { background: @immigration }
-.economy { background: @economy }
-.education { background: @education }
-.health { background: @health }
-.crime { background: @crime }
+//label styles
+.bar-label {
+  font-family: @df-sans;
+  width: 100%;
+  max-width: 700px;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center;
+  margin: auto;
+  color: @df-middle-gray;
+  padding-bottom: 10px;
+}
 
 // chart styles
 .bar-container {
   width: 100%;
   height: 38px;
-  background: @df-off-white;
+  background: @df-light-gray;
   max-width: 700px;
   margin: auto;
+
+  .broken { background: @broken }
+  .progress { background: @in-progress }
+  .kept { background: @kept }
 
   .completed {
     height: 100%;
@@ -42,73 +43,78 @@
 }
 
 .legend {
-  max-width: 100%;
-  display: inline-block;
-
-  @media @mobile {
-    text-align: center;
-  }
+  width: 100%;
 }
 
-.category-legend {
-  @icon-size: 12px;
-  text-indent: -@icon-size - 8px;
-  font-family: @df-sans;
-  float: left;
-  clear: right;
-  padding-right: 30px;
-  padding-top: 10px;
-  font-size: 14px;
+.legend-key {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0px;
 
-  // @media @mobile {
-  //   padding-left: @icon-size * 2;
-
-  // }
-
-  &::before {
-    border-radius: 10%;
-    display: inline-block;
-    vertical-align: text-top;
-    width: @icon-size;
-    height: @icon-size;
-    background: black;
-    content: "";
-    background-size: @icon-size @icon-size;
-    margin-right: 4px;
-    margin-top: 2px;
+  .status-legend {
+    list-style-type: none;
+    font-family: @df-sans;
   }
 
-  .key-icon-bg(@sector) {
-    &.@{sector} {
-      background: transparent;
+  .status-title {
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+  }
 
-      &::before { background-color: @@sector }
+  .quantity {
+    font-size: 35px;
+    font-family: @df-serif;
+    text-align: center;
+  }
+
+  .kept {
+    .status-title {
+      background-color: @kept;
     }
   }
 
-  .key-icon-bg(government);
-  .key-icon-bg(trade);
-  .key-icon-bg(energy);
-  .key-icon-bg(environment);
-  .key-icon-bg(immigration);
-  .key-icon-bg(economy);
-  .key-icon-bg(education);
-  .key-icon-bg(health);
-  .key-icon-bg(crime);
-}
+  .none {
+    order: 1;
 
-// line with days remaining below bar
-.remaining {
-  font-family: @df-sans;
-  font-size: 16px;
-  color: @df-middle-gray;
-  text-transform: uppercase;
-  text-align: right;
-  max-width: 700px;
-  margin: auto;
-  width: 100%;
+    .status-title {
+      background-color: @df-light-gray;
+      color: @df-charcoal;
+    }
+  }
 
-  .days-remaining {
-    font-weight: bold;
+  .broken {
+    .status-title {
+      background-color: @broken;
+    }
+  }
+
+  .progress {
+    .status-title {
+      background-color: @in-progress;
+      color: @df-charcoal;
+    }
   }
 }
+
+// // line with days remaining below bar
+// .remaining {
+//   font-family: @df-sans;
+//   font-size: 16px;
+//   color: @df-middle-gray;
+//   text-transform: uppercase;
+//   text-align: right;
+//   max-width: 700px;
+//   margin: auto;
+//   width: 100%;
+
+//   .days-remaining {
+//     font-weight: bold;
+//   }
+// }
+
