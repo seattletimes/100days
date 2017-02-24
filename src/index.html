@@ -17,7 +17,7 @@
     <main class="content">
 
     <section class="introduction">
-      <p class="intro">As of today, President Donald Trump has been in office for <b><span class="currentDay"></span> days</b>. We're tracking the statuses of promises outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> which contains his plan for his first 100 days in office. He has <span class="days-remaining"></span> days remaining in this period.</p>
+      <p class="intro">As of today, President Donald Trump has been in office for <b><span class="currentDay"></span> days</b>. We're tracking the statuses of promises outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> which contains his plan for his first 100 days in office. He has <b><span class="days-remaining"></span> days</b> remaining in this period.</p>
     </section>
 
     <section class="progress-bar">
@@ -118,9 +118,15 @@
             </label> 
             
             <input type="checkbox" class="plan-filter" id="incomplete">
-            <label for="incomplete">
+            <label for="incomplete" class="incomplete">
               <i class="fa fa-square-o" aria-hidden="true"></i>
               <span class="text">Incomplete</span>
+            </label>
+
+            <input type="checkbox" class="plan-filter" id="broken">
+            <label for="broken" class="broken">
+              <i class="fa fa-times" aria-hidden="true"></i>
+              <span class="text">Broken</span>
             </label>
 
             <!-- dropdown menu for categories -->
@@ -142,7 +148,7 @@
 
 
             <select class="topics">
-              <option value="">Select one ...</option>
+              <option value="">Select all ...</option>
 
               <% for (var i=0; i < categories.length; i++) { %>
                 <option value=<%= categories[i] %>>
@@ -161,8 +167,21 @@
 
           <ol>
             <% var lookup = {} %>
-            <% json.goals.forEach(function(k) { %>
-              <li class="plan-item" data-progress="<%= k.day_completed ? "completed" : k.in_progress ? "in-progress" : "incomplete" %>" data-topic="<%= k.category %>">
+            <% json.goals.forEach(function(k) {
+              k.progress = ""; 
+              if (k.day_completed) {
+                k.progress = "completed";
+              } else {
+                if (k.in_progress) {
+                  k.progress = "in-progress";
+                } else {
+                  if (k.day_broken) {
+                    k.progress = "broken";
+                  }
+                }
+              }
+              %>
+              <li class="plan-item" data-progress="<%= k.progress %>" data-topic="<%= k.category %>">
 
                 <header class="label-container">
                   <div class="category-label <%= k.category.toLowerCase() %>"><%= k.category%></div>
@@ -172,6 +191,8 @@
                   <i class="fa fa-check-square" aria-hidden="true"></i>
                 <% } else if (k.in_progress) { lookup[k.in_progress] = true; %>
                   <i class="fa fa-pencil" aria-hidden="true"></i>
+                  <% } else if (k.day_broken) { lookup[k.day_broken] = true; %>
+                  <i class="fa fa-times" aria-hidden="true"></i>
                 <% } else { %>
                   <i class="fa fa-square-o" aria-hidden="true"></i>
                 <% } %>
@@ -182,6 +203,8 @@
               (<a href="#day-<%= k.day_completed%>">Completed on Day <%= k.day_completed %></a>)
               <% } else if (k.in_progress) { %>
               (<a href="#day-<%= k.in_progress%>">Started process on Day <%= k.in_progress %></a>)
+              <% } else if (k.day_broken) { %>
+              (<a href="#day-<%= k.day_broken%>">Promise broken on Day <%= k.day_broken %></a>)
               <% }%>
             </li>
             <% }) %>
@@ -224,8 +247,13 @@
           <li class="event complete">
             <i class="icon"></i> = Completed
           </li>
+          
           <li class="event progress">
             <i class="icon"></i> = In progress
+          </li>
+
+          <li class="event broken">
+            <i class="icon"></i> = Broken
           </li>
         </ul>
 

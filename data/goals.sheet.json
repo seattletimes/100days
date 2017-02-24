@@ -22,17 +22,17 @@
   },
   {
     "goal": "A 5-year-ban on White House and congressional officials becoming lobbyists after they leave government service",
-    "day_completed": 9,
+    "day_broken": 9,
     "date": "Jan. 28",
     "category": "Government",
     "promise_status": "broken"
   },
   {
     "goal": "A lifetime ban on White House officials lobbying on behalf of a foreign government",
-    "day_completed": 9,
+    "day_broken": 9,
     "date": "Jan. 28",
     "category": "Government",
-    "promise_status": "kept"
+    "promise_status": "broken"
   },
   {
     "goal": "A complete ban on foreign lobbyists raising money for American elections",

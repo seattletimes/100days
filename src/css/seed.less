@@ -126,8 +126,14 @@ main.content {
   }
 
   .checklist-key{
+    .display-flex();
+    flex-direction: row;
+    flex-wrap: wrap;
     padding-top: 20px;
-    display: block;
+
+    .broken {
+      margin-right: auto;
+    }
 
     @media @mobile {
      // display: none;
@@ -199,6 +205,10 @@ label {
 
 .fa-check-square {
   color: @st-green;
+}
+
+.fa-times {
+  color: @st-dark-red;
 }
 
 // action plan list
@@ -400,5 +410,9 @@ ul.key {
 
   &.progress .icon {
     background-color: @st-light-orange;
+  }
+
+  &.broken .icon {
+    background-color: @st-dark-red;
   }
 }
