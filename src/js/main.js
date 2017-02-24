@@ -46,7 +46,6 @@ filterInputs.forEach(el => el.addEventListener("change", applyFilters));
 topicSelect.addEventListener("change", applyFilters);
 applyFilters();
 
-
 //finding days remaining
 var moment = require("moment");
 
@@ -57,7 +56,23 @@ var difference = lastDay.dayOfYear() - now.dayOfYear();
 var firstDay = moment("2017-01-20", "YYYY-MM-DD");
 var currentDay = ( now.dayOfYear() - firstDay.dayOfYear() ) + 1;
 
+
 document.querySelector(".days-remaining").innerHTML = difference;
 document.querySelector(".currentDay").innerHTML = currentDay;
+// document.querySelector(".actionDay").innerHTML = actionDay.format("MMM Do YY");
 
-//finding current day
+
+
+// json.goals.forEach(function(day) { 
+//   var dayOfAction = 0;
+//   if (day.day_completed){
+//     dayOfAction = day.day_completed;
+//     console.log(dayOfAction);
+//   } else if (day.in_progress) {
+//       dayOfAction = day.in_progress;
+//   } else if (day.day_broken) {
+//       dayOfAction = day.day_broken;
+//   } else {
+//       return;
+//     }
+// })

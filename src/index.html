@@ -1,4 +1,7 @@
-<!doctype html>
+<%
+var moment = require("moment");
+
+%><!doctype html>
 <html>
   <head>
     <%= t.include("partials/_head.html") %>
@@ -11,7 +14,7 @@
 
 
     <section class="title">
-      <h1 class="largest">Trump's first 100 days</h1>
+      <h1 class="headline">Trump's first 100 days</h1>
     </section>
 
     <main class="content">
@@ -93,7 +96,7 @@
           <ul>
             <li><a href="#day-by-day">Jump to: <i class="fa fa-calendar" aria-hidden="true"></i> A day-by-day look at Trump's actions</a></li> 
 
-            <li> | </li>
+            <li class="pipe"> | </li>
 
             <li><a href="http://www.seattletimes.com/nation-world/nation-politics/"><i class="fa fa-external-link" aria-hidden="true"></i> Read all our politics coverage</a></li>
           </ul>
@@ -222,23 +225,25 @@
     <section class="cal">
       <div class="narrow">
       <h2>Day-by-day day</h2>
-      <ul class="actions-key">
-        <li class="event complete">
-          <i class="icon"></i> = Completed
-        </li>
-        
-        <li class="event progress">
-          <i class="icon"></i> = In progress
-        </li>
-
-        <li class="event broken">
-          <i class="icon"></i> = Broken
-        </li>
-      </ul>
       
       <div class="day-calendar" id="day-by-day">
         <div class="instructions">
-          <p class="light-caps">Click on a day to see what actions Trump took on that day. Dates in green signify an action was taken that day.</p>
+          <p class="light-caps">Click on a bolded date to see what actions Trump took on that day.</p>
+            <div class="actions-key-container">
+              <ul class="actions-key">
+                  <li class="event complete">
+                    <i class="icon"></i> Completed
+                  </li>
+                  
+                  <li class="event progress">
+                    <i class="icon"></i> In progress
+                  </li>
+
+                  <li class="event broken">
+                    <i class="icon"></i> Broken
+                  </li>
+              </ul>
+            </div>
           <!-- <ul class="key events calendar-legend">
             <li class="event complete">
               <i class="icon"></i> = Completed a promise
@@ -264,11 +269,18 @@
     <section class="actions">
 
         <% Object.keys(byDay).forEach(function(d) { 
-          var actions = byDay[d]; %>
+          var actions = byDay[d]; 
+          var when = moment("2017-01-20", "YYYY-MM-DD");
+          when.add(d - 1, "days");
+          %>
 
           <div class="day-no">
             <% if (d) { %>
-              <h3 id="day-<%= d %>">Day <%= d %></h3>
+              <h3 id="day-<%= d %>">Day <%= d %>  
+                  <div class="actionDay">
+                    <%= when.format("MMM D, YYYY") %>
+                  </div>
+              </h3>
             <% } %>
 
             <ul class="actions-list">
