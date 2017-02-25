@@ -114,15 +114,15 @@ var moment = require("moment");
               <span class="text event complete"><i class="icon"></i> Promise kept</span>
             </label> 
 
-            <input type="checkbox" class="plan-filter" id="in-progress">
-            <label for="in-progress">
-              <span class="text event progress"><i class="icon"></i> In progress</span>
-            </label> 
-
             <input type="checkbox" class="plan-filter" id="broken">
             <label for="broken" class="broken">
               <span class="text event broken"><i class="icon"></i> Promise broken</span>
             </label>
+
+            <input type="checkbox" class="plan-filter" id="in-progress">
+            <label for="in-progress">
+              <span class="text event progress"><i class="icon"></i> In progress</span>
+            </label>             
             
             <input type="checkbox" class="plan-filter" id="incomplete">
             <label for="incomplete" class="incomplete">
@@ -232,15 +232,15 @@ var moment = require("moment");
             <div class="actions-key-container">
               <ul class="actions-key">
                   <li class="event complete">
-                    <i class="icon"></i> Completed
-                  </li>
-                  
-                  <li class="event progress">
-                    <i class="icon"></i> In progress
+                    <i class="icon"></i> Promise kept
                   </li>
 
                   <li class="event broken">
-                    <i class="icon"></i> Broken
+                    <i class="icon"></i> Promise broken
+                  </li>
+
+                  <li class="event progress">
+                    <i class="icon"></i> In progress
                   </li>
               </ul>
             </div>

@@ -215,14 +215,6 @@ label {
 }
 
 
-.fa-check-square {
-  color: @st-green;
-}
-
-.fa-times {
-  color: @st-dark-red;
-}
-
 // action plan list
 .plan-item {
   padding: 8px 4px 16px;
@@ -251,10 +243,6 @@ label {
   // &:nth-child(2n) {
   //   background: darken(@df-off-white, 5%);
   // }
-
-  .fa-check-square {
-    color: @st-green;
-  }
 }
 
 i {
@@ -434,15 +422,15 @@ ul.key {
   }
 
   &.complete .icon {
-    background-color: @st-green;
+    background-color: @kept-color;
   }
 
   &.progress .icon {
-    background-color: @st-light-orange;
+    background-color: @progress-color;
   }
 
   &.broken .icon {
-    background-color: @st-dark-red;
+    background-color: @broken-color;
   }
 
   &.incomplete .icon {
