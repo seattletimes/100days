@@ -59,20 +59,3 @@ var currentDay = ( now.dayOfYear() - firstDay.dayOfYear() ) + 1;
 
 document.querySelector(".days-remaining").innerHTML = difference;
 document.querySelector(".currentDay").innerHTML = currentDay;
-// document.querySelector(".actionDay").innerHTML = actionDay.format("MMM Do YY");
-
-
-
-// json.goals.forEach(function(day) { 
-//   var dayOfAction = 0;
-//   if (day.day_completed){
-//     dayOfAction = day.day_completed;
-//     console.log(dayOfAction);
-//   } else if (day.in_progress) {
-//       dayOfAction = day.in_progress;
-//   } else if (day.day_broken) {
-//       dayOfAction = day.day_broken;
-//   } else {
-//       return;
-//     }
-// })
