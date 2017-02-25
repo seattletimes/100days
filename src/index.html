@@ -59,6 +59,8 @@ var moment = require("moment");
           <% for (var s in progressByStatus) { %>
           <li class="status-legend <%= s.toLowerCase() %>">
 
+          <div class="quantity"> <%= progressByStatus[s] %> </div>
+
             <div class="status-title">
               <% if (s == "none"){ %> 
                 No action <% }
@@ -71,8 +73,6 @@ var moment = require("moment");
                 <%= s %>
                 <% } %>
               </div>
-            
-            <div class="quantity"> <%= progressByStatus[s] %> </div>
 
           </li>
           <% } %>
