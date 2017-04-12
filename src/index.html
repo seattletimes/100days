@@ -172,9 +172,11 @@ var moment = require("moment");
               k.progress = ""; 
               if (k.day_completed) {
                 k.progress = "completed";
-              } else if (k.in_progress) {
+              } else {
+                if (k.in_progress) {
                   k.progress = "in-progress";
-                } else if (k.day_broken) {
+                } else {
+                  if (k.day_broken) {
                     k.progress = "broken";
                     } else {
                         k.progress = "incomplete";
@@ -222,7 +224,7 @@ var moment = require("moment");
 
     <section class="cal">
       <div class="narrow">
-      <h2>Day-by-day day</h2>
+      <h2>Day-by-day actions</h2>
       
       <div class="day-calendar" id="day-by-day">
         <div class="instructions">
