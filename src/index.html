@@ -172,11 +172,9 @@ var moment = require("moment");
               k.progress = ""; 
               if (k.day_completed) {
                 k.progress = "completed";
-              } else {
-                if (k.in_progress) {
+              } else if (k.in_progress) {
                   k.progress = "in-progress";
-                } else {
-                  if (k.day_broken) {
+                } else if (k.day_broken) {
                     k.progress = "broken";
                     } else {
                         k.progress = "incomplete";

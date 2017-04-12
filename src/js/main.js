@@ -12,7 +12,7 @@ var topicSelect = $.one("select.topics");
 var changeFilter = function() {
   var checked = $(".plan-filter:checked");
   var categories = checked.map(check => check.id);
-  if (!categories.length) categories = ["completed", "in-progress", "incomplete"];
+  if (!categories.length) categories = ["completed", "in-progress", "broken", "incomplete"];
   planItems.forEach(function(item) {
     var cat = item.getAttribute("data-progress");
     if (categories.indexOf(cat) > -1) {
