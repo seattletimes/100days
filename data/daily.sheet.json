@@ -76,7 +76,10 @@
     "summary": "In a move to replace the late Justice Antonin Scalia on the Supreme Court, Trump nominated Neil Gorsuch to the seat.",
     "link": "Read more about Neil Gorsuch, a judge on the 10th Circuit Court of Appeals in Denver.",
     "url": "http://www.seattletimes.com/nation-world/trump-set-to-announce-nominee-for-supreme-court/",
-    "status": "progress"
+    "status": "progress",
+    "update": "Update (April 10): Trump's court pick, Neil Gorsuch, was sworn in to the seat left vacant by the death of Justice Antonin Scalia.",
+    "update_link": "“I will do all my powers permit to be a faithful servant of the Constitution and laws of this great nation,” he said.",
+    "update_url": "http://www.seattletimes.com/nation-world/gorsuch-takes-supreme-court-seat-after-divisive-confirmation/"
   },
   {
     "day": 21,
@@ -98,5 +101,12 @@
     "link": "The order also covers corruption, cybercrime, fraud and more.",
     "url": "https://www.whitehouse.gov/the-press-office/2017/02/09/presidential-executive-order-enforcing-federal-law-respect-transnational",
     "status": "progress"
+  },
+  {
+    "day": 81,
+    "summary": "Update (April 10): President Trump's court pick, Neil Gorsuch, was sworn in to the seat left vacant by the death of Justice Antonin Scalia.",
+    "link": "More on the ceremony that followed the Republican's \"nuclear option\" change of rules on the Senate floor.",
+    "url": "http://www.seattletimes.com/nation-world/gorsuch-takes-supreme-court-seat-after-divisive-confirmation/",
+    "status": "complete"
   }
 ]
