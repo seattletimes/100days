@@ -5,7 +5,7 @@ var moment = require("moment");
 <html>
   <head>
     <%= t.include("partials/_head.html") %>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
@@ -20,7 +20,10 @@ var moment = require("moment");
     <main class="content">
 
     <section class="introduction">
-      <p class="intro">As of today, President Donald Trump has been in office for <b><span class="currentDay"></span> days</b>. We're tracking the statuses of promises outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> which contains his plan for his first 100 days in office. He has <b><span class="days-remaining"></span> days</b> remaining in this period.</p>
+      <p class="intro">
+        President Donald Trump has hit his 100th day in office. We've tracked the statuses of his promises, outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> and may affect the Pacific Northwest, especially Washington.
+
+        <!-- As of today, President Donald Trump has been in office for <b><span class="currentDay"></span> days</b>. We're tracking the statuses of promises outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> which contains his plan for his first 100 days in office. He has <b><span class="days-remaining"></span> days</b> remaining in this period. --></p>
     </section>
 
     <section class="progress-bar">
@@ -35,9 +38,8 @@ var moment = require("moment");
         if (stat) {
           progressByStatus[stat]++;
           if (stat !== "none") statusCount++;
-      }
-      });
-
+          }
+        });
       %>
 
       <div class="bar-label">Status of Trump's promises</div>
@@ -64,11 +66,6 @@ var moment = require("moment");
             <div class="status-title">
               <% if (s == "none"){ %> 
                 No action <% }
-                
-                else if (s == "progress") { %>
-                  In progress
-                <% } 
-               
                 else { %>
                 <%= s %>
                 <% } %>
@@ -119,9 +116,9 @@ var moment = require("moment");
               <span class="text event broken"><i class="icon"></i> Promise broken</span>
             </label>
 
-            <input type="checkbox" class="plan-filter" id="in-progress">
-            <label for="in-progress">
-              <span class="text event progress"><i class="icon"></i> In progress</span>
+            <input type="checkbox" class="plan-filter" id="developing">
+            <label for="developing">
+              <span class="text event developing"><i class="icon"></i> Developing</span>
             </label>             
             
             <input type="checkbox" class="plan-filter" id="incomplete">
@@ -160,43 +157,44 @@ var moment = require("moment");
             </select>
             <!-- end of menu -->
 
-
-
-
           </nav>
 
-
           <ol>
-            <% var lookup = {} %>
-            <% json.goals.forEach(function(k) {
-              k.progress = ""; 
-              if (k.day_completed) {
-                k.progress = "completed";
+            <%
+            var lookup = {}
+            var itemsByCat = {}
+            json.goals.forEach(function(g) {
+              if (!itemsByCat[g.category]) itemsByCat[g.category] = [];
+              itemsByCat[g.category].push(g);
+              g.progress = "";
+              if (g.day_completed) {
+                g.progress = "completed";
               } else {
-                if (k.in_progress) {
-                  k.progress = "in-progress";
+                if (g.developing) {
+                  g.progress = "developing";
                 } else {
-                  if (k.day_broken) {
-                    k.progress = "broken";
-                    } else {
-                        k.progress = "incomplete";
-                    }
+                  if (g.day_broken) {
+                    g.progress = "broken";
+                  } else {
+                      g.progress = "incomplete";
+                  }
                 }
               }
-              %>
+            });
 
-
-
-              <li class="plan-item" data-progress="<%= k.progress %>" data-topic="<%= k.category %>">
-
-                <header class="label-container">
-                  <div class="category-label <%= k.category.toLowerCase() %>"><%= k.category%></div>
+            Object.keys(itemsByCat).forEach(function(c) { %>
+              <header class="label-container" data-topic="<%=c.toLowerCase()%>">
+                  <div class="category-label <%= c.toLowerCase() %>"><%= c %></div>
                 </header>
 
+              <% itemsByCat[c].forEach(function(k) {
+                
+                %>
+                <li class="plan-item" data-progress="<%= k.progress %>" data-topic="<%= k.category %>">
                 <% if (k.day_completed) { lookup[k.day_completed] = true; %>
                   <span class="text event complete"><i class="icon"></i></span>
-                <% } else if (k.in_progress) { lookup[k.in_progress] = true; %>
-                  <span class="text event progress"><i class="icon"></i></span>
+                <% } else if (k.developing) { lookup[k.developing] = true; %>
+                  <span class="text event developing"><i class="icon"></i></span>
                   <% } else if (k.day_broken) { lookup[k.day_broken] = true; %>
                   <span class="text event broken"><i class="icon"></i></span>
 
@@ -204,16 +202,26 @@ var moment = require("moment");
                   <span class="text event incomplete"><i class="icon"></i></span>
                 <% } %>
 
-                <%= k.goal %>
+                <%= k.goal %> 
 
-              <% if (k.day_completed) { %>
-              (<a href="#day-<%= k.day_completed%>">Completed on Day <%= k.day_completed %></a>)
-              <% } else if (k.in_progress) { %>
-              (<a href="#day-<%= k.in_progress%>">Started process on Day <%= k.in_progress %></a>)
-              <% } else if (k.day_broken) { %>
-              (<a href="#day-<%= k.day_broken%>">Promise broken on Day <%= k.day_broken %></a>)
-              <% }%>
-            </li>
+                <ul>
+                  <% if (k.summary) { %>
+                    <li class="update">
+                      Update <i class="fa fa-clock-o" aria-hidden="true"></i>:
+                      <div><%= k.summary %> <a href="<%=k.url%>"><%=k.link%></a></div>
+                    </li>
+                  <% } %>
+
+                </ul>
+
+
+            <% }) %>
+
+
+          </li>
+
+
+
             <% }) %>
           </ol>
 
@@ -222,92 +230,8 @@ var moment = require("moment");
     <div class="to-top"><a href="#action-plan">&uarr; Top</a></div>
     <hr>
 
-    <section class="cal">
-      <div class="narrow">
-      <h2>Day-by-day actions</h2>
-      
-      <div class="day-calendar" id="day-by-day">
-        <div class="instructions">
-          <p class="light-caps">Click on a bolded date to see what actions Trump took on that day.</p>
-            <div class="actions-key-container">
-              <ul class="actions-key">
-                  <li class="event complete">
-                    <i class="icon"></i> Promise kept
-                  </li>
-
-                  <li class="event broken">
-                    <i class="icon"></i> Promise broken
-                  </li>
-
-                  <li class="event progress">
-                    <i class="icon"></i> In progress
-                  </li>
-              </ul>
-            </div>
-          <!-- <ul class="key events calendar-legend">
-            <li class="event complete">
-              <i class="icon"></i> = Completed a promise
-            </li> -->
-    <!--           <li class="event progress">
-              <i class="icon"></i> = Promise in progress
-            </li> -->
-          </ul>
-        </div>
-        <div class="calendar">
-
-        <%= t.include("_calendar.html", { lookup, padding: 0, offset: 0, length: 31, ignored: 19, month: "january" }) %>
-
-        <%= t.include("_calendar.html", { lookup, padding: 3, offset: 12, length: 28, ignored: 0, month: "february" }) %>
-
-        <%= t.include("_calendar.html", { lookup, padding: 3, offset: 40, length: 31, ignored: 0, month: "march" }) %>
-
-        <%= t.include("_calendar.html", { lookup, padding: 6, offset: 71, length: 30, ignored: 0, month: "april" }) %>
-
-      </div>
-    </section>
-
-    <section class="actions">
-
-        <% Object.keys(byDay).forEach(function(d) { 
-          var actions = byDay[d]; 
-          var when = moment("2017-01-20", "YYYY-MM-DD");
-          when.add(d - 1, "days");
-          %>
-
-          <div class="day-no">
-            <% if (d) { %>
-              <h3 id="day-<%= d %>">Day <%= d %>  
-                  <div class="actionDay">
-                    <%= when.format("MMM D, YYYY") %>
-                  </div>
-              </h3>
-            <% } %>
-
-            <ul class="actions-list">
-              <% actions.forEach(function(e) { %>
-              <li class="event <%= e.status %>"> <i class="icon"></i> <%= e.summary %> 
-                <% if (e.url) { %>
-                <a href="<%= e.url %>"><%= e.link %></a>
-                <% }
-                   if (e.update) {%>
-                    <div class="update">
-                      <i class="fa fa-clock-o" aria-hidden="true"></i> <%= e.update %> <a href="<%=e.update_url%>"><%=e.update_link%></a>
-                    </div>
-                  <% }
-                    else {
-                     return;
-                    } %>
-              </li>
-              <% }) %>
-            </ul>
-          </div>
-          <% }) %>
-        </div>
-
-      </section>
-      <div class="to-top"><a href="#day-by-day">&uarr; Top</a></div>
-
     </main>
+
 
     <script>
     window.goals = <%= JSON.stringify(json.goals) %>;

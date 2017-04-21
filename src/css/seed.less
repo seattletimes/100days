@@ -212,8 +212,21 @@ label {
 
 
 // action plan list
+
+.category-label {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  color: @df-dark-gray;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding-top: 30px;
+  // min-width: 150px;
+  line-height: 1;
+}
+
 .plan-item {
-  padding: 8px 4px 16px;
+  padding: 8px 10px 16px;
   border-top: 1px solid @df-light-gray;
   font-size: 16px;
 
@@ -225,20 +238,13 @@ label {
     display: block;
   }
 
-  .category-label {
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: bold;
-    color: @df-dark-gray;
-    margin-bottom: 10px;
-    display: inline-block;
-    // min-width: 150px;
-    line-height: 1;
+  &:nth-child(2n) {
+    background: darken(@df-off-white, 1%);
   }
 
-  // &:nth-child(2n) {
-  //   background: darken(@df-off-white, 5%);
-  // }
+  ul li {
+    list-style-type: none;
+  }
 }
 
 i {
@@ -339,15 +345,15 @@ i {
       }
     }
   }
+}
 
-  .update {
-    padding-top: 12px;
-    font-style: italic;
-    text-indent: 0px;
+.update {
+  padding-top: 12px;
+  font-style: italic;
+  text-indent: 0px;
 
-    a {
-      font-size: 14px;
-    }
+  a {
+    font-size: 14px;
   }
 }
 
@@ -421,8 +427,8 @@ ul.key {
     background-color: @kept-color;
   }
 
-  &.progress .icon {
-    background-color: @progress-color;
+  &.developing .icon {
+    background-color: @developing-color;
   }
 
   &.broken .icon {

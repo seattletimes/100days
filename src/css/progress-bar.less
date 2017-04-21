@@ -1,6 +1,6 @@
 // color variables
 @broken: @broken-color;
-@in-progress: @progress-color;
+@developing: @developing-color;
 @kept: @kept-color;
 @none: @df-off-white;
 
@@ -26,7 +26,7 @@
   margin: auto;
 
   .broken { background: @broken }
-  .progress { background: @in-progress }
+  .developing { background: @developing }
   .kept { background: @kept }
 
   .completed {
@@ -95,9 +95,9 @@
     }
   }
 
-  .progress {
+  .developing {
     .status-title {
-      background-color: @in-progress;
+      background-color: @developing;
       color: @df-charcoal;
     }
   }

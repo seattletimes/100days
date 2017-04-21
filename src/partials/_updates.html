@@ -1,0 +1,49 @@
+        <%
+        var byDay = {};
+        json.daily.forEach(function(row) {
+          if (!byDay[row.day]) {
+            byDay[row.day] = [];
+          }
+          byDay[row.day].push(row);
+        });
+        %>
+
+<section class="actions">
+
+        <% Object.keys(byDay).forEach(function(d) { 
+          var actions = byDay[d]; 
+          var when = moment("2017-01-20", "YYYY-MM-DD");
+          when.add(d - 1, "days");
+          %>
+
+          <div class="day-no">
+            <% if (d) { %>
+              <h3 id="day-<%= d %>">Day <%= d %>  
+                  <div class="actionDay">
+                    <%= when.format("MMM D, YYYY") %>
+                  </div>
+              </h3>
+            <% } %>
+
+            <ul class="actions-list">
+              <% actions.forEach(function(e) { %>
+              <li class="event <%= e.status %>"> <i class="icon"></i> <%= e.summary %> 
+                <% if (e.url) { %>
+                <a href="<%= e.url %>"><%= e.link %></a>
+                <% }
+                   if (e.update) {%>
+                    <div class="update">
+                      <i class="fa fa-clock-o" aria-hidden="true"></i> <%= e.update %> <a href="<%=e.update_url%>"><%=e.update_link%></a>
+                    </div>
+                  <% }
+                    else {
+                     return;
+                    } %>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+          <% }) %>
+        </div>
+
+      </section>
