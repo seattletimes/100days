@@ -132,6 +132,18 @@ main.content {
     list-style-type: none;
     font-size: 18px;
     padding-left: 0px;
+
+    li {
+      padding-left: 8px;
+
+      ul {
+        padding: 0px 45px 0px 45px;
+
+        @media @mobile {
+          padding: 0px 25px 0px 25px;
+        }
+      }
+    }
   }
 
   .checklist-key{
@@ -150,7 +162,7 @@ main.content {
     list-style-type: none;
 
     li {
-      padding: 0px; 
+      padding: 0px;
     }
   }
 
@@ -347,6 +359,7 @@ i {
   }
 }
 
+
 .update {
   padding-top: 12px;
   font-style: italic;
@@ -354,6 +367,36 @@ i {
 
   a {
     font-size: 14px;
+  }
+
+  .update-label {
+    border-radius: 1px;
+    color: @df-charcoal;
+    padding: 5px 5px 5px 0px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .update-summary {
+    padding-top: 3px;
+  }
+
+  .read-more {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 5px;
+    font-style: normal;
+    font-size: 14px;
+    
+    a {
+      color: @df-charcoal;
+
+      &:hover {
+        color: @df-middle-gray;
+      }
+    }
   }
 }
 

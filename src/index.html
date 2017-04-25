@@ -21,7 +21,7 @@ var moment = require("moment");
 
     <section class="introduction">
       <p class="intro">
-        President Donald Trump has hit his 100th day in office. We've tracked the statuses of his promises, outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> and may affect the Pacific Northwest, especially Washington.
+        President Donald Trump has hit his 100th day in office. We've tracked the statuses of his promises, outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> and how they may affect the Pacific Northwest, especially Washington.
 
         <!-- As of today, President Donald Trump has been in office for <b><span class="currentDay"></span> days</b>. We're tracking the statuses of promises outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> which contains his plan for his first 100 days in office. He has <b><span class="days-remaining"></span> days</b> remaining in this period. --></p>
     </section>
@@ -91,10 +91,6 @@ var moment = require("moment");
       <div>
         <nav class="jump-to">
           <ul>
-            <li><a href="#day-by-day">Jump to: <i class="fa fa-calendar" aria-hidden="true"></i> A day-by-day look at Trump's actions</a></li> 
-
-            <li class="pipe"> | </li>
-
             <li><a href="http://www.seattletimes.com/nation-world/nation-politics/"><i class="fa fa-external-link" aria-hidden="true"></i> Read all our politics coverage</a></li>
           </ul>
         </nav>
@@ -206,9 +202,13 @@ var moment = require("moment");
 
                 <ul>
                   <% if (k.summary) { %>
-                    <li class="update">
-                      Update <i class="fa fa-clock-o" aria-hidden="true"></i>:
-                      <div><%= k.summary %> <a href="<%=k.url%>"><%=k.link%></a></div>
+                    <li class="update"><span class="update-label">
+                      The latest <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                      <div class="update-summary"><%= k.summary %></div>
+
+                      <!-- Read more link -->
+                      <div class="read-more">
+                        <a href="<%=k.url%>"><i class="fa fa-external-link" aria-hidden="true"></i> READ MORE</a></div>
                     </li>
                   <% } %>
 
