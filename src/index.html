@@ -93,7 +93,7 @@ var moment = require("moment");
       <div>
         <nav class="jump-to">
           <ul>
-            <li><a href="http://www.seattletimes.com/nation-world/nation-politics/"><i class="fa fa-external-link" aria-hidden="true"></i> Read all our politics coverage</a></li>
+            <li><a href="http://www.seattletimes.com/nation-world/nation-politics/"><i class="fa fa-external-link" aria-hidden="true"></i> Read all of our politics coverage</a></li>
           </ul>
         </nav>
       </div>
@@ -106,7 +106,7 @@ var moment = require("moment");
           <nav class="checklist-key">
             <input type="checkbox" class="plan-filter" id="completed">
             <label for="completed">
-              <span class="text event complete"><i class="icon"></i> Promise kept</span>
+              <span class="text event completed"><i class="icon"></i> Promise kept</span>
             </label> 
 
             <input type="checkbox" class="plan-filter" id="broken">
@@ -157,7 +157,6 @@ var moment = require("moment");
 
           </nav>
 
-          <ol>
             <%
             var lookup = {}
             var itemsByCat = {}
@@ -166,12 +165,15 @@ var moment = require("moment");
               itemsByCat[g.category].push(g);
               g.progress = "";
               if (g.day_completed) {
+                lookup[g.day_completed] = true;
                 g.progress = "completed";
               } else {
                 if (g.developing) {
+                  lookup[g.developing] = true;
                   g.progress = "developing";
                 } else {
                   if (g.day_broken) {
+                    lookup[g.day_broken] = true;
                     g.progress = "broken";
                   } else {
                       g.progress = "incomplete";
@@ -181,54 +183,70 @@ var moment = require("moment");
             });
 
             Object.keys(itemsByCat).forEach(function(c) { %>
-              <header class="label-container" data-topic="<%=c.toLowerCase()%>">
+
+            <ol data-topic="<%= c %>">
+
+              <header class="label-container">
                   <div class="category-label <%= c.toLowerCase() %>">
-                    <i class="material-icons">account_balance</i>
-                    <div><%= c %></div>
+                    
+                    <% var icons = {
+                      Government: "gavel",
+                      Trade: "directions_boat",
+                      Energy: "lightbulb_outline",
+                      Environment: "local_florist",
+                      Immigration: "business_center",
+                      Economy: "account_balance",
+                      Education: "school",
+                      "Health care": "local_hospital",
+                      Crime: "directions_car",
+                    } %>
+
+                    <!-- finding out which icon to place -->
+                    <i class="material-icons">
+                      <%= icons[c] %>
+                    </i>
+
+
+                    <!-- icon section ends -->
+
+                    <div><%= c %></div> <!-- prints out category -->
                   </div>
                 </header>
 
               <% itemsByCat[c].forEach(function(k) {
                 
                 %>
-                <li class="plan-item" data-progress="<%= k.progress %>" data-topic="<%= k.category %>">
-                <% if (k.day_completed) { lookup[k.day_completed] = true; %>
-                  <span class="text event complete"><i class="icon"></i></span>
-                <% } else if (k.developing) { lookup[k.developing] = true; %>
-                  <span class="text event developing"><i class="icon"></i></span>
-                  <% } else if (k.day_broken) { lookup[k.day_broken] = true; %>
-                  <span class="text event broken"><i class="icon"></i></span>
+                <li class="plan-item" data-progress="<%= k.progress %>">
+                  <div class="text event <%= k.progress %>">
+                    <i class="icon"></i>
+                  </div>
+                  
+                  <div class="goal-updates">
+                    <b><%= k.goal %></b> 
 
-                <% } else { %>
-                  <span class="text event incomplete"><i class="icon"></i></span>
-                <% } %>
+                    <ul>
+                      <% if (k.summary) { %>
+                        <li class="update"><span class="update-label">
+                          Update:</span>
+                          <div class="update-summary"><%= k.summary %></div>
 
-                <b><%= k.goal %></b> 
+                          <!-- Read more link -->
+                          <div class="read-more">
+                            <a href="<%=k.url%>"><i class="fa fa-external-link" aria-hidden="true"></i> READ MORE</a></div>
+                        </li>
+                      <% } %>
 
-                <ul>
-                  <% if (k.summary) { %>
-                    <li class="update"><span class="update-label">
-                      Update:</span>
-                      <div class="update-summary"><%= k.summary %></div>
-
-                      <!-- Read more link -->
-                      <div class="read-more">
-                        <a href="<%=k.url%>"><i class="fa fa-external-link" aria-hidden="true"></i> READ MORE</a></div>
-                    </li>
-                  <% } %>
-
-                </ul>
-
-
-            <% }) %>
+                    </ul>
+                  </div>
+                <% }) %>
 
 
           </li>
 
 
+          </ol>
 
             <% }) %>
-          </ol>
 
     </section>
 

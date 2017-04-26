@@ -109,7 +109,7 @@ main.content {
         }
 
         @media @mobile {
-          font-size: 16px;
+          font-size: 18px;
         }
       }
     }
@@ -140,7 +140,7 @@ main.content {
       padding: 35px 70px 35px 70px; // resizes goal
 
       @media @mobile {
-        padding: 40px;
+        padding: 20px;
       }
 
       &.update {
@@ -191,7 +191,7 @@ main.content {
     & + label {
       font-size: 15px;
       border: .3px dotted @df-light-gray;
-      padding: 8px 10px;
+      padding: 8px 8px;
       cursor: pointer;
       border-radius: 5px;
       margin-right: 10px;
@@ -202,9 +202,7 @@ main.content {
       .flex(1 1 50%);
       padding: 4px;
       text-align: left;
-      margin-right: 8px;
-      margin-bottom: 8px;
-      max-width: 137px;
+      max-width: 150px;
     }
   }
 
@@ -247,16 +245,29 @@ label {
     width: 100%;
     text-align: center;
     line-height: 1;
-    margin: 90px 0px 25px 0px;
+    margin: 30px 0px 0px 0px;
 
-    &.government {
-      margin: 30px 0px 25px 0px;
+    @media @mobile {
+      font-size: 30px;
+    }
+
+    // &.government {
+    //   margin: 30px 0px 25px 0px;
+    // }
+
+    .material-icons {
+      // background-color: @df-light-gray;
+      font-size: 30px;
+      color: @df-charcoal;
+      padding: 15px;
+      border-radius: 5%;
+      // margin-bottom: 20px;
     }
   }
+}
 
-  &::after {
-    content: "";
-  }
+.hidden {
+    display: none;
 }
 
 .plan-item {
@@ -264,6 +275,11 @@ label {
   border-bottom: 1px solid @df-light-gray;
   font-size: 20px;
   margin-bottom: 10px;
+  .display-flex();
+
+  @media @mobile {
+    font-size: 18px;
+  }
 
   &.hidden {
     display: none;
@@ -280,6 +296,9 @@ label {
   ul li {
     list-style-type: none;
   }
+
+
+
 }
 
 // key for actions list
@@ -385,6 +404,10 @@ label {
   font-size: 18px;
   color: @df-dark-gray;
 
+  @media @mobile {
+     font-size: 16px; 
+  }
+
   .update-label {
     border-radius: 1px;
     padding: 5px 5px 5px 0px;
@@ -404,6 +427,10 @@ label {
     margin-top: 5px;
     font-style: normal;
     font-size: 16px;
+
+    @media @mobile {
+      font-size: 15px;
+    }
     
     a {
       color: @df-charcoal;
@@ -458,30 +485,32 @@ ul.key {
 .event {
   font-size: 18px;
   clear: left;
-  @icon-size: 14px;
-  text-indent: -@icon-size - 8px;
-  padding-bottom: 18px;
+  @icon-size: 20px;
+  padding-right: 10px;
 
   @media @mobile {
-    // padding-left: @icon-size * 2;
-    padding-top: 18px;
+    font-size: 16px;
   }
 
   .icon {
-    border-radius: 100%;
-    display: inline-block;
-    vertical-align: text-top;
-    width: @icon-size;
-    height: @icon-size;
-    background: black;
-    content: "";
-    background-size: @icon-size @icon-size;
-    margin-right: 4px;
-    margin-top: 2px;
-    font-size: 19px;
+        border-radius: 100%;
+        display: inline-block;
+        vertical-align: text-top;
+        width: @icon-size;
+        height: @icon-size;
+        background: black;
+        content: "";
+        background-size: @icon-size @icon-size;
+        font-size: 20px;
+        margin-right: 4px;
+
+        @media @mobile {
+          width: 15px;
+          height: 15px;
+        }
   }
 
-  &.complete .icon {
+  &.completed .icon {
     background-color: @kept-color;
   }
 
