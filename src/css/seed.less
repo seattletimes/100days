@@ -19,7 +19,7 @@
 
 .headline {
   font-family: @df-serif;
-  font-size: 70px;
+  font-size: 80px;
   line-height: 80px;
   color: @df-charcoal;
   text-align: center;
@@ -34,7 +34,7 @@
 // inside
 
 main.content {
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
 
   @media @mobile {
@@ -48,17 +48,19 @@ main.content {
 }
 
 .intro {
-  font-size: 20px;
+  font-size: 23px;
   padding-bottom: 40px;
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
   margin: auto;
+  text-indent: 40px;
 
   a {
-    color: @df-blue;
+    color: @df-charcoal;
+    font-weight: bold;
 
     &:hover {
-      text-decoration: underline;
+      color: @df-middle-gray
     }
   }
 
@@ -95,14 +97,14 @@ main.content {
 
     li {
       float: left;
-      padding: 8px;
-      font-size: 16px;
+      padding-top: 30px;
+      font-size: 18px;
 
       a {
         color: @df-charcoal;
 
         &:hover {
-          color: @df-charcoal;
+          color: @df-middle-gray;
           font-weight: bold;
         }
 
@@ -115,7 +117,7 @@ main.content {
 }
 
 .checklist {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
 
   @media @mobile {
@@ -126,6 +128,7 @@ main.content {
     margin-top: 0px;
     margin-bottom: 0px;
     padding-left: 5px;
+    font-size: 28px;
   }
 
   ol {
@@ -134,14 +137,22 @@ main.content {
     padding-left: 0px;
 
     li {
-      padding-left: 8px;
+      padding: 35px 70px 35px 70px; // resizes goal
 
-      ul {
-        padding: 0px 45px 0px 45px;
+      @media @mobile {
+        padding: 40px;
+      }
+
+      &.update {
+        padding:  25px 0px; // resizes update field
 
         @media @mobile {
-          padding: 0px 25px 0px 25px;
+          padding: 20px 0px 20px 0px;
         }
+      }
+
+      ul {
+        padding: 0px;
       }
     }
   }
@@ -225,22 +236,34 @@ label {
 
 // action plan list
 
-.category-label {
-  text-transform: uppercase;
-  font-size: 15px;
-  font-weight: bold;
-  color: @df-dark-gray;
-  margin-bottom: 10px;
-  display: inline-block;
-  padding-top: 30px;
-  // min-width: 150px;
-  line-height: 1;
+.label-container {
+
+  .category-label {
+    font-family: @df-serif;
+    font-size: 33px;
+    font-weight: bold;
+    color: @df-charcoal;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    margin: 90px 0px 25px 0px;
+
+    &.government {
+      margin: 30px 0px 25px 0px;
+    }
+  }
+
+  &::after {
+    content: "";
+  }
 }
 
 .plan-item {
   padding: 8px 10px 16px;
-  border-top: 1px solid @df-light-gray;
-  font-size: 16px;
+  border-bottom: 1px solid @df-light-gray;
+  font-size: 20px;
+  margin-bottom: 10px;
 
   &.hidden {
     display: none;
@@ -250,17 +273,13 @@ label {
     display: block;
   }
 
-  &:nth-child(2n) {
-    background: darken(@df-off-white, 1%);
-  }
+  // &:nth-child(2n) {
+  //   background: darken(@df-off-white, 1%);
+  // }
 
   ul li {
     list-style-type: none;
   }
-}
-
-i {
-  font-size: 17px;
 }
 
 // key for actions list
@@ -361,26 +380,22 @@ i {
 
 
 .update {
-  padding-top: 12px;
   font-style: italic;
   text-indent: 0px;
-
-  a {
-    font-size: 14px;
-  }
+  font-size: 18px;
+  color: @df-dark-gray;
 
   .update-label {
     border-radius: 1px;
-    color: @df-charcoal;
     padding: 5px 5px 5px 0px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
   }
 
   .update-summary {
     padding-top: 3px;
+    text-indent: 12px;
   }
 
   .read-more {
@@ -388,7 +403,7 @@ i {
     text-align: right;
     margin-top: 5px;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     
     a {
       color: @df-charcoal;
@@ -403,7 +418,7 @@ i {
 .to-top {
   text-align: right;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   font-family: @df-sans;
   padding-top: 20px;
@@ -441,7 +456,7 @@ ul.key {
 }
 
 .event {
-  font-size: 16px;
+  font-size: 18px;
   clear: left;
   @icon-size: 14px;
   text-indent: -@icon-size - 8px;
@@ -485,6 +500,7 @@ ul.key {
 }
 
 select {
+  font-size: 16px;
   height: 30px;
   background-color: @df-off-white;
 }

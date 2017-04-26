@@ -7,6 +7,8 @@ var moment = require("moment");
     <%= t.include("partials/_head.html") %>
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
   <body>
 
@@ -180,7 +182,10 @@ var moment = require("moment");
 
             Object.keys(itemsByCat).forEach(function(c) { %>
               <header class="label-container" data-topic="<%=c.toLowerCase()%>">
-                  <div class="category-label <%= c.toLowerCase() %>"><%= c %></div>
+                  <div class="category-label <%= c.toLowerCase() %>">
+                    <i class="material-icons">account_balance</i>
+                    <div><%= c %></div>
+                  </div>
                 </header>
 
               <% itemsByCat[c].forEach(function(k) {
@@ -198,12 +203,12 @@ var moment = require("moment");
                   <span class="text event incomplete"><i class="icon"></i></span>
                 <% } %>
 
-                <%= k.goal %> 
+                <b><%= k.goal %></b> 
 
                 <ul>
                   <% if (k.summary) { %>
                     <li class="update"><span class="update-label">
-                      The latest <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                      Update:</span>
                       <div class="update-summary"><%= k.summary %></div>
 
                       <!-- Read more link -->
