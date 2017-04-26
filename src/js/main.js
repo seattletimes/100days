@@ -14,8 +14,6 @@ var changeFilter = function() {
   var checked = $(".plan-filter:checked");
   var categories = checked.map(check => check.id);
   if (!categories.length) categories = ["completed", "developing", "broken", "incomplete"];
-
-  console.log(categories);
   planItems.forEach(function(item) {
     var cat = item.getAttribute("data-progress");
     if (categories.indexOf(cat) > -1) {
