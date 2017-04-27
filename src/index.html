@@ -1,5 +1,6 @@
 <%
 var moment = require("moment");
+var quotable = text => text.replace(/'/g, "&rsquo;");
 
 %><!doctype html>
 <html>
@@ -18,14 +19,14 @@ var moment = require("moment");
     <header class="title">
       <img src="./assets/trump100.jpg">
 
-      <h1 class="headline">Trump's first 100 days</h1>
+      <h1 class="headline">Trump&rsquo;s first 100 days</h1>
     </header>
 
     <main class="content">
 
     <section class="introduction">
       <p class="intro">
-        President Donald Trump has hit his 100th day in office. We've tracked the statuses of his promises, outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> and how they may affect the Pacific Northwest, especially Washington.
+        President Donald Trump has hit his 100th day in office. We&rsquo;ve tracked the statuses of his promises, outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">&ldquo;Contract with the American Voter,&rdquo;</a> and how they may affect the Pacific Northwest, especially Washington.
 
         <!-- As of today, President Donald Trump has been in office for <b><span class="currentDay"></span> days</b>. We're tracking the statuses of promises outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> which contains his plan for his first 100 days in office. He has <b><span class="days-remaining"></span> days</b> remaining in this period. --></p>
     </section>
@@ -160,22 +161,18 @@ var moment = require("moment");
           </nav>
 
             <%
-            var lookup = {}
             var itemsByCat = {}
             json.goals.forEach(function(g) {
               if (!itemsByCat[g.category]) itemsByCat[g.category] = [];
               itemsByCat[g.category].push(g);
               g.progress = "";
-              if (g.day_completed) {
-                lookup[g.day_completed] = true;
+              if (g.promise_status == "kept") {
                 g.progress = "completed";
               } else {
-                if (g.developing) {
-                  lookup[g.developing] = true;
+                if (g.promise_status == "developing") {
                   g.progress = "developing";
                 } else {
-                  if (g.day_broken) {
-                    lookup[g.day_broken] = true;
+                  if (g.promise_status == "broken") {
                     g.progress = "broken";
                   } else {
                       g.progress = "incomplete";
@@ -224,13 +221,13 @@ var moment = require("moment");
                   </div>
                   
                   <div class="goal-updates">
-                    <b><%= k.goal %></b> 
+                    <b><%= quotable(k.goal) %></b> 
 
                     <ul>
                       <% if (k.summary) { %>
                         <li class="update"><span class="update-label">
                           Update:</span>
-                          <div class="update-summary"><%= k.summary %></div>
+                          <div class="update-summary"><%= quotable(k.summary) %></div>
 
                           <!-- Read more link -->
                           <div class="read-more">
