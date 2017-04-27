@@ -120,7 +120,12 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
             <input type="checkbox" class="plan-filter" id="developing">
             <label for="developing">
               <span class="text event developing"><i class="icon"></i> Developing</span>
-            </label>             
+            </label>  
+
+            <input type="checkbox" class="plan-filter" id="stymied">
+            <label for="stymied" class="stymied">
+              <span class="text event stymied"><i class="icon"></i> Stymied</span>
+            </label>           
             
             <input type="checkbox" class="plan-filter" id="incomplete">
             <label for="incomplete" class="incomplete">
@@ -166,19 +171,12 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
               if (!itemsByCat[g.category]) itemsByCat[g.category] = [];
               itemsByCat[g.category].push(g);
               g.progress = "";
-              if (g.promise_status == "kept") {
-                g.progress = "completed";
-              } else {
-                if (g.promise_status == "developing") {
-                  g.progress = "developing";
-                } else {
-                  if (g.promise_status == "broken") {
-                    g.progress = "broken";
-                  } else {
-                      g.progress = "incomplete";
-                  }
-                }
-              }
+              var promisedProgress = {
+                kept: "completed",
+                none: "incomplete"
+              };
+
+              g.progress = promisedProgress[g.promise_status] || g.promise_status;
             });
 
             Object.keys(itemsByCat).forEach(function(c) { %>

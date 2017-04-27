@@ -7,42 +7,42 @@
   {
     "goal": "Implement a hiring freeze on all federal employees to reduce federal workforce through attrition (exempting military, public safety, and public health)",
     "category": "Government",
-    "promise_status": "kept",
-    "summary": "President Trump kicked off his first full week in office by signing three executive memorandums, including one hiring for some federal government workers as a way to reduce payrolls and rein in the size of the workforce.",
-    "url": "http://www.seattletimes.com/nation-world/nation-politics/trump-undoes-parts-of-obama-agenda-with-executive-actions/"
+    "promise_status": "broken",
+    "summary": "President Trump had initinally frozen hiring for some federal government workers during his first full week in office, as a way to reduce payrolls and rein in the size of the workforce. On April 12, the order was lifted.",
+    "url": "http://www.seattletimes.com/business/trump-administration-to-lift-federal-hiring-freeze/"
   },
   {
     "goal": "Require that for every new federal regulation, two existing regulations be eliminated",
     "category": "Government",
     "promise_status": "kept",
-    "summary": "Trump signed an executive order aimed at significantly cutting regulations. White House officials are calling the directive a “one in, two out” plan. It requires government agencies requesting a new regulations to identify two regulations they will cut from their own departments. (AP caption)",
+    "summary": "On Jan. 30, Trump signed an executive order aimed at significantly cutting regulations. It requires that \"for every one new regulation issued, at least two prior regulations be identified for elimination.\"",
     "url": "https://www.whitehouse.gov/the-press-office/2017/01/30/presidential-executive-order-reducing-regulation-and-controlling"
   },
   {
     "goal": "Impose a five-year-ban on White House and congressional officials becoming lobbyists after they leave government service",
     "category": "Government",
-    "promise_status": "broken",
-    "summary": "President Trump signed an executive order banning administration officials from ever lobbying the U.S. on behalf of a foreign government and imposing a separate five-year ban on other lobbying.",
+    "promise_status": "kept",
+    "summary": "On Jan. 28, President Trump signed an executive order requiring appointees to sign a pledge, which says that they will not \"engage in lobbying activities with respect to\" their agencies within five years of leaving.",
     "url": "http://www.seattletimes.com/business/trump-sets-tougher-restrictions-on-lobbying-by-officials/"
   },
   {
     "goal": "Enforce a lifetime ban on White House officials lobbying on behalf of a foreign government",
     "category": "Government",
-    "promise_status": "broken",
-    "summary": "President Trump signed an executive order banning administration officials from ever lobbying the U.S. on behalf of a foreign government and imposing a separate five-year ban on other lobbying.",
-    "url": "http://www.seattletimes.com/business/trump-sets-tougher-restrictions-on-lobbying-by-officials/"
+    "promise_status": "none"
   },
   {
     "goal": "Ban foreign lobbyists from raising money for American elections",
     "category": "Government",
-    "promise_status": "none"
+    "promise_status": "kept",
+    "summary": "On Jan. 28, Trump signed an executive order banning administration officials from ever lobbying the U.S. on behalf of a foreign government. political appointee joining the executive branch on or after Jan. 20 must agree to the lobbying bans.",
+    "url": "http://www.seattletimes.com/business/trump-sets-tougher-restrictions-on-lobbying-by-officials/"
   },
   {
     "goal": "Renegotiate NAFTA or withdraw from the deal under Article 2205",
     "category": "Trade",
     "promise_status": "developing",
-    "summary": "A draft of his administration’s plan for NAFTA proposes only a mild rewrite. But in his AP interview, he threatened anew to terminate the deal if his goals are not met in a renegotiation.",
-    "url": "http://www.seattletimes.com/nation-world/trumps-100-days-promises-fewer-than-half-carried-out/"
+    "summary": "On April 27, Trump said he has told the leaders of Mexico and Canada that he will not pull out of the North American Free Trade Agreement at this time, but could still withdraw if he concludes a renegotiated pact is not “a fair deal for all.”",
+    "url": "http://www.seattletimes.com/business/white-house-trump-will-not-immediately-bolt-from-nafta/"
   },
   {
     "goal": "Withdraw from the Trans-Pacific Partnership",
@@ -55,7 +55,9 @@
   {
     "goal": "Direct the Secretary of the Treasury to label China a currency manipulator",
     "category": "Trade",
-    "promise_status": "none"
+    "promise_status": "broken",
+    "summary": "Backing away from a campaign pledge, President Donald Trump said on April 12 that his administration won’t label China a currency manipulator in a report due this week, though he does think the U.S. dollar “is getting too strong.”",
+    "url": "http://www.seattletimes.com/business/trump-says-china-wont-be-labeled-a-currency-manipulator/"
   },
   {
     "goal": "Direct the Secretary of Commerce and U.S. Trade Representative to identify all foreign trading abuses that unfairly impact American workers and direct them to use every tool under American and international law to end those abuses immediately",
@@ -65,7 +67,9 @@
   {
     "goal": "Lift the restrictions on the production of $50 trillion dollars' worth of job-producing American energy reserves, including shale, oil, natural gas and clean coal.",
     "category": "Energy",
-    "promise_status": "none"
+    "promise_status": "kept",
+    "summary": "On March 28, President Trump signed an order to suspend, rescind or flag for review measures to boost fossil fuel production.",
+    "url": "http://www.seattletimes.com/business/trump-takes-aim-at-obamas-efforts-to-curb-global-warming-2/"
   },
   {
     "goal": "Allow energy infrastructure projects, like the Keystone Pipeline, to move forward",
@@ -88,13 +92,13 @@
     "goal": "Select a Supreme Court nominee",
     "category": "Government",
     "promise_status": "kept",
-    "summary": "In a move to replace the late Justice Antonin Scalia on the Supreme Court, Trump nominated Neil Gorsuch, who has been confirmed, to the seat.",
+    "summary": "In a move to replace the late Justice Antonin Scalia on the Supreme Court, Trump nominated Neil Gorsuch, who has been confirmed, to the seat on April 10.",
     "url": "http://www.seattletimes.com/nation-world/gorsuch-takes-supreme-court-seat-after-divisive-confirmation/"
   },
   {
     "goal": "Cancel all federal funding to Sanctuary Cities",
     "category": "Immigration",
-    "promise_status": "developing",
+    "promise_status": "stymied",
     "summary": "Less than a month after Seattle sued President Donald Trump over his “sanctuary cities” executive order, a federal judge in San Francisco has blocked the order. Seattle will now review that ruling, which will inform the city’s next steps in its own suit, Murray said.",
     "url": "http://www.seattletimes.com/seattle-news/politics/seattle-officials-welcome-judges-block-of-sanctuary-city-crackdown/"
   },
@@ -102,68 +106,68 @@
     "goal": "Begin removing the more than 2 million criminal illegal immigrants from the country and cancel visas to foreign countries that won't take them back",
     "category": "Immigration",
     "promise_status": "developing",
-    "summary": "Trump signed executive actions to jumpstart construction of a U.S.-Mexico border wall and order cuts in federal grants for \"sanctuary cities.\"",
-    "url": "http://www.seattletimes.com/seattle-news/what-does-trumps-action-on-sanctuary-cities-mean-for-seattle-thats-up-for-debate/"
+    "summary": "On Feb. 21, Trump signed executive actions to jumpstart construction of a U.S.-Mexico border wall and order cuts in federal grants for \"sanctuary cities.\"The politicized term has no official definition, so it isn't clear if the administration considers Seattle a sanctuary city.",
+    "url": "http://www.seattletimes.com/nation-world/nation-politics/us-to-increase-number-of-immigrants-targeted-for-deportation/"
   },
   {
     "goal": "Suspend immigration from terror-prone regions where vetting cannot safely occur. All vetting of people coming into our country will be considered extreme vetting",
     "category": "Immigration",
-    "promise_status": "kept",
-    "summary": "A three-judge federal appeals panel unanimously refused to reinstate President Trump’s targeted travel ban after it sparked protests throughout the country, including at Seattle-Tacoma International Airport.",
-    "url": "http://www.seattletimes.com/nation-world/trump-loses-travel-ban-appeal/"
+    "promise_status": "stymied",
+    "summary": "In March, President Trump signed a second executive order halting the entrance of immigrants from several Muslim majority countries, this time with Iraq excluded. Like its predecessor, it was shortly struck down by a federal judge. ",
+    "url": "http://www.seattletimes.com/nation-world/us-judge-to-hear-arguments-on-longer-block-to-travel-ban/"
   },
   {
-    "goal": "Middle Class Tax Relief And Simplification Act",
+    "goal": "Pass the Middle Class Tax Relief And Simplification Act",
     "category": "Economy",
-    "promise_status": "none"
+    "promise_status": "developing",
+    "summary": "On April 27, Trump proposed a tax plan with some of the same aspects promised in his original pledge to voters. It awaits Congressional approval. ",
+    "url": "http://www.seattletimes.com/business/trump-tax-plan-relief-for-his-voters-but-lots-of-unknowns/"
   },
   {
-    "goal": "End The Offshoring Act",
+    "goal": "Pass the End The Offshoring Act",
     "category": "Trade",
     "promise_status": "none"
   },
   {
-    "goal": "American Energy & Infrastructure Act",
+    "goal": "Pass the American Energy & Infrastructure Act",
     "category": "Economy",
     "promise_status": "none"
   },
   {
-    "goal": "School Choice And Education Opportunity Act",
+    "goal": "Pass the School Choice And Education Opportunity Act",
     "category": "Education",
     "promise_status": "none"
   },
   {
-    "goal": "Repeal and Replace Obamacare Act",
+    "goal": "Pass the Repeal and Replace Obamacare Act",
     "category": "Health care",
-    "promise_status": "developing",
+    "promise_status": "stymied",
     "summary": "The first executive order signed by Trump aimed to repeal former President Obama's health care law. More than 200,000 King County residents are insured through the Affordable Care Act.",
     "url": "http://www.seattletimes.com/seattle-news/health/king-county-officials-patients-push-to-salvage-health-care-law/"
   },
   {
-    "goal": "Affordable Childcare and Eldercare Act",
+    "goal": "Pass the Affordable Childcare and Eldercare Act",
     "category": "Economy",
     "promise_status": "none"
   },
   {
-    "goal": "End Illegal Immigration Act",
+    "goal": "Pass the End Illegal Immigration Act",
     "category": "Immigration",
     "promise_status": "none"
   },
   {
-    "goal": "Restoring Community Safety Act",
+    "goal": "Pass the Restoring Community Safety Act",
     "category": "Crime",
-    "promise_status": "developing"
+    "promise_status": "none"
   },
   {
-    "goal": "Restoring National Security Act",
+    "goal": "Pass the Restoring National Security Act",
     "category": "Government",
     "promise_status": "none"
   },
   {
-    "goal": "Clean up Corruption in Washington Act",
+    "goal": "Pass the Clean up Corruption in Washington Act",
     "category": "Government",
-    "promise_status": "developing",
-    "summary": "President Trump signed an executive order banning administration officials from ever lobbying the U.S. on behalf of a foreign government and imposing a separate five-year ban on other lobbying.",
-    "url": "http://www.seattletimes.com/business/trump-sets-tougher-restrictions-on-lobbying-by-officials/"
+    "promise_status": "none"
   }
 ]
