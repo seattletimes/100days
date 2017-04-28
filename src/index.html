@@ -150,17 +150,19 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
                 }
               }) %>
 
+              <div>
+                <select class="topics">
+                  <option value="">Filter by category</option>
 
-            <select class="topics">
-              <option value="">Filter by category</option>
+                  <% for (var i=0; i < categories.length; i++) { %>
+                    <option value=<%= categories[i] %>>
+                      <%= categories[i] %>
+                    </option>
+                  <% } %>
 
-              <% for (var i=0; i < categories.length; i++) { %>
-                <option value=<%= categories[i] %>>
-                  <%= categories[i] %>
-                </option>
-              <% } %>
+                </select>
+              </div>
 
-            </select>
             <!-- end of menu -->
 
           </nav>
@@ -229,7 +231,15 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
 
                           <!-- Read more link -->
                           <div class="read-more">
-                            <a href="<%=k.url%>"><i class="fa fa-external-link" aria-hidden="true"></i> READ MORE</a></div>
+                            <a href="<%=k.url%>">READ MORE</a></div>
+
+                          <!-- Related -->
+                          <% if (k.related_link) { %>
+                          <div class="related">
+                            <span class="related-label"><i class="fa fa-external-link" aria-hidden="true"></i> Related:</span> <a href="<%= k.related_url %>"><%= k.related_link %></a>
+                          </div>
+                          <% } %>
+                          <!-- end related -->
                         </li>
                       <% } %>
 
@@ -249,8 +259,19 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
 
     <div class="to-top"><a href="#action-plan">&uarr; Top</a></div>
     <hr>
-
     </main>
+
+    <div class="credits">
+
+      Reporting by <span class="credit-name">The Associated Press and Seattle Times staff</span> &bull; Illustration by <span class="credit-name">Gabriel Campanario</span>
+        <div>
+        Design by <span class="credit-name">Frank Mina</span>
+        &bull;
+        Development by <span class="credit-name">Vanessa Martínez and Thomas Wilburn</span>
+       </div>
+    </div>
+
+    <%= t.include("partials/_dontMiss.html", { data: json.rail }) %>
 
 
     <script>

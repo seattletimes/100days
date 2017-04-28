@@ -8,7 +8,7 @@
     "goal": "Implement a hiring freeze on all federal employees to reduce federal workforce through attrition (exempting military, public safety, and public health)",
     "category": "Government",
     "promise_status": "broken",
-    "summary": "President Trump had initinally frozen hiring for some federal government workers during his first full week in office, as a way to reduce payrolls and rein in the size of the workforce. On April 12, the order was lifted.",
+    "summary": "President Trump initially froze hiring for some federal government workers during his first full week in office, as a way to reduce payrolls and rein in the size of the workforce. On April 12, the order was lifted.",
     "url": "http://www.seattletimes.com/business/trump-administration-to-lift-federal-hiring-freeze/"
   },
   {
@@ -28,14 +28,14 @@
   {
     "goal": "Enforce a lifetime ban on White House officials lobbying on behalf of a foreign government",
     "category": "Government",
-    "promise_status": "none"
+    "promise_status": "kept",
+    "summary": "On Jan. 28, Trump signed an executive order banning administration officials from ever lobbying the U.S. on behalf of a foreign government. Political appointees joining the executive branch on or after Jan. 20 must agree to the lobbying bans.",
+    "url": "http://www.seattletimes.com/business/trump-sets-tougher-restrictions-on-lobbying-by-officials/"
   },
   {
     "goal": "Ban foreign lobbyists from raising money for American elections",
     "category": "Government",
-    "promise_status": "kept",
-    "summary": "On Jan. 28, Trump signed an executive order banning administration officials from ever lobbying the U.S. on behalf of a foreign government. political appointee joining the executive branch on or after Jan. 20 must agree to the lobbying bans.",
-    "url": "http://www.seattletimes.com/business/trump-sets-tougher-restrictions-on-lobbying-by-officials/"
+    "promise_status": "none"
   },
   {
     "goal": "Renegotiate NAFTA or withdraw from the deal under Article 2205",
@@ -49,14 +49,16 @@
     "category": "Trade",
     "promise_status": "kept",
     "summary": "During his first week in office, Trump abandoned the 12-nation TransPacific Partnership brokered by former President Barack Obama. Many Washington companies participate in global trade.",
-    "url": "http://www.seattletimes.com/business/exporters-on-edge-after-trade-pact-dies/",
+    "url": "http://www.seattletimes.com/nation-world/trump-withdraws-us-from-sweeping-asia-trade-pact/",
+    "related_link": "Exporters on edge after trade pact dies | Jon Talton",
+    "related_url": "http://www.seattletimes.com/business/exporters-on-edge-after-trade-pact-dies/",
     "undefined": "http://www.seattletimes.com/nation-world/trump-withdraws-us-from-sweeping-asia-trade-pact/"
   },
   {
     "goal": "Direct the Secretary of the Treasury to label China a currency manipulator",
     "category": "Trade",
     "promise_status": "broken",
-    "summary": "Backing away from a campaign pledge, President Donald Trump said on April 12 that his administration won’t label China a currency manipulator in a report due this week, though he does think the U.S. dollar “is getting too strong.”",
+    "summary": "Backing away from a campaign pledge, President Donald Trump said on April 12 that his administration won’t label China a currency manipulator, though he does think the U.S. dollar “is getting too strong.”",
     "url": "http://www.seattletimes.com/business/trump-says-china-wont-be-labeled-a-currency-manipulator/"
   },
   {
@@ -65,11 +67,13 @@
     "promise_status": "none"
   },
   {
-    "goal": "Lift the restrictions on the production of $50 trillion dollars' worth of job-producing American energy reserves, including shale, oil, natural gas and clean coal.",
+    "goal": "Lift restrictions on the production of $50 trillion worth of job-producing American energy reserves, including shale, oil, natural gas and clean coal.",
     "category": "Energy",
     "promise_status": "kept",
     "summary": "On March 28, President Trump signed an order to suspend, rescind or flag for review measures to boost fossil fuel production.",
-    "url": "http://www.seattletimes.com/business/trump-takes-aim-at-obamas-efforts-to-curb-global-warming-2/"
+    "url": "http://www.seattletimes.com/business/trump-takes-aim-at-obamas-efforts-to-curb-global-warming-2/",
+    "related_link": "Railroads a better bet than coal for restoring jobs | Jon Talton",
+    "related_url": "http://www.seattletimes.com/business/economy/railroads-a-better-bet-than-coal-for-restoring-jobs/"
   },
   {
     "goal": "Allow energy infrastructure projects, like the Keystone Pipeline, to move forward",
@@ -92,29 +96,33 @@
     "goal": "Select a Supreme Court nominee",
     "category": "Government",
     "promise_status": "kept",
-    "summary": "In a move to replace the late Justice Antonin Scalia on the Supreme Court, Trump nominated Neil Gorsuch, who has been confirmed, to the seat on April 10.",
+    "summary": "In a move to replace the late Justice Antonin Scalia on the Supreme Court, Trump nominated Neil Gorsuch, who joined the court April 10 after a \"nuclear option\" was triggered on the Senate floor, paving the way for his confirmation.",
     "url": "http://www.seattletimes.com/nation-world/gorsuch-takes-supreme-court-seat-after-divisive-confirmation/"
   },
   {
-    "goal": "Cancel all federal funding to Sanctuary Cities",
+    "goal": "Cancel all federal funding to sanctuary cities",
     "category": "Immigration",
     "promise_status": "stymied",
-    "summary": "Less than a month after Seattle sued President Donald Trump over his “sanctuary cities” executive order, a federal judge in San Francisco has blocked the order. Seattle will now review that ruling, which will inform the city’s next steps in its own suit, Murray said.",
-    "url": "http://www.seattletimes.com/seattle-news/politics/seattle-officials-welcome-judges-block-of-sanctuary-city-crackdown/"
+    "summary": "Less than a month after Seattle sued President Donald Trump over his “sanctuary cities” executive order, a federal judge in San Francisco blocked the order. Seattle will now review that ruling, which will inform the city’s next steps in its own suit, Mayor Ed Murray said.",
+    "url": "http://www.seattletimes.com/seattle-news/politics/seattle-officials-welcome-judges-block-of-sanctuary-city-crackdown/",
+    "related_link": "What does it mean for Seattle to be a sanctuary city for immigrants?",
+    "related_url": "http://www.seattletimes.com/seattle-news/politics/qa-whats-it-mean-for-seattle-to-be-a-sanctuary-city-for-immigrants/"
   },
   {
     "goal": "Begin removing the more than 2 million criminal illegal immigrants from the country and cancel visas to foreign countries that won't take them back",
     "category": "Immigration",
     "promise_status": "developing",
-    "summary": "On Feb. 21, Trump signed executive actions to jumpstart construction of a U.S.-Mexico border wall and order cuts in federal grants for \"sanctuary cities.\"The politicized term has no official definition, so it isn't clear if the administration considers Seattle a sanctuary city.",
+    "summary": "On Feb. 21, Trump signed executive actions to jumpstart construction of a U.S.-Mexico border wall and order cuts in federal grants for \"sanctuary cities.\" The politicized term has no official definition, so it isn't clear if the administration considers Seattle a sanctuary city.",
     "url": "http://www.seattletimes.com/nation-world/nation-politics/us-to-increase-number-of-immigrants-targeted-for-deportation/"
   },
   {
     "goal": "Suspend immigration from terror-prone regions where vetting cannot safely occur. All vetting of people coming into our country will be considered extreme vetting",
     "category": "Immigration",
     "promise_status": "stymied",
-    "summary": "In March, President Trump signed a second executive order halting the entrance of immigrants from several Muslim majority countries, this time with Iraq excluded. Like its predecessor, it was shortly struck down by a federal judge. ",
-    "url": "http://www.seattletimes.com/nation-world/us-judge-to-hear-arguments-on-longer-block-to-travel-ban/"
+    "summary": "In March, President Trump signed a second executive order halting the entrance of immigrants from several Muslim-majority countries, this time with Iraq excluded. Like its predecessor, the order was blocked by a federal judge. ",
+    "url": "http://www.seattletimes.com/nation-world/us-judge-to-hear-arguments-on-longer-block-to-travel-ban/",
+    "related_link": "Who qualifies as a refugee? How do green cards work? Things you might not know about immigration",
+    "related_url": "http://www.seattletimes.com/seattle-news/who-qualifies-as-a-refugee-how-do-green-cards-work-things-you-might-not-know-about-immigration/"
   },
   {
     "goal": "Pass the Middle Class Tax Relief And Simplification Act",
@@ -129,7 +137,7 @@
     "promise_status": "none"
   },
   {
-    "goal": "Pass the American Energy & Infrastructure Act",
+    "goal": "Pass the American Energy and Infrastructure Act",
     "category": "Economy",
     "promise_status": "none"
   },
@@ -142,8 +150,10 @@
     "goal": "Pass the Repeal and Replace Obamacare Act",
     "category": "Health care",
     "promise_status": "stymied",
-    "summary": "The first executive order signed by Trump aimed to repeal former President Obama's health care law. More than 200,000 King County residents are insured through the Affordable Care Act.",
-    "url": "http://www.seattletimes.com/seattle-news/health/king-county-officials-patients-push-to-salvage-health-care-law/"
+    "summary": "The first executive order signed by Trump aimed to repeal former President Obama's health care law. On March 24, President Donald Trump and GOP leaders yanked their bill to repeal “Obamacare” off the House floor when it became clear it would fail badly — after seven years of nonstop railing against the health care law. More than 200,000 King County residents are insured through the Affordable Care Act.",
+    "url": "http://www.seattletimes.com/nation-world/house-sets-risky-health-care-vote-after-trump-demands-it-2/",
+    "related_link": "King County officials, patients push to salvage health-care law",
+    "related_url": "http://www.seattletimes.com/seattle-news/health/king-county-officials-patients-push-to-salvage-health-care-law/"
   },
   {
     "goal": "Pass the Affordable Childcare and Eldercare Act",
