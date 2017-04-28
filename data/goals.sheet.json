@@ -38,7 +38,7 @@
     "promise_status": "none"
   },
   {
-    "goal": "Renegotiate NAFTA or withdraw from the deal under Article 2205",
+    "goal": "Announce his intention to renegotiate NAFTA or withdraw from the deal under Article 2205",
     "category": "Trade",
     "promise_status": "developing",
     "summary": "On April 27, Trump said he has told the leaders of Mexico and Canada that he will not pull out of the North American Free Trade Agreement at this time, but could still withdraw if he concludes a renegotiated pact is not “a fair deal for all.”",
@@ -64,31 +64,33 @@
   {
     "goal": "Direct the Secretary of Commerce and U.S. Trade Representative to identify all foreign trading abuses that unfairly impact American workers and direct them to use every tool under American and international law to end those abuses immediately",
     "category": "Trade",
-    "promise_status": "none"
+    "promise_status": "developing",
+    "summary": "On March 31, President Trump signed an executive order giving the Commerce Department 90 days to assemble a report on the factors behind the trade deficit, and a second order seeking to increase collection of duties on imports. The report would identify “every form of trade abuse and every non-reciprocal practice that now contributes to the U.S. trade deficit,” said Commerce Secretary Wilbur Ross.",
+    "url": "http://www.seattletimes.com/business/trump-to-sign-executive-orders-targeting-trade-abuses-2/"
   },
   {
     "goal": "Lift restrictions on the production of $50 trillion worth of job-producing American energy reserves, including shale, oil, natural gas and clean coal.",
     "category": "Energy",
     "promise_status": "kept",
-    "summary": "On March 28, President Trump signed an order to suspend, rescind or flag for review measures to boost fossil fuel production.",
-    "url": "http://www.seattletimes.com/business/trump-takes-aim-at-obamas-efforts-to-curb-global-warming-2/",
+    "summary": "Declaring an end to what he’s called “the war on coal,” President Donald Trump signed on March 28 an executive order that eliminates numerous restrictions on fossil-fuel production, breaking with leaders across the globe who have embraced cleaner energy sources. On April 28, just one day before his 100th day in office, Trump signed an executive order aimed at expanding oil drilling in the Arctic and Atlantic oceans.",
+    "url": "http://www.seattletimes.com/business/trump-signs-order-aimed-at-opening-arctic-drilling/",
     "related_link": "Railroads a better bet than coal for restoring jobs | Jon Talton",
     "related_url": "http://www.seattletimes.com/business/economy/railroads-a-better-bet-than-coal-for-restoring-jobs/"
   },
   {
-    "goal": "Allow energy infrastructure projects, like the Keystone Pipeline, to move forward",
+    "goal": "Allow energy infrastructure projects, like the Keystone XL Pipeline, to move forward",
     "category": "Energy",
     "promise_status": "kept",
     "summary": "Trump signed executive actions to aggressively overhaul the country's energy policy, advancing the Keystone XL and Dakota Access pipeline projects.",
     "url": "http://www.seattletimes.com/tag/dakota-access-pipeline/"
   },
   {
-    "goal": "Cancel billions in payments to U.N. climate change programs and use the money to fix America's water and environmental infrastructure",
+    "goal": "Cancel billions in payments to U.N. climate-change programs and use the money to fix America's water and environmental infrastructure",
     "category": "Environment",
     "promise_status": "none"
   },
   {
-    "goal": "Cancel every executive action, memorandum and order issued by President Obama",
+    "goal": "Cancel every unconstitutional executive action, memorandum and order issued by President Obama",
     "category": "Government",
     "promise_status": "none"
   },
@@ -103,7 +105,7 @@
     "goal": "Cancel all federal funding to sanctuary cities",
     "category": "Immigration",
     "promise_status": "stymied",
-    "summary": "Less than a month after Seattle sued President Donald Trump over his “sanctuary cities” executive order, a federal judge in San Francisco blocked the order. Seattle will now review that ruling, which will inform the city’s next steps in its own suit, Mayor Ed Murray said.",
+    "summary": "Less than a month after Seattle sued President Donald Trump over his “sanctuary cities” executive order, a federal judge in San Francisco hearing two California lawsuits blocked the order. Seattle will now review that ruling, which will inform the city’s next steps in its own suit, Mayor Ed Murray said.",
     "url": "http://www.seattletimes.com/seattle-news/politics/seattle-officials-welcome-judges-block-of-sanctuary-city-crackdown/",
     "related_link": "What does it mean for Seattle to be a sanctuary city for immigrants?",
     "related_url": "http://www.seattletimes.com/seattle-news/politics/qa-whats-it-mean-for-seattle-to-be-a-sanctuary-city-for-immigrants/"
@@ -112,11 +114,13 @@
     "goal": "Begin removing the more than 2 million criminal illegal immigrants from the country and cancel visas to foreign countries that won't take them back",
     "category": "Immigration",
     "promise_status": "developing",
-    "summary": "On Feb. 21, Trump signed executive actions to jumpstart construction of a U.S.-Mexico border wall and order cuts in federal grants for \"sanctuary cities.\" The politicized term has no official definition, so it isn't clear if the administration considers Seattle a sanctuary city.",
-    "url": "http://www.seattletimes.com/nation-world/nation-politics/us-to-increase-number-of-immigrants-targeted-for-deportation/"
+    "summary": "On Feb. 21, the Trump administration announced a sweeping rewrite of immigration enforcement policies that could target for deportation millions of people living in the United States illegally.",
+    "url": "http://www.seattletimes.com/nation-world/nation-politics/us-to-increase-number-of-immigrants-targeted-for-deportation/",
+    "related_link": "Seattle wants $1M legal-defense fund for immigrants facing deportation",
+    "related_url": "http://www.seattletimes.com/seattle-news/politics/seattle-wants-1m-legal-defense-fund-for-immigrants-facing-deportation/"
   },
   {
-    "goal": "Suspend immigration from terror-prone regions where vetting cannot safely occur. All vetting of people coming into our country will be considered extreme vetting",
+    "goal": "Suspend immigration from terror-prone regions where vetting cannot safely occur. All vetting of people coming into the country will be considered extreme vetting",
     "category": "Immigration",
     "promise_status": "stymied",
     "summary": "In March, President Trump signed a second executive order halting the entrance of immigrants from several Muslim-majority countries, this time with Iraq excluded. Like its predecessor, the order was blocked by a federal judge. ",
@@ -125,58 +129,56 @@
     "related_url": "http://www.seattletimes.com/seattle-news/who-qualifies-as-a-refugee-how-do-green-cards-work-things-you-might-not-know-about-immigration/"
   },
   {
-    "goal": "Pass the Middle Class Tax Relief And Simplification Act",
+    "goal": "Pass the Middle Class Tax Relief And Simplification Act to slash taxes for the middle class and businesses ",
     "category": "Economy",
     "promise_status": "developing",
-    "summary": "On April 27, Trump proposed a tax plan with some of the same aspects promised in his original pledge to voters. It awaits Congressional approval. ",
+    "summary": "On April 27, the president proposed a tax plan with some of the same aspects promised in his original pledge to voters. It awaits congressional approval. ",
     "url": "http://www.seattletimes.com/business/trump-tax-plan-relief-for-his-voters-but-lots-of-unknowns/"
   },
   {
-    "goal": "Pass the End The Offshoring Act",
+    "goal": "Pass the End The Offshoring Act to create tariffs on companies that lay off workers in the U.S.",
     "category": "Trade",
     "promise_status": "none"
   },
   {
-    "goal": "Pass the American Energy and Infrastructure Act",
+    "goal": "Pass the American Energy and Infrastructure Act for the government to work with private companies to invest $1 trillion in infrastructure over 10 years",
     "category": "Economy",
     "promise_status": "none"
   },
   {
-    "goal": "Pass the School Choice And Education Opportunity Act",
+    "goal": "Pass the School Choice And Education Opportunity Act, which would direct public education funding to schools of parents' choice, end Common Core education and expand vocational education",
     "category": "Education",
     "promise_status": "none"
   },
   {
-    "goal": "Pass the Repeal and Replace Obamacare Act",
+    "goal": "Pass the Repeal and Replace Obamacare Act and reshape the U.S. insurance market and health-care system ",
     "category": "Health care",
     "promise_status": "stymied",
-    "summary": "The first executive order signed by Trump aimed to repeal former President Obama's health care law. On March 24, President Donald Trump and GOP leaders yanked their bill to repeal “Obamacare” off the House floor when it became clear it would fail badly — after seven years of nonstop railing against the health care law. More than 200,000 King County residents are insured through the Affordable Care Act.",
-    "url": "http://www.seattletimes.com/nation-world/house-sets-risky-health-care-vote-after-trump-demands-it-2/",
-    "related_link": "King County officials, patients push to salvage health-care law",
-    "related_url": "http://www.seattletimes.com/seattle-news/health/king-county-officials-patients-push-to-salvage-health-care-law/"
+    "summary": "The first executive order signed by President Trump aimed to repeal former President Obama's health-care law. On March 24, Trump and GOP leaders yanked their bill to repeal “Obamacare” off the House floor when it became clear it would fail badly — after seven years of nonstop railing against the health-care law. More than 200,000 King County residents are insured through the Affordable Care Act.",
+    "url": "http://www.seattletimes.com/nation-world/house-sets-risky-health-care-vote-after-trump-demands-it-2/"
   },
   {
-    "goal": "Pass the Affordable Childcare and Eldercare Act",
+    "goal": "Pass the Affordable Childcare and Eldercare Act to push employers to provide workplace child care, create tax-free savings accounts for dependents and allow people to deduct child care and eldercare on taxes ",
     "category": "Economy",
     "promise_status": "none"
   },
   {
-    "goal": "Pass the End Illegal Immigration Act",
+    "goal": "Pass the End Illegal Immigration Act to construct a border wall (paid for by Mexico), create mandatory minimum sentences for deported immigrants returning to U.S. and increase penalties for overstaying visas",
     "category": "Immigration",
     "promise_status": "none"
   },
   {
-    "goal": "Pass the Restoring Community Safety Act",
+    "goal": "Pass the Restoring Community Safety Act to create a violent-crimes task force, direct more funding to police training and boost funding for federal law enforcement",
     "category": "Crime",
     "promise_status": "none"
   },
   {
-    "goal": "Pass the Restoring National Security Act",
+    "goal": "Pass the Restoring National Security Act to increase military investment, allow veterans to seek care outside the VA, and create new screening process for immigrants",
     "category": "Government",
     "promise_status": "none"
   },
   {
-    "goal": "Pass the Clean up Corruption in Washington Act",
+    "goal": "Pass the Clean up Corruption in Washington Act to introduce government ethics reforms and \"Drain the Swamp\"",
     "category": "Government",
     "promise_status": "none"
   }

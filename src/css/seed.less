@@ -174,9 +174,9 @@ main.content {
 
   .checklist-key{
     .display-flex();
-    flex-direction: row;
-    flex-wrap: wrap;
+    .flex-wrap(wrap);
     padding-top: 20px;
+    .justify-content(space-between);
 
     .incomplete {
       margin-right: auto;
@@ -214,11 +214,9 @@ main.content {
 
 
     @media @mobile {
-      .flex(1 1 50%);
+      .flex(0 0 45%);
       padding: 4px;
-      margin: 5px;
       text-align: left;
-      max-width: 130px;
 
       .text {
         padding-right: 0px;
@@ -582,7 +580,6 @@ ul.key {
 select {
   font-size: 16px;
   height: 30px;
-  background-color: @df-off-white;
 }
 
 //bottom

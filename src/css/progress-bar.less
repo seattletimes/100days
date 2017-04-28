@@ -39,7 +39,33 @@
     float: left;
     height:100%;
     box-sizing: border-box;
-    float: left;
+    position: relative;
+  }
+
+  .popup {
+    font-family: @df-sans;
+    font-size: 15px;
+    position: absolute;
+    background: white;
+    display: none;
+    z-index: 99;
+    top: 105%;
+    box-shadow: 8px 8px 16px 0 fade(black, 12%);
+    padding: 10px;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .bar:hover .popup {
+    display: block;
   }
 
 }

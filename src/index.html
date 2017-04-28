@@ -37,13 +37,13 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
         var progressByStatus = {};
         var statusCount = 0;
         json.goals.forEach(function(g) {
-        var stat = g.promise_status;
-        if (!stat) return;
-        if (!progressByStatus[stat]) progressByStatus[stat] = 0;
-        if (stat) {
-          progressByStatus[stat]++;
+          var stat = g.promise_status;
+          if (!stat) return;
+          if (!progressByStatus[stat]) progressByStatus[stat] = {total: 0};
+          progressByStatus[stat].total++;
+          if (!progressByStatus[stat][g.category]) progressByStatus[stat][g.category] = 0; 
+          progressByStatus[stat][g.category]++;
           if (stat !== "none") statusCount++;
-          }
         });
       %>
 
@@ -53,9 +53,20 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
           <% for (var s in progressByStatus) { 
             if (s !== "none") {%>
               <div
-                style="width: <%= (progressByStatus[s] / statusCount * 100).toFixed(2) %>%"
+                style="width: <%= (progressByStatus[s].total / statusCount * 100).toFixed(2) %>%"
                 class="bar <%= s.toLowerCase() %>"
-              ></div><% } 
+              >
+                <div class="popup">
+                  <ul>
+                    <li><b>Total: <%= progressByStatus[s].total %></b></li>
+                  <% for (var c in progressByStatus[s]) { %>
+                    <% if (c !== "total") { %>
+                    <li> <%= c %>: <%= progressByStatus[s][c] %>
+                    <% } %>
+                  <% } %>
+                  </ul>
+                </div>
+              </div><% } 
             } %>
         </div>
       </div>
@@ -66,7 +77,7 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
           <% for (var s in progressByStatus) { %>
           <li class="status-legend <%= s.toLowerCase() %>">
 
-          <div class="quantity"> <%= progressByStatus[s] %> </div>
+          <div class="quantity"> <%= progressByStatus[s].total %> </div>
 
             <div class="status-title">
               <% if (s == "none"){ %> 
@@ -106,31 +117,33 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
         <div class="checklist narrow" id="action-plan">
           <h2>100-day action plan</h2>
 
-          <nav class="checklist-key">
-            <input type="checkbox" class="plan-filter" id="completed">
-            <label for="completed">
-              <span class="text event completed"><i class="icon"></i> Promise kept</span>
-            </label> 
+          <nav>
+            <div class="checklist-key">
+              <input type="checkbox" class="plan-filter" id="completed">
+              <label for="completed">
+                <span class="text event completed"><i class="icon"></i> Promise kept</span>
+              </label> 
 
-            <input type="checkbox" class="plan-filter" id="broken">
-            <label for="broken" class="broken">
-              <span class="text event broken"><i class="icon"></i> Promise broken</span>
-            </label>
+              <input type="checkbox" class="plan-filter" id="broken">
+              <label for="broken" class="broken">
+                <span class="text event broken"><i class="icon"></i> Promise broken</span>
+              </label>
 
-            <input type="checkbox" class="plan-filter" id="developing">
-            <label for="developing">
-              <span class="text event developing"><i class="icon"></i> Developing</span>
-            </label>  
+              <input type="checkbox" class="plan-filter" id="developing">
+              <label for="developing">
+                <span class="text event developing"><i class="icon"></i> Developing</span>
+              </label>  
 
-            <input type="checkbox" class="plan-filter" id="stymied">
-            <label for="stymied" class="stymied">
-              <span class="text event stymied"><i class="icon"></i> Stymied</span>
-            </label>           
-            
-            <input type="checkbox" class="plan-filter" id="incomplete">
-            <label for="incomplete" class="incomplete">
-              <span class="text event incomplete"><i class="icon"></i> No action</span>
-            </label>
+              <input type="checkbox" class="plan-filter" id="stymied">
+              <label for="stymied" class="stymied">
+                <span class="text event stymied"><i class="icon"></i> Stymied</span>
+              </label>           
+              
+              <input type="checkbox" class="plan-filter" id="incomplete">
+              <label for="incomplete" class="incomplete">
+                <span class="text event incomplete"><i class="icon"></i> No action</span>
+              </label>
+            </div>
 
 
             <!-- dropdown menu for categories -->
