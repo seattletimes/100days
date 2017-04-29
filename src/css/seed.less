@@ -139,6 +139,29 @@ main.content {
     display: block;
   }
 
+  .filter-container {
+    .display-flex();
+    .flex-wrap(wrap);
+
+  h2 {
+    margin-right: auto;
+
+    @media @mobile {
+      display: block;
+      padding-bottom: 10px;
+  }
+
+  select {
+    @media @mobile {
+      display: block;
+    }
+  }
+
+  }
+
+
+  }
+
   h2 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -426,18 +449,6 @@ label {
      font-size: 16px; 
   }
 
-  .update-label {
-    border-radius: 1px;
-    padding: 5px 5px 5px 0px;
-    // text-transform: uppercase;
-    font-style: normal;
-    font-weight: bold;
-  }
-
-  .update-summary {
-    padding-top: 3px;
-  }
-
   .read-more {
     font-weight: bold;
     text-align: right;
@@ -457,6 +468,18 @@ label {
         color: @df-middle-gray;
       }
     }
+  }
+
+  .update-label {
+    border-radius: 1px;
+    padding: 5px 5px 5px 0px;
+    // text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .update-summary {
+    padding-top: 3px;
   }
 
   .related {
@@ -580,6 +603,10 @@ ul.key {
 select {
   font-size: 16px;
   height: 30px;
+
+  @media @mobile {
+    width: 100%;
+  }
 }
 
 //bottom

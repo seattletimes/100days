@@ -5,18 +5,18 @@
     "promise_status": "none"
   },
   {
-    "goal": "Implement a hiring freeze on all federal employees to reduce federal workforce through attrition (exempting military, public safety, and public health)",
-    "category": "Government",
-    "promise_status": "broken",
-    "summary": "President Trump initially froze hiring for some federal government workers during his first full week in office, as a way to reduce payrolls and rein in the size of the workforce. On April 12, the order was lifted.",
-    "url": "http://www.seattletimes.com/business/trump-administration-to-lift-federal-hiring-freeze/"
-  },
-  {
     "goal": "Require that for every new federal regulation, two existing regulations be eliminated",
     "category": "Government",
     "promise_status": "kept",
     "summary": "On Jan. 30, Trump signed an executive order aimed at significantly cutting regulations. It requires that \"for every one new regulation issued, at least two prior regulations be identified for elimination.\"",
     "url": "https://www.whitehouse.gov/the-press-office/2017/01/30/presidential-executive-order-reducing-regulation-and-controlling"
+  },
+  {
+    "goal": "Implement a hiring freeze on all federal employees to reduce federal workforce through attrition (exempting military, public safety, and public health)",
+    "category": "Government",
+    "promise_status": "broken",
+    "summary": "President Trump initially froze hiring for some federal government workers during his first full week in office, as a way to reduce payrolls and rein in the size of the workforce. On April 12, the order was lifted.",
+    "url": "http://www.seattletimes.com/business/trump-administration-to-lift-federal-hiring-freeze/"
   },
   {
     "goal": "Impose a five-year-ban on White House and congressional officials becoming lobbyists after they leave government service",
@@ -92,7 +92,8 @@
   {
     "goal": "Cancel every unconstitutional executive action, memorandum and order issued by President Obama",
     "category": "Government",
-    "promise_status": "none"
+    "promise_status": "none",
+    "note": "President Trump has began reversing some of President Obama's actions, but we are labeling this as no action because the former president's legislation has not been deemed unconstitutional by a court."
   },
   {
     "goal": "Select a Supreme Court nominee",
@@ -106,7 +107,7 @@
     "category": "Immigration",
     "promise_status": "stymied",
     "summary": "Less than a month after Seattle sued President Donald Trump over his “sanctuary cities” executive order, a federal judge in San Francisco hearing two California lawsuits blocked the order. Seattle will now review that ruling, which will inform the city’s next steps in its own suit, Mayor Ed Murray said.",
-    "url": "http://www.seattletimes.com/seattle-news/politics/seattle-officials-welcome-judges-block-of-sanctuary-city-crackdown/",
+    "url": "http://www.seattletimes.com/nation-world/california-judge-blocks-trump-order-on-sanctuary-city-money/",
     "related_link": "What does it mean for Seattle to be a sanctuary city for immigrants?",
     "related_url": "http://www.seattletimes.com/seattle-news/politics/qa-whats-it-mean-for-seattle-to-be-a-sanctuary-city-for-immigrants/"
   },

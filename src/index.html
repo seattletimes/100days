@@ -26,9 +26,7 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
 
     <section class="introduction">
       <p class="intro">
-        President Donald Trump has hit his 100th day in office. We&rsquo;ve tracked the statuses of his promises, outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">&ldquo;Contract with the American Voter,&rdquo;</a> and how they may affect the Pacific Northwest, especially Washington.
-
-        <!-- As of today, President Donald Trump has been in office for <b><span class="currentDay"></span> days</b>. We're tracking the statuses of promises outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">"Contract with the American Voter,"</a> which contains his plan for his first 100 days in office. He has <b><span class="days-remaining"></span> days</b> remaining in this period. --></p>
+        President Donald Trump has hit his 100th day in office. We&rsquo;ve tracked the status of his promises, outlined in his <a href="https://assets.donaldjtrump.com/CONTRACT_FOR_THE_VOTER.pdf">&ldquo;Contract with the American Voter,&rdquo;</a> and how they may affect the Pacific Northwest, especially Washington.</p>
     </section>
 
     <section class="progress-bar">
@@ -43,22 +41,23 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
           progressByStatus[stat].total++;
           if (!progressByStatus[stat][g.category]) progressByStatus[stat][g.category] = 0; 
           progressByStatus[stat][g.category]++;
-          if (stat !== "none") statusCount++;
+          statusCount++;
         });
       %>
 
       <div class="bar-label">Status of Trump's promises</div>
       <div class="bar-container">
         <div class="completed" style="width: <%= (statusCount / json.goals.length * 100).toFixed(2) %>%">
-          <% for (var s in progressByStatus) { 
-            if (s !== "none") {%>
+          <% var order = ["kept", "broken", "developing", "stymied", "none"]; %>
+          <% order.forEach(function(s) { 
+            if (true || s !== "none") {%>
               <div
                 style="width: <%= (progressByStatus[s].total / statusCount * 100).toFixed(2) %>%"
                 class="bar <%= s.toLowerCase() %>"
               >
                 <div class="popup">
                   <ul>
-                    <li><b>Total: <%= progressByStatus[s].total %></b></li>
+                    <li class="total"><b>Total: <%= progressByStatus[s].total %></b></li>
                   <% for (var c in progressByStatus[s]) { %>
                     <% if (c !== "total") { %>
                     <li> <%= c %>: <%= progressByStatus[s][c] %>
@@ -67,7 +66,7 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
                   </ul>
                 </div>
               </div><% } 
-            } %>
+            }) %>
         </div>
       </div>
 
@@ -112,10 +111,44 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
         </nav>
       </div>
 
+            <!-- creates an array with categories -->
+            <% 
+              var categories = [];
+
+              function isInArray(categories, cat_title) {
+                return categories.indexOf(cat_title) > -1;
+              }
+
+              json.goals.forEach(function(k) { 
+                var cat_title = k.category;
+                if (!isInArray(categories, cat_title)) {
+                  categories.push(cat_title);
+                }
+              }) %>
+
+            <!-- end of menu -->
+
       <section class="dates-goals">
 
         <div class="checklist narrow" id="action-plan">
-          <h2>100-day action plan</h2>
+          <div class="filter-container">
+            <h2>100-day action plan</h2>
+
+          <!-- filter -->
+              
+                <select class="topics">
+                  <option value="">Filter by category</option>
+
+                  <% for (var i=0; i < categories.length; i++) { %>
+                    <option value=<%= categories[i] %>>
+                      <%= categories[i] %>
+                    </option>
+                  <% } %>
+
+                </select>
+          </div>
+                       
+          <!-- end filter -->
 
           <nav>
             <div class="checklist-key">
@@ -147,36 +180,6 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
 
 
             <!-- dropdown menu for categories -->
-
-            <!-- creates an array with categories -->
-            <% 
-              var categories = [];
-
-              function isInArray(categories, cat_title) {
-                return categories.indexOf(cat_title) > -1;
-              }
-
-              json.goals.forEach(function(k) { 
-                var cat_title = k.category;
-                if (!isInArray(categories, cat_title)) {
-                  categories.push(cat_title);
-                }
-              }) %>
-
-              <div>
-                <select class="topics">
-                  <option value="">Filter by category</option>
-
-                  <% for (var i=0; i < categories.length; i++) { %>
-                    <option value=<%= categories[i] %>>
-                      <%= categories[i] %>
-                    </option>
-                  <% } %>
-
-                </select>
-              </div>
-
-            <!-- end of menu -->
 
           </nav>
 
@@ -237,6 +240,13 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
                     <b><%= quotable(k.goal) %></b> 
 
                     <ul>
+                     <% if (k.note) { %>
+                        <li class="update"><span class="update-label">
+                          Note:</span>
+                          <div class="update-summary"><%= k.note %></div>
+                        </li>
+                      <% } %>
+
                       <% if (k.summary) { %>
                         <li class="update"><span class="update-label">
                           Update:</span>
@@ -253,9 +263,9 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
                           </div>
                           <% } %>
                           <!-- end related -->
+
                         </li>
                       <% } %>
-
                     </ul>
                   </div>
                 <% }) %>
@@ -283,8 +293,6 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
         Development by <span class="credit-name">Vanessa Martínez and Thomas Wilburn</span>
        </div>
     </div>
-
-    <%= t.include("partials/_dontMiss.html", { data: json.rail }) %>
 
 
     <script>
