@@ -9,11 +9,11 @@
       "path": "2017/trump-100-days"
     }
   },
-  "title": "First 100 Days: A look at the status of President Donald Trump's promises",
+  "title": "First 100 Days: A look at the status of President Trump's promises",
   "description": "We’ve tracked the status of Trump's promises, outlined in his “Contract with the American Voter,” and how they may affect the Pacific Northwest, especially Washington.",
   "url": "https://projects.seattletimes.com/2017/trump-100-days/",
   "image": "assets/trump100.jpg",
   "sheets": ["1pJulVzfZiHl4IrnzTz0s0lP6IgdxzYyCpevvKpRIZ2Q"],
-  "production": false,
+  "production": true,
   "embedded": false
 }
