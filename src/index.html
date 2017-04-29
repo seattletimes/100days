@@ -251,11 +251,13 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
                         <li class="update"><span class="update-label">
                           Update:</span>
                           <div class="update-summary"><%= quotable(k.summary) %></div>
+                      <% }
 
+                      if (k.url) { %>
                           <!-- Read more link -->
                           <div class="read-more">
                             <a href="<%=k.url%>">READ MORE</a></div>
-
+                      <% } %>
                           <!-- Related -->
                           <% if (k.related_link) { %>
                           <div class="related">
@@ -265,7 +267,7 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
                           <!-- end related -->
 
                         </li>
-                      <% } %>
+                      
                     </ul>
                   </div>
                 <% }) %>

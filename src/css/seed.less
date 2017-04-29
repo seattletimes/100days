@@ -228,7 +228,7 @@ main.content {
 
     & + label {
       font-size: 15px;
-      border: .3px dotted @df-light-gray;
+      border: .3px solid @df-light-gray;
       padding: 8px 8px;
       cursor: pointer;
       border-radius: 5px;
@@ -438,6 +438,27 @@ label {
   }
 }
 
+.read-more {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-style: normal;
+  font-size: 16px;
+
+  @media @mobile {
+    font-size: 15px;
+  }
+  
+  a {
+    color: @df-charcoal;
+
+    &:hover {
+      color: @df-middle-gray;
+    }
+  }
+}
+
 
 .update {
   font-style: italic;
@@ -447,27 +468,6 @@ label {
 
   @media @mobile {
      font-size: 16px; 
-  }
-
-  .read-more {
-    font-weight: bold;
-    text-align: right;
-    margin-top: 5px;
-    padding-bottom: 5px;
-    font-style: normal;
-    font-size: 16px;
-
-    @media @mobile {
-      font-size: 15px;
-    }
-    
-    a {
-      color: @df-charcoal;
-
-      &:hover {
-        color: @df-middle-gray;
-      }
-    }
   }
 
   .update-label {
@@ -602,7 +602,6 @@ ul.key {
 
 select {
   font-size: 16px;
-  height: 30px;
 
   @media @mobile {
     width: 100%;
