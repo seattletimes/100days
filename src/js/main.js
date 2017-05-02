@@ -1,9 +1,10 @@
-// require("./lib/social");
-// require("./lib/ads");
+require("./lib/social");
+
 // var track = require("./lib/tracking");
 
 
 var $ = require("./lib/qsa.js");
+require("./lib/ads");
 
 var section = $("[data-topic]");
 var planItems = $(".plan-item");

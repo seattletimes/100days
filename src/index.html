@@ -284,7 +284,6 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
 
     <div class="to-top"><a href="#action-plan">&uarr; Top</a></div>
     <hr>
-    </main>
 
     <div class="credits">
 
@@ -297,10 +296,17 @@ var quotable = text => text.replace(/'/g, "&rsquo;");
     </div>
 
 
+    </main>
+
+    <%= t.include("partials/_ad.html", { type: "bannerBottom" }) %>
+
     <script>
     window.goals = <%= JSON.stringify(json.goals) %>;
     window.daily = <%= JSON.stringify(json.daily) %>;
     </script>
+
+
+    <%= t.include("partials/_navBottom.html") %>
 
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
